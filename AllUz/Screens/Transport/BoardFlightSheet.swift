@@ -305,7 +305,7 @@ struct BoardFlightSheet: View {
         }
     }
 
-    private func section<C: View>(_ title: String, @ViewBuilder _ content: () -> C) -> some View {
+    private func section<C: View>(_ title: String, @ViewBuilder _ content: @escaping () -> C) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(title).font(Theme.Font.title3).foregroundStyle(Theme.ink)
             Panel(padding: 14) { content() }

@@ -306,7 +306,7 @@ private struct DistancesContent: View {
         }
     }
 
-    private func modeCard<C: View>(_ symbol: String, _ title: String, _ color: Color, @ViewBuilder content: () -> C) -> some View {
+    private func modeCard<C: View>(_ symbol: String, _ title: String, _ color: Color, @ViewBuilder content: @escaping () -> C) -> some View {
         HStack(alignment: .top, spacing: 14) {
             Image(systemName: symbol)
                 .font(.system(size: 16, weight: .semibold)).foregroundStyle(color)
