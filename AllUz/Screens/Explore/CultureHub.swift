@@ -47,7 +47,7 @@ private struct ExCultureContent: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                LazyVStack(alignment: .leading, spacing: 32) {
+                VStack(alignment: .leading, spacing: 32) {
                     VStack(alignment: .leading, spacing: 16) {
                         ExIntro(kicker: tr("Madaniyat", "Культура", "Culture"),
                                 title: tr("Oʻzbekiston madaniyati", "Культура Узбекистана", "The culture of Uzbekistan"),

@@ -175,7 +175,7 @@ struct ListScreen: View {
         LazyVStack(alignment: .leading, spacing: 0) {
             ForEach(vm.items) { card in
                 VStack(spacing: 0) {
-                    CardRow(card: card, trailing: trailing(card))
+                    CardRow(card: card)
                     Divider().overlay(Theme.line.opacity(0.5)).padding(.leading, 96)
                 }
                 .padding(.horizontal, Theme.gutter)
@@ -231,11 +231,6 @@ struct ListScreen: View {
         default: nil
         }
     }
-
-    private func trailing(_ card: Card) -> String? {
-        guard let r = card.rating, r > 0, spec.type == "place" || spec.type == "venue" else { return nil }
-        return String(repeating: "★", count: min(r, 5))
-    }
 }
 
 // MARK: - Ro'yxat holati
@@ -269,6 +264,7 @@ final class ExListModel {
     private var loadingMore = false
     private var generation = 0
     private var loadedQuery = ""
+    private var loadedKey: String?
     private var loadedOnce = false
     private static let pageSize = 40
 
@@ -319,12 +315,15 @@ final class ExListModel {
     /// Filtr o'zgarganda: qidiruv matni o'zgargan bo'lsa — 300 ms kutib (debounce), keyin birinchi sahifa
     func reload(debounced: Bool) async {
         let q = query.trimmingCharacters(in: .whitespaces)
+        // Ekranga qaytilganda (.task qayta ishga tushadi) — shu filtr allaqachon yuklangan bo'lsa, sahifalar saqlanib qoladi
+        if debounced, phase == .loaded, loadedKey == filterKey { return }
         if debounced, loadedOnce, q != loadedQuery {
             try? await Task.sleep(for: .milliseconds(300))
             if Task.isCancelled { return }
         }
         generation += 1
         let gen = generation
+        let key = filterKey
         moreError = nil
         if items.isEmpty { phase = .loading } else { isRefreshing = true }
         do {
@@ -339,6 +338,7 @@ final class ExListModel {
                 isRefreshing = false
             }
             loadedQuery = q
+            loadedKey = key
             loadedOnce = true
         } catch is CancellationError {
             if gen == generation { isRefreshing = false }
