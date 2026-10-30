@@ -43,6 +43,19 @@ targets:
         LSApplicationQueriesSchemes: [tg, comgooglemaps, yandexmaps]
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: false
+          # Ikkinchi himoya qatlami (Pinning.swift bilan bir xil ildizlar): ATS o'zi ham tekshiradi — har qanday URLSession uchun
+          NSPinnedDomains:
+            alluzbekistan.com:
+              NSIncludesSubdomains: false
+              NSPinnedCAIdentities:
+                - SPKI-SHA256-BASE64: C5+lpZ7tcVwmwQIMcRtPbsQtWLABXhQzejna0wHFr8M=
+                - SPKI-SHA256-BASE64: diGVwiVYbubAI3RW4hB9xU8e/CH2GnkuvVFZE8zmgzI=
+                - SPKI-SHA256-BASE64: fk6IOKit1ild5647BH06ujSIq5XbCgqlbYl6ANhhi88=
+                - SPKI-SHA256-BASE64: sCkq5UWXjg+7mKu9lMhhYF5bGLsy7VI/UNW3tccdR7w=
+                - SPKI-SHA256-BASE64: hxqRlPTu1bMS/0DITB1SSu0vd4u/8l8TjPgfaAp63Gc=
+                - SPKI-SHA256-BASE64: mEflZT5enoR1FuXLgYYGqnVEoZvmf9c2bVBpiOjYQ0c=
+                - SPKI-SHA256-BASE64: x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=
+                - SPKI-SHA256-BASE64: ICGRfpgmOUXIWcQ/HXPLQTkFPEFPoDyjvH7ohhQpjzs=
         CFBundleURLTypes:
           - CFBundleURLName: com.alluzbekistan.app
             CFBundleURLSchemes: [alluz]

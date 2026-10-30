@@ -12,6 +12,11 @@ enum Pinning {
         "diGVwiVYbubAI3RW4hB9xU8e/CH2GnkuvVFZE8zmgzI=",   // ISRG Root X2 (EC P-384, 2040)
         "fk6IOKit1ild5647BH06ujSIq5XbCgqlbYl6ANhhi88=",   // ISRG Root YR (RSA 4096, 2045) — hozirgi zanjir
         "sCkq5UWXjg+7mKu9lMhhYF5bGLsy7VI/UNW3tccdR7w=",   // ISRG Root YE (EC P-384, 2045)
+        // Zaxira: sayt boshqa CA'ga o'tsa ham ilova ishlashi uchun (Google Trust Services, Sectigo/ZeroSSL)
+        "hxqRlPTu1bMS/0DITB1SSu0vd4u/8l8TjPgfaAp63Gc=",   // GTS Root R1 (RSA 4096, 2036)
+        "mEflZT5enoR1FuXLgYYGqnVEoZvmf9c2bVBpiOjYQ0c=",   // GTS Root R4 (EC P-384, 2036)
+        "x4QzPSC810K5/cMjb05Qm4k3Bw5zBn4lTdO/nEW/Td4=",   // USERTrust RSA (RSA 4096, 2038)
+        "ICGRfpgmOUXIWcQ/HXPLQTkFPEFPoDyjvH7ohhQpjzs=",   // USERTrust ECC (EC P-384, 2038)
     ]
 
     /// SPKI DER sarlavhalari (kalit turi va o'lchami bo'yicha)

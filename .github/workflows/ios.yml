@@ -27,6 +27,8 @@ concurrency:
 jobs:
   ios:
     runs-on: macos-26
+    # Imzolash kalitlari faqat «release» muhitida (faqat main branch'dan) — boshqa branch/rejim ularni ko'rmaydi
+    environment: ${{ (inputs.mode == 'release' && github.ref == 'refs/heads/main') && 'release' || '' }}
     timeout-minutes: 60
     env:
       MODE: ${{ inputs.mode || 'build' }}
@@ -34,6 +36,8 @@ jobs:
       HOMEBREW_NO_INSTALL_CLEANUP: '1'
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: Xcode va vositalar
         run: |
           xcodebuild -version
@@ -70,7 +74,7 @@ jobs:
           path: shots/
           retention-days: 7
       - uses: actions/upload-artifact@v7
-        if: failure()
+        if: failure() && env.MODE != 'release'   # release logida kalit identifikatorlari bo'lishi mumkin — ochiq repoda yuklanmaydi
         with:
           name: build-log
           path: build.log

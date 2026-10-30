@@ -9,12 +9,15 @@ for v in TEAM_ID ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8 DIST_P12_B64 DIST_P12_PASS 
 done
 TMP=${RUNNER_TEMP:-$(mktemp -d)}
 KC="$TMP/prohisob.keychain-db"
+umask 077
+cleanup() { rm -f "${KEY:-}" "$TMP/dist.p12"; security delete-keychain "$KC" 2>/dev/null || true; }
+trap cleanup EXIT
 KC_PASS=$(uuidgen)
 security create-keychain -p "$KC_PASS" "$KC"
 security set-keychain-settings -lut 21600 "$KC"
 security unlock-keychain -p "$KC_PASS" "$KC"
 printf '%s' "$DIST_P12_B64" | base64 --decode > "$TMP/dist.p12"
-security import "$TMP/dist.p12" -P "$DIST_P12_PASS" -A -t cert -f pkcs12 -k "$KC"
+security import "$TMP/dist.p12" -P "$DIST_P12_PASS" -T /usr/bin/codesign -T /usr/bin/security -t cert -f pkcs12 -k "$KC"
 # Apple WWDR oraliq sertifikati (Apple Distribution shu bilan imzolangan)
 curl -fsSL -o "$TMP/AppleWWDRCAG3.cer" https://www.apple.com/certificateauthority/AppleWWDRCAG3.cer
 security import "$TMP/AppleWWDRCAG3.cer" -k "$KC" -t cert -f DER || true

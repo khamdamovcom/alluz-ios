@@ -56,14 +56,19 @@ final class AppModel {
     func openURL(_ url: URL) {
         if url.host == AppConfig.host || url.host == "www." + AppConfig.host, let r = Route(webPath: url.path) { open(r); return }
         guard let scheme = url.scheme?.lowercased() else { return }
-        if scheme == "https" || scheme == "http" { webURL = IdentifiedURL(url: url) }
+        if scheme == "https" { webURL = IdentifiedURL(url: url) }
+        else if scheme == "http", var c = URLComponents(url: url, resolvingAgainstBaseURL: false) {   // Safari oynasida ATS yo'q — https ga
+            c.scheme = "https"; if let u = c.url { webURL = IdentifiedURL(url: u) }
+        }
         else if ["tel", "mailto", "tg", "maps", "comgooglemaps", "yandexmaps"].contains(scheme) { UIApplication.shared.open(url) }
     }
     func openWeb(_ s: String?) { if let s, let u = URL(string: s) { openURL(u) } }
     /// Deep link: https://alluzbekistan.com/… yoki alluz://joylar/registon
     func handleDeepLink(_ url: URL) {
         let path = url.scheme == "alluz" ? "/" + (url.host ?? "") + url.path : url.path
-        if let r = Route(webPath: path) { open(r) }
+        if let r = Route(webPath: path) { paths[tab] = [r]; return }      // stek cheksiz o'smasin
+        // Ilova ichida ekrani yo'q sayt sahifasi — Safari oynasida
+        if url.scheme == "https", url.host == AppConfig.host { webURL = IdentifiedURL(url: url) }
     }
     func popToRoot(_ tab: Tab) { paths[tab] = [] }
 

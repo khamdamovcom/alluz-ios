@@ -86,9 +86,14 @@ enum Route: Hashable, Sendable {
         }
     }
 
+    /// Slug: faqat kichik lotin harf, raqam, «-» (server slug'lari shunday)
+    static func validSlug(_ s: String?) -> Bool { s.map { $0.range(of: "^[a-z0-9][a-z0-9-]{0,199}$", options: .regularExpression) != nil } ?? true }
+
     /// Sayt yo'li (tilsiz yoki /ru, /en bilan) → Route. Tanilmasa nil (sayt brauzerda ochiladi).
     init?(webPath raw: String) {
+        guard raw.count < 400 else { return nil }
         var parts = raw.split(separator: "/").map(String.init)
+        guard parts.count <= 4, parts.allSatisfy({ Route.validSlug($0) }) else { return nil }
         if let f = parts.first, ["ru", "en", "uz"].contains(f) { parts.removeFirst() }
         guard let first = parts.first else { return nil }
         let s1 = parts.count > 1 ? parts[1] : nil, s2 = parts.count > 2 ? parts[2] : nil
@@ -108,7 +113,7 @@ enum Route: Hashable, Sendable {
         case "marshrutlar": r = item("route", s1) ?? .list(ListSpec(type: "route"))
         case "davlat-idoralari": r = item("org", s1) ?? .gov
         case "banklar": r = item("bank", s1) ?? .currency
-        case "tablo": r = .board(s1?.uppercased())
+        case "tablo": r = .board(s1.flatMap { $0.range(of: "^[a-z]{3}$", options: .regularExpression) != nil ? $0.uppercased() : nil })
         case "transport":
             switch s1 {
             case "aeroportlar": r = item("airport", s2) ?? .list(ListSpec(type: "airport"))

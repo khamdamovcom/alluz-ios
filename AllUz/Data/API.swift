@@ -35,6 +35,8 @@ final class API: @unchecked Sendable {
         cfg.waitsForConnectivity = false
         cfg.httpCookieAcceptPolicy = .never
         cfg.httpShouldSetCookies = false
+        cfg.httpCookieStorage = nil
+        cfg.urlCredentialStorage = nil
         cfg.httpAdditionalHeaders = ["Accept": "application/json", "User-Agent": API.userAgent]
         // Rasmlar uchun katta disk kesh (server Cache-Control bo'yicha)
         cfg.urlCache = URLCache(memoryCapacity: 48 << 20, diskCapacity: 400 << 20)
@@ -71,7 +73,9 @@ final class API: @unchecked Sendable {
 
     /// Xom javob (keshdan yoki tarmoqdan)
     func fetch(_ path: String, query: [String: String] = [:], lang: Lang = Lang.current) async throws -> Data {
-        guard path.hasPrefix("/"), !path.contains("..") else { throw APIError.notFound }
+        // Yo'l faqat oddiy belgilardan: «..», «%», «?», «#» — so'rovni boshqa yo'lga burish urinishi
+        guard path.hasPrefix("/"), !path.contains(".."), path.range(of: #"^/[A-Za-z0-9/_.\-]{1,300}$"#, options: .regularExpression) != nil
+        else { throw APIError.notFound }
         var c = URLComponents(string: AppConfig.site + API.langPrefix(lang) + path)
         let q = query.filter { !$0.value.isEmpty }.sorted { $0.key < $1.key }
         if !q.isEmpty { c?.queryItems = q.map { URLQueryItem(name: $0.key, value: $0.value) } }
@@ -83,7 +87,8 @@ final class API: @unchecked Sendable {
             let (data, resp) = try await session.data(for: req)
             let code = (resp as? HTTPURLResponse)?.statusCode ?? 0
             switch code {
-            case 200: try? data.write(to: cacheDir.appendingPathComponent(key), options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication]); return data
+            case 200 where (resp.mimeType ?? "").contains("json"): try? data.write(to: cacheDir.appendingPathComponent(key), options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication]); return data
+            case 200: return data
             case 404: throw APIError.notFound
             default: throw APIError.server(code)
             }
