@@ -129,9 +129,10 @@ struct DetailCount: Identifiable, Hashable, Sendable {
 
 /// Tezkor amal (shisha tugmalar qatori)
 enum DetailQuick: Hashable, Sendable, Identifiable {
-    case directions(URL), call(URL), web(URL), telegram(URL), instagram(URL), mail(URL), board(String), railBoard(String)
+    case directions(URL), call(URL), web(URL), telegram(URL), instagram(URL), mail(URL), board(String), railBoard(String), weather(String)
     var id: String {
         switch self {
+        case .weather: "weather"
         case .directions: "dir"; case .call: "call"; case .web: "web"; case .telegram: "tg"; case .instagram: "ig"
         case .mail: "mail"; case .board: "board"; case .railBoard: "rail"
         }
@@ -404,7 +405,7 @@ extension DetailContent {
 
     private static func order(_ c: DetailContent) -> [DetailPart] {
         var p: [DetailPart] = [.title]
-        if !c.quick.isEmpty { p.append(.actions) }
+        p.append(.actions)      // ulashish va saqlash har doim bor
         if c.lead != nil { p.append(.lead) }
         if !c.facts.isEmpty || !c.rows.isEmpty { p.append(.facts) }
         if c.boardIATA != nil || c.railStation != nil { p.append(.board) }
@@ -890,6 +891,11 @@ private struct DetailBuilder {
             quick.append(.directions(u))
         }
         if let iata = boardIATA { quick.append(.board(iata)) }
+        // Ob-havo: hudud, tuman va diqqatga sazovor joy uchun (hudud slug'i bo'yicha)
+        if ["region", "district", "place"].contains(item.type) {
+            let reg = item.type == "region" ? item.slug : (item.region ?? s("region"))
+            if let reg, !reg.isEmpty { quick.append(.weather(reg)) }
+        }
         if let st = railStation { quick.append(.railBoard(st)) }
         for c in contacts {
             guard case .url(let u)? = c.tap else { continue }

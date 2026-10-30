@@ -220,7 +220,6 @@ struct DetailQuickActions: View {
                                      active: saved)
                 }
                 .buttonStyle(.press)
-                .sensoryFeedback(.selection, trigger: saved)
             }
             .padding(.horizontal, Theme.gutter - 4)
             .glassGroup(spacing: 6)
@@ -237,12 +236,14 @@ struct DetailQuickActions: View {
         case .mail(let u): ("envelope", "Email", u)
         case .board: ("airplane.departure", tr("Tablo", "Табло", "Flights"), nil)
         case .railBoard: ("tram", tr("Tablo", "Табло", "Timetable"), nil)
+        case .weather: ("cloud.sun", tr("Ob-havo", "Погода", "Weather"), nil)
         }
         return Button {
             Haptics.tap()
             switch q {
             case .board(let iata): model.open(.board(iata))
             case .railBoard(let st): model.open(.railBoard(st))
+            case .weather(let r): model.open(.weather(r))
             default: if let url { model.openURL(url) }
             }
         } label: {
