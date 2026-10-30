@@ -310,6 +310,13 @@ struct RailBoardScreen: View {
                 await vm.load()
             }
         }
+        // «… qoldi» yorliqlari yangilanib turadi
+        .task(id: phase == .active) {
+            while !Task.isCancelled && phase == .active {
+                try? await Task.sleep(for: .seconds(30))
+                vm.tick()
+            }
+        }
         .task { await vm.loadStations() }
         .sheet(isPresented: $picker) {
             RailStationPicker(stations: vm.stations, selected: vm.station) { s in vm.select(s); picker = false }
