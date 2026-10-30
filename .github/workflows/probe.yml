@@ -1,8 +1,0 @@
-name: probe
-on: workflow_dispatch
-permissions: { contents: read }
-jobs:
-  p:
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl -s -m 20 -o /tmp/r.json -w "%{http_code} %{size_download}\n" https://cbu.uz/uz/arkhiv-kursov-valyut/json/ ; head -c 200 /tmp/r.json || true
