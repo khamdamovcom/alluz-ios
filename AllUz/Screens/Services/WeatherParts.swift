@@ -67,13 +67,13 @@ struct WeatherMetrics: View {
                 tile("wind", tr("Shamol", "Ветер", "Wind"), WeatherFmt.wind(now.w), sub: WeatherFmt.windFrom(now.wd), arrow: now.wd)
             }
             if let h = now.h {
-                tile("humidity.fill", tr("Namlik", "Влажность", "Humidity"), "\(Int(h))%", sub: nil)
+                tile("humidity.fill", tr("Namlik", "Влажность", "Humidity"), "\(Int(min(max(h, 0), 100)))%", sub: nil)
             }
             if let p = now.p {
-                tile("gauge.with.dots.needle.33percent", tr("Bosim", "Давление", "Pressure"), "\(Fmt.num(Int(p))) \(tr("hPa", "гПа", "hPa"))", sub: WeatherFmt.mmHg(p))
+                tile("gauge.with.dots.needle.33percent", tr("Bosim", "Давление", "Pressure"), "\(Fmt.num(Int(min(max(p, 0), 2000)))) \(tr("hPa", "гПа", "hPa"))", sub: WeatherFmt.mmHg(p))
             }
             if let c = now.c {
-                tile("cloud.fill", tr("Bulutlilik", "Облачность", "Cloud cover"), "\(Int(c))%", sub: nil)
+                tile("cloud.fill", tr("Bulutlilik", "Облачность", "Cloud cover"), "\(Int(min(max(c, 0), 100)))%", sub: nil)
             }
             tile("drop.fill", tr("Yogʻin, bugun", "Осадки сегодня", "Rain today"), WeatherFmt.mm(now.pr ?? 0),
                  sub: (now.pr ?? 0) < 0.1 ? tr("Kutilmaydi", "Не ожидаются", "None expected") : nil)

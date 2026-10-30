@@ -57,7 +57,7 @@ private struct PostHomeView: View {
                         InfoRow(symbol: "phone", title: data.callCenterLabel ?? "", value: cc) { model.openURL(u) }
                             .padding(.horizontal, 14)
                             .background(Theme.card, in: RoundedRectangle(cornerRadius: Theme.Radius.m, style: .continuous))
-                            .accessibilityHint(tr("Qo'ng'iroq qilish", "Позвонить", "Call"))
+                            .accessibilityHint(tr("Qoʻngʻiroq qilish", "Позвонить", "Call"))
                     }
                 }
             }
@@ -97,7 +97,7 @@ private struct PostHomeView: View {
                     if !textMode { let d = String(v.filter(\.isNumber).prefix(6)); if d != v { query = d } }
                 }
             if !query.isEmpty {
-                Button { query = ""; Haptics.select() } label: { Image(systemName: "xmark.circle.fill").foregroundStyle(Theme.muted) }
+                Button { query = ""; Haptics.select() } label: { Image(systemName: "xmark.circle.fill").foregroundStyle(Theme.muted).frame(minWidth: 44, minHeight: 44) }
                     .accessibilityLabel(tr("Tozalash", "Очистить", "Clear"))
             }
             Button {
@@ -110,7 +110,7 @@ private struct PostHomeView: View {
                     .padding(.horizontal, 10).padding(.vertical, 6)
                     .background(Theme.accent.opacity(0.12), in: Capsule())
             }
-            .accessibilityLabel(textMode ? tr("Indeks bo'yicha qidirish", "Искать по индексу", "Search by postcode") : tr("Nom bo'yicha qidirish", "Искать по названию", "Search by name"))
+            .accessibilityLabel(textMode ? tr("Indeks boʻyicha qidirish", "Искать по индексу", "Search by postcode") : tr("Nom boʻyicha qidirish", "Искать по названию", "Search by name"))
         }
         .padding(.horizontal, 14)
         .frame(minHeight: 52)
@@ -147,7 +147,7 @@ private struct PostHomeView: View {
     private func leadText(_ r: PostSearchData) -> String? {
         switch r.mode {
         case "near": tr("\(r.q) indeksi topilmadi — eng yaqinlari:", "Индекс \(r.q) не найден — ближайшие:", "Postcode \(r.q) not found — the nearest ones:")
-        case "dup": tr("\(r.q) indeksi bir nechta bo'limda:", "Индекс \(r.q) у нескольких отделений:", "Postcode \(r.q) is shared by several offices:")
+        case "dup": tr("\(r.q) indeksi bir nechta boʻlimda:", "Индекс \(r.q) у нескольких отделений:", "Postcode \(r.q) is shared by several offices:")
         case "prefix": tr("\(r.q) bilan boshlanadigan indekslar: \(r.total)", "Индексы, начинающиеся с \(r.q): \(r.total)", "Postcodes starting with \(r.q): \(r.total)")
         case "text": tr("Topildi: \(r.total)", "Найдено: \(r.total)", "Found: \(r.total)")
         default: nil
@@ -234,7 +234,7 @@ private struct PostRegionView: View {
                     ChipBar(items: data.groups.map { (key: $0.id, label: $0.name, count: $0.count) }, selected: $group)
                 }
                 if shown.isEmpty {
-                    EmptyState(text: query.isEmpty ? nil : tr("Boshqa indeks yoki nom bilan urinib ko'ring.", "Попробуйте другой индекс или название.", "Try another postcode or name."))
+                    EmptyState(text: query.isEmpty ? nil : tr("Boshqa indeks yoki nom bilan urinib koʻring.", "Попробуйте другой индекс или название.", "Try another postcode or name."))
                 } else {
                     ForEach(shown) { g in
                         VStack(alignment: .leading, spacing: 8) {

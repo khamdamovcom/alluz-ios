@@ -64,7 +64,7 @@ struct ErrorState: View {
     let retry: () -> Void
     var body: some View {
         ContentUnavailableView {
-            Label(tr("Yuklab bo'lmadi", "Не удалось загрузить", "Couldn't load"), systemImage: (error as? APIError) == .offline ? "wifi.slash" : "exclamationmark.triangle")
+            Label(tr("Yuklab boʻlmadi", "Не удалось загрузить", "Couldn't load"), systemImage: (error as? APIError) == .offline ? "wifi.slash" : "exclamationmark.triangle")
         } description: {
             Text(error.localizedDescription)
         } actions: {

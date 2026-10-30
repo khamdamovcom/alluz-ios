@@ -101,7 +101,7 @@ private struct VisaPickerList: View {
                 .padding(.bottom, 10)
 
                 if shown.isEmpty {
-                    EmptyState(text: tr("Davlat nomini boshqacha yozib ko'ring.", "Попробуйте написать название страны иначе.", "Try spelling the country differently."))
+                    EmptyState(text: tr("Davlat nomini boshqacha yozib koʻring.", "Попробуйте написать название страны иначе.", "Try spelling the country differently."))
                 } else {
                     ForEach(Array(shown.enumerated()), id: \.element.id) { i, c in
                         VisaCountryRow(country: c, highlighted: false) { onPick(c.code) }
@@ -111,7 +111,7 @@ private struct VisaPickerList: View {
                     }
                 }
                 if let a = data.asofText {
-                    Label(tr("Ma'lumot \(a) holatiga tekshirilgan", "Данные проверены на \(a)", "Checked as of \(a)"), systemImage: "checkmark.seal")
+                    Label(tr("Maʼlumot \(a) holatiga tekshirilgan", "Данные проверены на \(a)", "Checked as of \(a)"), systemImage: "checkmark.seal")
                         .font(Theme.Font.caption).foregroundStyle(Theme.muted)
                         .padding(Theme.gutter)
                 }
@@ -140,7 +140,7 @@ private struct VisaPickerList: View {
             Text(tr("Qaysi davlat fuqarosisiz?", "Гражданином какой страны вы являетесь?", "What is your citizenship?"))
                 .font(Theme.Font.largeTitle).foregroundStyle(Theme.ink)
                 .fixedSize(horizontal: false, vertical: true)
-            Text(tr("Pasportingizni bergan davlatni tanlang — vizasiz muddat, elektron viza yoki elchixona orqali viza va kelgandan keyingi qoidalarni ko'rsatamiz.",
+            Text(tr("Pasportingizni bergan davlatni tanlang — vizasiz muddat, elektron viza yoki elchixona orqali viza va kelgandan keyingi qoidalarni koʻrsatamiz.",
                     "Выберите страну, выдавшую паспорт, — покажем безвизовый срок, электронную визу или визу через посольство и правила после прибытия.",
                     "Pick the country that issued your passport to see your visa-free period, e-visa or embassy visa, and the rules after arrival."))
                 .font(Theme.Font.sub).foregroundStyle(Theme.ink2)
@@ -270,7 +270,7 @@ private struct VisaResultContent: View {
                 if !d.same.isEmpty { samePanel }
 
                 if let a = d.asofText {
-                    Label(tr("Ma'lumot \(a) holatiga tekshirilgan", "Данные проверены на \(a)", "Checked as of \(a)"), systemImage: "checkmark.seal")
+                    Label(tr("Maʼlumot \(a) holatiga tekshirilgan", "Данные проверены на \(a)", "Checked as of \(a)"), systemImage: "checkmark.seal")
                         .font(Theme.Font.caption).foregroundStyle(Theme.muted)
                 }
             }
@@ -400,7 +400,7 @@ private struct VisaResultContent: View {
                 Image(systemName: "book.fill").font(.title3).foregroundStyle(Theme.accent)
                     .frame(width: 44, height: 44).background(Theme.accent.opacity(0.12), in: RoundedRectangle(cornerRadius: Theme.Radius.s, style: .continuous))
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(tr("Qo'llanma", "Путеводитель", "Guide")).font(Theme.Font.caption).foregroundStyle(Theme.muted)
+                    Text(tr("Qoʻllanma", "Путеводитель", "Guide")).font(Theme.Font.caption).foregroundStyle(Theme.muted)
                     Text(d.guide?.name ?? tr("Viza va kirish", "Визы и въезд", "Visas and entry")).font(Theme.Font.headline).foregroundStyle(Theme.ink).multilineTextAlignment(.leading)
                 }
                 Spacer(minLength: 0)
@@ -626,7 +626,7 @@ private struct VisaContactCard: View {
                     InfoRow(symbol: "phone", title: p.label ?? tr("Telefon", "Телефон", "Phone"), value: p.value) {
                         if let u = GovLinks.tel(p.tel) { model.openURL(u) }
                     }
-                    .accessibilityHint(tr("Qo'ng'iroq qilish", "Позвонить", "Call"))
+                    .accessibilityHint(tr("Qoʻngʻiroq qilish", "Позвонить", "Call"))
                 }
                 ForEach(c.emails, id: \.self) { e in
                     InfoRow(symbol: "envelope", title: "E-mail", value: e) { if let u = GovLinks.mail(e) { model.openURL(u) } }

@@ -1,5 +1,5 @@
 // Til: uz / ru / en — ilova ichida almashtiriladi (Sozlamalar), standart — telefon tili (o'zbek/rus, aks holda ingliz).
-// Matnlar kodda uch tilda: tr("O'zbekcha", "Русский", "English"). Til almashsa ildiz ko'rinish qayta chiziladi (.id(lang)).
+// Matnlar kodda uch tilda: tr("Oʻzbekcha", "Русский", "English"). Til almashsa ildiz ko'rinish qayta chiziladi (.id(lang)).
 import Foundation
 
 enum Lang: String, CaseIterable, Identifiable, Codable, Sendable {

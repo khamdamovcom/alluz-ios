@@ -95,7 +95,8 @@ enum CurrencyFmt {
     static func diffColor(_ d: Double) -> Color { d > 0 ? Theme.ok : d < 0 ? Theme.bad : Theme.muted }
     static func parse(_ s: String) -> Double? {
         let t = s.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\u{00A0}", with: "").replacingOccurrences(of: ",", with: ".")
-        return t.isEmpty ? nil : Double(t)
+        guard !t.isEmpty, let d = Double(t), d.isFinite, d >= 0, d < 1e15 else { return nil }
+        return d
     }
 }
 

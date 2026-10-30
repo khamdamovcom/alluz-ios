@@ -12,11 +12,11 @@ enum APIError: LocalizedError, Equatable {
 
     var errorDescription: String? {
         switch self {
-        case .offline: return tr("Internet yo'q. Ulanishni tekshiring.", "Нет интернета. Проверьте подключение.", "No internet connection.")
+        case .offline: return tr("Internet yoʻq. Ulanishni tekshiring.", "Нет интернета. Проверьте подключение.", "No internet connection.")
         case .notFound: return tr("Topilmadi.", "Не найдено.", "Not found.")
-        case .server(let c): return tr("Server xatosi (\(c)). Birozdan keyin urinib ko'ring.", "Ошибка сервера (\(c)). Попробуйте позже.", "Server error (\(c)). Please try again later.")
-        case .decoding: return tr("Ma'lumotni o'qib bo'lmadi. Ilovani yangilang.", "Не удалось прочитать данные. Обновите приложение.", "Could not read data. Please update the app.")
-        case .blocked: return tr("Xavfsiz ulanib bo'lmadi.", "Не удалось установить безопасное соединение.", "Secure connection failed.")
+        case .server(let c): return tr("Server xatosi (\(c)). Birozdan keyin urinib koʻring.", "Ошибка сервера (\(c)). Попробуйте позже.", "Server error (\(c)). Please try again later.")
+        case .decoding: return tr("Maʼlumotni oʻqib boʻlmadi. Ilovani yangilang.", "Не удалось прочитать данные. Обновите приложение.", "Could not read data. Please update the app.")
+        case .blocked: return tr("Xavfsiz ulanib boʻlmadi.", "Не удалось установить безопасное соединение.", "Secure connection failed.")
         }
     }
 }

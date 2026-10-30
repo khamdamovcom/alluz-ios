@@ -78,7 +78,7 @@ struct MapScreen: View {
                         Image(systemName: "xmark.circle.fill").foregroundStyle(Theme.muted)
                     }
                     .buttonStyle(.plain)
-                    .frame(minWidth: 28, minHeight: 28)
+                    .frame(minWidth: 44, minHeight: 44)
                     .accessibilityLabel(tr("Tozalash", "Очистить", "Clear"))
                 }
             }
@@ -257,7 +257,7 @@ private struct MapPointRow: View {
         HStack(spacing: 12) {
             Image(systemName: annotation.glyph)
                 .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
+                .foregroundStyle(Theme.accentInk)
                 .frame(width: 32, height: 32)
                 .background(annotation.category.color, in: Circle())
                 .accessibilityHidden(true)

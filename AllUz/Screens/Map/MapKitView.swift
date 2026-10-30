@@ -170,7 +170,7 @@ final class MapPointMarkerView: MKMarkerAnnotationView {
         guard let a = annotation as? MapPointAnnotation else { return }
         markerTintColor = a.category.uiColor
         glyphImage = UIImage(systemName: a.glyph)
-        glyphTintColor = .white
+        glyphTintColor = UIColor(Theme.accentInk)
         // Muhim joylar zich hududda ham ko'rinib tursin
         displayPriority = a.point.rating >= 5 ? .defaultHigh : a.point.rating >= 4 ? MKFeatureDisplayPriority(rawValue: 600) : .defaultLow
         titleVisibility = .adaptive
@@ -200,7 +200,7 @@ final class MapClusterMarkerView: MKMarkerAnnotationView {
         let top = tally.max { $0.value < $1.value }?.key ?? .place
         markerTintColor = top.uiColor
         glyphText = members.count > 999 ? "999+" : "\(c.memberAnnotations.count)"
-        glyphTintColor = .white
+        glyphTintColor = UIColor(Theme.accentInk)
         isAccessibilityElement = true
         accessibilityLabel = tr("\(c.memberAnnotations.count) ta nuqta — yaqinlashtirish", "Точек: \(c.memberAnnotations.count) — приблизить",
                                 "\(c.memberAnnotations.count) places — zoom in")

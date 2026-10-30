@@ -47,7 +47,7 @@ enum DetailLink {
     static func instagram(_ raw: String?) -> URL? {
         guard let s = raw?.trimmingCharacters(in: .whitespacesAndNewlines), !s.isEmpty else { return nil }
         if s.contains("/") {
-            guard let u = web(s), let h = u.host?.lowercased(), h.hasSuffix("instagram.com") else { return nil }
+            guard let u = web(s), let h = u.host?.lowercased(), (h == "instagram.com" || h.hasSuffix(".instagram.com")) else { return nil }
             return u
         }
         let name = s.hasPrefix("@") ? String(s.dropFirst()) : s

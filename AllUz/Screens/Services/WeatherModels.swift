@@ -234,7 +234,7 @@ enum WeatherGlyph {
 enum WeatherFmt {
     /// −3° (haqiqiy minus belgisi)
     static func deg(_ v: Double?) -> String {
-        guard let v else { return "—" }
+        guard let v, v.isFinite, abs(v) < 1000 else { return "—" }
         let n = Int(v.rounded())
         return (n < 0 ? "−\(-n)" : "\(n)") + "°"
     }
@@ -252,7 +252,7 @@ enum WeatherFmt {
         return tr(uz[i], ru[i], en[i])
     }
     /// hPa → mm simob ustuni
-    static func mmHg(_ hpa: Double) -> String { "\(Int((hpa * 0.750062).rounded())) \(tr("mm sim. ust.", "мм рт. ст.", "mmHg"))" }
+    static func mmHg(_ hpa: Double) -> String { "\(Int((min(max(hpa, 0), 2000) * 0.750062).rounded())) \(tr("mm sim. ust.", "мм рт. ст.", "mmHg"))" }
     static func updated(_ ms: Double?) -> String? {
         guard let ms, ms > 0 else { return nil }
         let d = Date(timeIntervalSince1970: ms / 1000)

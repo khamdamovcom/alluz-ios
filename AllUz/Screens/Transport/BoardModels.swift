@@ -81,7 +81,7 @@ private extension KeyedDecodingContainer {
     /// Matn yoki son — bo'sh bo'lsa nil (terminal/gate ba'zan son bo'lib keladi)
     func loose(_ k: Key) -> String? {
         if let s = try? decodeIfPresent(String.self, forKey: k) { let t = s.trimmingCharacters(in: .whitespaces); return t.isEmpty ? nil : t }
-        if let n = try? decodeIfPresent(Double.self, forKey: k) { return n.rounded() == n ? String(Int(n)) : String(n) }
+        if let n = try? decodeIfPresent(Double.self, forKey: k) { return n.rounded() == n && abs(n) < 1e15 ? String(Int(n)) : String(n) }
         return nil
     }
 }

@@ -142,7 +142,7 @@ private struct DistancesContent: View {
             .background(Theme.paper)
         }
         .toolbar {
-            if let web = result?.web, let u = URL(string: AppConfig.site + web) {
+            if let web = result?.web, web.hasPrefix("/"), let u = URL(string: AppConfig.site + web), u.host == AppConfig.host {
                 ToolbarItem(placement: .topBarTrailing) {
                     ShareLink(item: u) { Image(systemName: "square.and.arrow.up") }
                         .accessibilityLabel(tr("Ulashish", "Поделиться", "Share"))
@@ -555,7 +555,7 @@ private struct DistMiniMap: View {
 
     private func pin(_ color: Color, _ symbol: String) -> some View {
         Image(systemName: symbol)
-            .font(.system(size: 11, weight: .bold)).foregroundStyle(.white)
+            .font(.system(size: 11, weight: .bold)).foregroundStyle(Theme.accentInk)
             .frame(width: 24, height: 24)
             .background(color, in: Circle())
             .overlay(Circle().strokeBorder(.white, lineWidth: 2))

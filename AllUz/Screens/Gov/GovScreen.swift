@@ -194,7 +194,7 @@ struct GovScreen: View {
                 .contentTransition(.numericText())
                 .padding(.horizontal, Theme.gutter)
             if r.sections.isEmpty {
-                EmptyState(text: tr("Boshqa so'z yoki filtr bilan urinib ko'ring.", "Попробуйте другое слово или фильтр.", "Try another word or filter."))
+                EmptyState(text: tr("Boshqa soʻz yoki filtr bilan urinib koʻring.", "Попробуйте другое слово или фильтр.", "Try another word or filter."))
             }
             ForEach(r.sections) { s in
                 VStack(alignment: .leading, spacing: 6) {
@@ -216,7 +216,7 @@ struct GovScreen: View {
                 Button { Task { await loadMore(offset: shownCount) } } label: {
                     HStack(spacing: 8) {
                         if loadingMore { ProgressView() }
-                        Text(tr("Yana ko'rsatish (\(r.total - shownCount))", "Показать ещё (\(r.total - shownCount))", "Show more (\(r.total - shownCount))"))
+                        Text(tr("Yana koʻrsatish (\(r.total - shownCount))", "Показать ещё (\(r.total - shownCount))", "Show more (\(r.total - shownCount))"))
                     }
                     .font(Theme.Font.sub.weight(.semibold)).frame(maxWidth: .infinity).padding(.vertical, 4)
                 }
@@ -298,7 +298,7 @@ private struct GovEmergencyGrid: View {
             }
             .accessibilityElement(children: .combine)
             .accessibilityAddTraits(.isHeader)
-            Text(tr("Bepul, kecha-kunduz. Bosing — qo'ng'iroq qilinadi.", "Бесплатно, круглосуточно. Нажмите, чтобы позвонить.", "Free, 24/7. Tap to call."))
+            Text(tr("Bepul, kecha-kunduz. Bosing — qoʻngʻiroq qilinadi.", "Бесплатно, круглосуточно. Нажмите, чтобы позвонить.", "Free, 24/7. Tap to call."))
                 .font(Theme.Font.caption).foregroundStyle(Theme.muted)
             if let first = phones.first {
                 button(first, wide: true)
@@ -344,7 +344,7 @@ private struct GovEmergencyGrid: View {
         .buttonStyle(.press)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(p.num), \(p.label)")
-        .accessibilityHint(tr("Qo'ng'iroq qilish", "Позвонить", "Call"))
+        .accessibilityHint(tr("Qoʻngʻiroq qilish", "Позвонить", "Call"))
         .accessibilityAddTraits(.isButton)
     }
 }
@@ -379,7 +379,7 @@ private struct GovHotlineRail: View {
                         .carouselEffect()
                         .accessibilityElement(children: .ignore)
                         .accessibilityLabel("\(h.num), \(h.label)")
-                        .accessibilityHint(tr("Qo'ng'iroq qilish", "Позвонить", "Call"))
+                        .accessibilityHint(tr("Qoʻngʻiroq qilish", "Позвонить", "Call"))
                         .accessibilityAddTraits(.isButton)
                     }
                 }

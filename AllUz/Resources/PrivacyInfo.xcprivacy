@@ -2,7 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!-- Maxfiylik manifesti: kuzatuv yo'q, reklama yo'q, analitika yo'q, hisob yo'q. Ilova faqat ochiq kontentni o'qiydi.
      Sevimlilar, oxirgi ko'rilganlar va joylashuv faqat telefonda qoladi, serverga yuborilmaydi.
-     UserDefaults — faqat ilovaning o'z sozlamalari (til, mavzu): CA92.1. -->
+     UserDefaults — faqat ilovaning o'z sozlamalari va tanlovlari (til, mavzu, oxirgi qidiruvlar, tanlangan aeroport/vokzal/valyuta,
+     fuqarolik — viza ekrani uchun), hammasi faqat telefonda: CA92.1. -->
 <plist version="1.0">
 <dict>
 	<key>NSPrivacyTracking</key>

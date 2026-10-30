@@ -20,9 +20,9 @@ struct DetailSeason: View {
                                 .frame(height: on ? 26 : 14)
                                 .frame(height: 26, alignment: .bottom)
                             Text(DetailLabels.monthShort(m))
-                                .font(.system(size: 9, weight: on ? .bold : .regular))
+                                .font(.caption2.weight(on ? .bold : .regular))
                                 .foregroundStyle(on ? Theme.accent : Theme.muted)
-                                .lineLimit(1).minimumScaleFactor(0.6)
+                                .lineLimit(1).minimumScaleFactor(0.8)
                         }
                         .frame(maxWidth: .infinity)
                     }
