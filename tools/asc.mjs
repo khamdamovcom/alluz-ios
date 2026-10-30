@@ -5,7 +5,7 @@
 //   metadata              — App Store sahifasi matnlari (appstore/<til>/*.txt), toifa, mualliflik
 //   screenshots <papka>   — skrinshotlar (<papka>/phone/*.png → en-US va ru, ilova o'zbekcha)
 //   setup                 — kontent huquqi, bepul narx, mavjudlik (Xitoysiz)
-//   review                — App Review: demo hisoblar (demo.json) va izoh, kontakt sam.uz dan
+//   review                — App Review izohi (hisob yo'q), kontakt sam.uz dan
 //   testflight | attach | submit — ichki sinov guruhi, buildni versiyaga biriktirish, ko'rib chiqishga yuborish (faqat egasi roziligi bilan)
 //   status                — buildlar va versiya holati
 // Kalit va sertifikatlar repozitoriyga tushmaydi: /root/zaxira/alluz-ios (700).
@@ -105,8 +105,8 @@ async function signing(team) {
   const pass = fs.existsSync(passF) ? fs.readFileSync(passF, 'utf8').trim() : crypto.randomBytes(18).toString('base64url');
   fs.writeFileSync(passF, pass, { mode: 0o600 });
   execFileSync('openssl', ['x509', '-inform', 'DER', '-in', certF, '-out', path.join(DIR, 'dist.pem')]);
-  execFileSync('openssl', ['pkcs12', '-export', '-inkey', keyF, '-in', path.join(DIR, 'dist.pem'), '-out', p12F, '-passout', `pass:${pass}`,
-    '-name', 'Apple Distribution', '-keypbe', 'PBE-SHA1-3DES', '-certpbe', 'PBE-SHA1-3DES', '-macalg', 'sha1']);
+  execFileSync('openssl', ['pkcs12', '-export', '-inkey', keyF, '-in', path.join(DIR, 'dist.pem'), '-out', p12F, '-passout', 'env:P12PASS',
+    '-name', 'Apple Distribution', '-keypbe', 'PBE-SHA1-3DES', '-certpbe', 'PBE-SHA1-3DES', '-macalg', 'sha1'], { env: { ...process.env, P12PASS: pass } });
   fs.chmodSync(p12F, 0o600);
   // 4) App Store profili (eskisini o'chirib, yangisini yaratamiz — sertifikat o'zgargan bo'lishi mumkin)
   const name = 'AllUz App Store';
@@ -140,12 +140,12 @@ async function editableVersion(id) {
 
 async function metadata() {
   const id = await appId();
-  if (!id) throw new Error("App Store Connect'da ilova yo'q — avval Apps → «+» → New App (bundle com.prohisob.app)");
+  if (!id) throw new Error("App Store Connect'da ilova yo'q — avval Apps → «+» → New App (bundle com.alluzbekistan.app)");
   // ilova ma'lumoti: nom, subtitle, maxfiylik havolasi; toifa
   const infos = (await get(`/v1/apps/${id}/appInfos`)).data;
   const info = infos.find((x) => !['READY_FOR_DISTRIBUTION', 'REPLACED_WITH_NEW_INFO'].includes(x.attributes.appStoreState || x.attributes.state)) || infos[0];
   await api('PATCH', `/v1/appInfos/${info.id}`, { data: { type: 'appInfos', id: info.id, relationships: {
-    primaryCategory: { data: { type: 'appCategories', id: 'BUSINESS' } }, secondaryCategory: { data: { type: 'appCategories', id: 'FINANCE' } } } } });
+    primaryCategory: { data: { type: 'appCategories', id: 'TRAVEL' } }, secondaryCategory: { data: { type: 'appCategories', id: 'REFERENCE' } } } } });
   const il = (await get(`/v1/appInfos/${info.id}/appInfoLocalizations`)).data;
   for (const loc of Object.keys(LOCS)) {
     const attrs = { name: read(loc, 'name.txt'), subtitle: read(loc, 'subtitle.txt'), privacyPolicyUrl: read(loc, 'privacy_url.txt') };
@@ -157,7 +157,7 @@ async function metadata() {
   }
   // versiya: 1.0.0, mualliflik, tavsif, kalit so'zlar, havolalar
   const v = await editableVersion(id);
-  await api('PATCH', `/v1/appStoreVersions/${v.id}`, { data: { type: 'appStoreVersions', id: v.id, attributes: { versionString: '1.0.0', copyright: `${new Date().getFullYear()} Prohisob` } } });
+  await api('PATCH', `/v1/appStoreVersions/${v.id}`, { data: { type: 'appStoreVersions', id: v.id, attributes: { versionString: '1.0.0', copyright: `${new Date().getFullYear()} All Uzbekistan` } } });
   const vl = (await get(`/v1/appStoreVersions/${v.id}/appStoreVersionLocalizations`)).data;
   for (const loc of Object.keys(LOCS)) {
     const attrs = { description: read(loc, 'description.txt'), keywords: read(loc, 'keywords.txt'), promotionalText: read(loc, 'promotional_text.txt'),
@@ -218,7 +218,7 @@ async function testflight() {
   if (!id) throw new Error("ilova yo'q");
   let g = (await get(`/v1/apps/${id}/betaGroups?limit=50`)).data.find((x) => x.attributes.isInternalGroup);
   if (!g) {
-    g = (await api('POST', '/v1/betaGroups', { data: { type: 'betaGroups', attributes: { name: 'Prohisob jamoa', isInternalGroup: true, hasAccessToAllBuilds: true },
+    g = (await api('POST', '/v1/betaGroups', { data: { type: 'betaGroups', attributes: { name: 'All Uzbekistan jamoa', isInternalGroup: true, hasAccessToAllBuilds: true },
       relationships: { app: { data: { type: 'apps', id } } } } })).data;
     console.log('ichki sinov guruhi yaratildi:', g.attributes.name);
   } else console.log('ichki sinov guruhi bor:', g.attributes.name);
@@ -267,8 +267,8 @@ async function submit() {
 async function setup() {
   const id = await appId();
   if (!id) throw new Error("ilova yo'q");
-  await api('PATCH', `/v1/apps/${id}`, { data: { type: 'apps', id, attributes: { contentRightsDeclaration: 'DOES_NOT_USE_THIRD_PARTY_CONTENT' } } });
-  console.log('kontent huquqi: uchinchi tomon kontenti yo\'q');
+  await api('PATCH', `/v1/apps/${id}`, { data: { type: 'apps', id, attributes: { contentRightsDeclaration: 'USES_THIRD_PARTY_CONTENT' } } });
+  console.log('kontent huquqi: uchinchi tomon kontenti bor (CC litsenziyali suratlar, mualliflar ko\'rsatilgan)');
   // narx: bepul (asosiy hudud AQSH)
   const pts = await get(`/v1/apps/${id}/appPricePoints?filter[territory]=USA&limit=200`);
   const free = pts.data.find((x) => Number(x.attributes.customerPrice) === 0);
@@ -291,11 +291,19 @@ async function setup() {
   } catch (e) { console.log('mavjudlik:', e.message); }
 }
 
-// ---------- review: App Review uchun demo hisoblar va izoh (parollar /root/zaxira/prohisob-ios/demo.json dan, repoga tushmaydi) ----------
+// ---------- review: App Review izohi (hisob yo'q — demo kerak emas) va aloqa ----------
+const REVIEW_NOTES = [
+  'All Uzbekistan is a free, independent travel and reference guide to Uzbekistan — the native app of https://alluzbekistan.com.',
+  'No account, no sign-in, no purchases, no ads, no tracking. All content is public and read-only; the app is fully usable without any login.',
+  'Content: places and monuments, regions and districts, hotels and restaurants (contacts only, no booking), history and culture, routes,',
+  'live airport departure/arrival boards (official airport data), train timetables, visa rules, weather (MET Norway), Central Bank exchange rates,',
+  'post codes and government office contacts. Languages: English, Russian, Uzbek (Settings).',
+  'Location (optional) is requested only when the user taps "My location" on the map and is used only on the device.',
+  'Photos are credited to their authors under Creative Commons / official licenses (shown under every photo).',
+].join('\n');
 async function review() {
   const id = await appId();
   if (!id) throw new Error("ilova yo'q");
-  const demo = JSON.parse(fs.readFileSync(path.join(DIR, 'demo.json'), 'utf8'));
   const v = await editableVersion(id);
   // aloqa ma'lumoti — jamoaning boshqa ilovasidagi (sam.uz) App Review kontaktidan
   let contact = {};
@@ -305,17 +313,8 @@ async function review() {
     const rd = sv ? (await get(`/v1/appStoreVersions/${sv.id}/appStoreReviewDetail`).catch(() => null))?.data : null;
     if (rd) contact = Object.fromEntries(['contactFirstName', 'contactLastName', 'contactPhone', 'contactEmail'].map((k) => [k, rd.attributes[k]]));
   }
-  const notes = [
-    'Prohisob is a B2B bookkeeping app for construction foremen in Uzbekistan. The interface is in Uzbek.',
-    'Accounts are created by us for each foreman (no in-app sign-up, no purchases). The demo workspace below contains sample data only.',
-    '',
-    `1) Foreman account — on the sign-in screen keep the "Prorab / xodim" tab: login ${demo.prorab.login}, password ${demo.prorab.parol}.`,
-    '   Tabs: Asosiy (dashboard), Obyektlar (projects), Ustalar (workers), Yozuvlar (records), Yana (more). The "+ Yangi yozuv" button adds a record; a receipt photo can be attached from the camera.',
-    `2) Property owner (client) account — choose the "Obyekt egasi" tab: login ${demo.mijoz.login}, password ${demo.mijoz.parol}. It shows a read-only view of the owner's own project.`,
-    '',
-    'Camera/photos are used only to attach receipts; Face ID is an optional app lock (Yana → Xavfsizlik). Feel free to add or delete records in the demo workspace.',
-  ].join('\n');
-  const attrs = { ...contact, demoAccountRequired: true, demoAccountName: demo.prorab.login, demoAccountPassword: demo.prorab.parol, notes };
+  const notes = REVIEW_NOTES;
+  const attrs = { ...contact, demoAccountRequired: false, notes };
   const ex = (await get(`/v1/appStoreVersions/${v.id}/appStoreReviewDetail`).catch(() => null))?.data;
   if (ex) await api('PATCH', `/v1/appStoreReviewDetails/${ex.id}`, { data: { type: 'appStoreReviewDetails', id: ex.id, attributes: attrs } });
   else await api('POST', '/v1/appStoreReviewDetails', { data: { type: 'appStoreReviewDetails', attributes: attrs,
@@ -324,9 +323,9 @@ async function review() {
 }
 
 // ---------- beta: tashqi sinovchilar (jamoa a'zosi emas — faqat email; birinchi build Apple Beta App Review'dan o'tadi) ----------
-//   beta add <email> [ism]  — «Prohisob sinovchilar» guruhiga qo'shish (+ beta ma'lumotlari: demo hisob, izoh, aloqa)
+//   beta add <email> [ism]  — «All Uzbekistan sinovchilar» guruhiga qo'shish (+ beta ma'lumotlari: demo hisob, izoh, aloqa)
 //   beta build              — oxirgi VALID buildni guruhga berish va Beta App Review'ga yuborish (sinovchilarga email shundan keyin)
-const BETA_GROUP = 'Prohisob sinovchilar';
+const BETA_GROUP = 'All Uzbekistan sinovchilar';
 async function betaGroup(id) {
   let g = (await get(`/v1/apps/${id}/betaGroups?limit=50`)).data.find((x) => !x.attributes.isInternalGroup && x.attributes.name === BETA_GROUP);
   if (!g) {
@@ -337,19 +336,17 @@ async function betaGroup(id) {
   return g;
 }
 async function betaInfo(id) {
-  const demo = JSON.parse(fs.readFileSync(path.join(DIR, 'demo.json'), 'utf8'));
   const v = await editableVersion(id);
   const rd = (await get(`/v1/appStoreVersions/${v.id}/appStoreReviewDetail`).catch(() => null))?.data?.attributes || {};
   const attrs = { contactFirstName: rd.contactFirstName, contactLastName: rd.contactLastName, contactPhone: rd.contactPhone, contactEmail: rd.contactEmail,
-    demoAccountRequired: true, demoAccountName: demo.prorab.login, demoAccountPassword: demo.prorab.parol,
-    notes: `Interface is in Uzbek. Foreman demo: ${demo.prorab.login} / ${demo.prorab.parol} ("Prorab / xodim" tab). Property owner demo: ${demo.mijoz.login} / ${demo.mijoz.parol} ("Obyekt egasi" tab). Sample data only.` };
+    demoAccountRequired: false, notes: REVIEW_NOTES };
   const d = (await get(`/v1/apps/${id}/betaAppReviewDetail`)).data;
   await api('PATCH', `/v1/betaAppReviewDetails/${d.id}`, { data: { type: 'betaAppReviewDetails', id: d.id, attributes: attrs } });
   const locs = (await get(`/v1/apps/${id}/betaAppLocalizations`)).data;
-  const desc = { ru: 'Prohisob — учёт строительных объектов для прорабов: объекты, мастера, магазины, расходы и чеки. Интерфейс на узбекском.',
-    'en-US': 'Prohisob — construction bookkeeping for foremen: projects, workers, suppliers, expenses and receipts. Uzbek interface.' };
+  const desc = { ru: 'All Uzbekistan — путеводитель по Узбекистану: достопримечательности, регионы, табло аэропортов, визы, погода, курсы валют.',
+    'en-US': 'All Uzbekistan — travel guide to Uzbekistan: sights, regions, live airport boards, visa rules, weather and exchange rates.' };
   for (const [locale, description] of Object.entries(desc)) {
-    const a = { description, feedbackEmail: rd.contactEmail, marketingUrl: 'https://prohisob.com', privacyPolicyUrl: 'https://cabinet.prohisob.com/maxfiylik' };
+    const a = { description, feedbackEmail: rd.contactEmail, marketingUrl: 'https://alluzbekistan.com', privacyPolicyUrl: 'https://alluzbekistan.com/en/maxfiylik' };
     const ex = locs.find((x) => x.attributes.locale === locale);
     if (ex) await api('PATCH', `/v1/betaAppLocalizations/${ex.id}`, { data: { type: 'betaAppLocalizations', id: ex.id, attributes: a } });
     else await api('POST', '/v1/betaAppLocalizations', { data: { type: 'betaAppLocalizations', attributes: { locale, ...a },
@@ -373,7 +370,7 @@ async function beta(sub, a1, a2) {
     const b = (await get(`/v1/builds?filter[app]=${id}&filter[processingState]=VALID&sort=-uploadedDate&limit=1`)).data[0];
     if (!b) throw new Error("tayyor build yo'q");
     const bl = (await get(`/v1/builds/${b.id}/betaBuildLocalizations`)).data;
-    const whatsNew = 'Birinchi versiya: obyektlar, ustalar, magazinlar, yozuvlar va cheklar, hisobot va Excel, obyekt egasi rejimi. Kamchilik topsangiz — TestFlight orqali skrinshot bilan yuboring.';
+    const whatsNew = 'Birinchi sinov versiyasi: joylar, hududlar, xarita, aeroport tablosi, viza, ob-havo, valyuta va boshqalar. Kamchilik topsangiz — TestFlight orqali skrinshot bilan yuboring.';
     for (const locale of ['ru', 'en-US']) {
       const ex = bl.find((x) => x.attributes.locale === locale);
       if (ex) await api('PATCH', `/v1/betaBuildLocalizations/${ex.id}`, { data: { type: 'betaBuildLocalizations', id: ex.id, attributes: { whatsNew } } });
