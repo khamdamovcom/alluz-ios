@@ -56,6 +56,7 @@ final class AppModel {
     func openURL(_ url: URL) {
         if url.host == AppConfig.host || url.host == "www." + AppConfig.host, let r = Route(webPath: url.path) { open(r); return }
         guard let scheme = url.scheme?.lowercased() else { return }
+        if scheme == "https", url.host == "apps.apple.com" { UIApplication.shared.open(url); return }   // App Store ilovasida
         if scheme == "https" { webURL = IdentifiedURL(url: url) }
         else if scheme == "http", var c = URLComponents(url: url, resolvingAgainstBaseURL: false) {   // Safari oynasida ATS yo'q — https ga
             c.scheme = "https"; if let u = c.url { webURL = IdentifiedURL(url: u) }
