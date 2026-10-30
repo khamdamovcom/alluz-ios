@@ -15,7 +15,7 @@ struct MapKitView: UIViewRepresentable {
     func makeCoordinator() -> MapKitCoordinator { MapKitCoordinator(model: model) }
 
     func makeUIView(context: Context) -> MKMapView {
-        let m = MKMapView()
+        let m = MapKitHostView()
         let cfg = MKStandardMapConfiguration(elevationStyle: .flat, emphasisStyle: .muted)
         cfg.pointOfInterestFilter = .excludingAll
         m.preferredConfiguration = cfg
@@ -26,7 +26,6 @@ struct MapKitView: UIViewRepresentable {
         m.register(MapPointMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         m.register(MapClusterMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
         m.delegate = context.coordinator
-        m.setVisibleMapRect(MapGeo.uzbekistan, edgePadding: UIEdgeInsets(top: 120, left: 16, bottom: 90, right: 16), animated: false)
         m.accessibilityLabel = tr("Oʻzbekiston xaritasi", "Карта Узбекистана", "Map of Uzbekistan")
         return m
     }
@@ -90,7 +89,7 @@ final class MapKitCoordinator: NSObject, MKMapViewDelegate {
             m.selectedAnnotations.forEach { m.deselectAnnotation($0, animated: true) }
             programmatic = false
         case .home:
-            m.setVisibleMapRect(MapGeo.uzbekistan, edgePadding: UIEdgeInsets(top: 120, left: 16, bottom: 90, right: 16), animated: true)
+            m.setVisibleMapRect(MapGeo.uzbekistan, edgePadding: MapGeo.homePadding, animated: true)
         case .user:
             if let loc = m.userLocation.location, CLLocationCoordinate2DIsValid(loc.coordinate) {
                 m.setRegion(MKCoordinateRegion(center: loc.coordinate, latitudinalMeters: 4000, longitudinalMeters: 4000), animated: true)
@@ -137,6 +136,17 @@ final class MapKitCoordinator: NSObject, MKMapViewDelegate {
         guard let loc = userLocation.location, loc.horizontalAccuracy >= 0 else { return }
         if let old = model.userLocation, old.distance(from: loc) < 50 { return }   // keraksiz qayta chizishsiz
         model.userLocation = loc
+    }
+}
+
+/// Boshlang'ich ko'rinish (butun O'zbekiston) — o'lchami ma'lum bo'lgach bir marta
+final class MapKitHostView: MKMapView {
+    private var fitted = false
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        guard !fitted, bounds.width > 0, bounds.height > 0 else { return }
+        fitted = true
+        setVisibleMapRect(MapGeo.uzbekistan, edgePadding: MapGeo.homePadding, animated: false)
     }
 }
 

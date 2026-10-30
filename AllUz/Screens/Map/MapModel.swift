@@ -133,6 +133,8 @@ enum MapGeo {
         return MKMapRect(x: min(a.x, b.x), y: min(a.y, b.y), width: abs(a.x - b.x), height: abs(a.y - b.y))
     }()
     static let center = CLLocationCoordinate2D(latitude: 41.3, longitude: 64.6)
+    /// Tepada qidiruv+chiplar, pastda tab bar
+    static let homePadding = UIEdgeInsets(top: 130, left: 12, bottom: 70, right: 12)
 }
 
 // MARK: - Model
