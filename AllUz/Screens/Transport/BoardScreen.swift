@@ -229,6 +229,7 @@ struct BoardScreen: View {
             HStack(spacing: 8) {
                 BoardSegment(items: BoardDay.allCases, selection: Binding(get: { vm.day }, set: { vm.select(day: $0) }),
                              title: { $0.title }, compact: true)
+                    .layoutPriority(1)
                 Spacer(minLength: 4)
                 BoardUpdatedBadge(updated: vm.updatedAt, refreshing: vm.refreshing, stale: vm.isStale)
             }

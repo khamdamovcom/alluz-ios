@@ -291,7 +291,7 @@ private struct TransportAirportRow: View {
                     .labelStyle(TransportCompactLabel())
                     if s.delayed > 0 {
                         Text(tr("\(s.delayed) kechikmoqda", "\(s.delayed) задерж.", "\(s.delayed) delayed"))
-                            .font(Theme.Font.caption2Bold).foregroundStyle(Theme.warn)
+                            .font(Theme.Font.boardCaption2Bold).foregroundStyle(Theme.warn)
                     }
                 }
                 .contentTransition(.numericText())

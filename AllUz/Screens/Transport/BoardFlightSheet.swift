@@ -59,16 +59,13 @@ struct BoardFlightSheet: View {
     // MARK: Sarlavha
 
     private var header: some View {
-        HStack(alignment: .top, spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                Kicker(text: [item.airline, dir.title, item.sched.map { Fmt.day($0) }].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: " · "))
-                Text(f.flight).font(Theme.Font.display(32)).monospaced().foregroundStyle(Theme.ink)
-                    .lineLimit(1).minimumScaleFactor(0.7)
-            }
-            Spacer(minLength: 8)
+        VStack(alignment: .leading, spacing: 8) {
+            Kicker(text: [item.airline, dir.title, item.sched.map { Fmt.day($0) }].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: " · "))
+            Text(f.flight).font(Theme.Font.display(32)).monospaced().foregroundStyle(Theme.ink)
+                .lineLimit(1).minimumScaleFactor(0.7)
             BoardStatusPill(label: item.label, tone: item.tone, large: true)
-                .padding(.top, 18)
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
         .accessibilityElement(children: .combine)
     }
 
@@ -117,7 +114,7 @@ struct BoardFlightSheet: View {
                 .font(Theme.Font.caption).foregroundStyle(Theme.muted)
             } else {
                 Text("—").font(Theme.Font.boardTime).foregroundStyle(Theme.line).padding(.top, 6)
-                Text(tr("mahalliy vaqt", "местное время", "local time")).font(Theme.Font.caption).foregroundStyle(Theme.muted).hidden()
+                    .accessibilityHidden(true)
             }
         }
         .frame(minWidth: 84, alignment: align == .leading ? .leading : .trailing)
@@ -237,7 +234,7 @@ struct BoardFlightSheet: View {
             }
             .primaryButton().tint(Theme.accent)
             if let url = radarURL {
-                Button { model.openWeb(url) } label: {
+                Button { openWeb(url) } label: {
                     Label(tr("Flightradar24 da kuzatish", "Следить на Flightradar24", "Track on Flightradar24"), systemImage: "location.viewfinder")
                         .font(Theme.Font.sub.weight(.semibold)).frame(maxWidth: .infinity, minHeight: 44)
                 }
@@ -283,7 +280,7 @@ struct BoardFlightSheet: View {
     @ViewBuilder private var sourceLine: some View {
         VStack(alignment: .leading, spacing: 6) {
             if let s = source, let host = BoardSource.host(s) {
-                Button { model.openWeb(BoardSource.home(s)) } label: {
+                Button { openWeb(BoardSource.home(s)) } label: {
                     Label("\(tr("Manba", "Источник", "Source")): \(host)\(updatedAt.map { " · \(tr("yangilangan", "обновлено", "updated")) \(BoardTime.time($0))" } ?? "")",
                           systemImage: "link")
                         .font(Theme.Font.caption.weight(.medium)).foregroundStyle(Theme.accent)
@@ -297,6 +294,16 @@ struct BoardFlightSheet: View {
     }
 
     // MARK: Yordamchilar
+
+    /// Tashqi havola: avval oyna yopiladi (ildizdagi Safari oynasi sheet ustida ochilmaydi), keyin model.openWeb
+    private func openWeb(_ s: String?) {
+        guard let s else { return }
+        dismiss()
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(450))
+            model.openWeb(s)
+        }
+    }
 
     private func section<C: View>(_ title: String, @ViewBuilder _ content: () -> C) -> some View {
         VStack(alignment: .leading, spacing: 6) {

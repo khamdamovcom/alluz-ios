@@ -370,4 +370,5 @@ extension Theme.Font {
     static let boardTime = SwiftUI.Font.system(.title3, design: .monospaced).weight(.bold)
     static let boardTimeSmall = SwiftUI.Font.system(.caption, design: .monospaced).weight(.medium)
     static let boardCode = SwiftUI.Font.system(.caption, design: .monospaced).weight(.semibold)
+    static let boardCaption2Bold = SwiftUI.Font.caption2.weight(.bold)
 }

@@ -124,12 +124,15 @@ struct BoardUpdatedBadge: View {
             }
             .frame(width: 14, height: 14)
             if let updated {
-                Text("\(tr("Yangilandi", "Обновлено", "Updated")) \(BoardTime.time(updated))")
-                    .font(Theme.Font.caption.monospacedDigit())
-                    .foregroundStyle(stale ? Theme.warn : Theme.muted)
-                    .contentTransition(.numericText())
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
+                // Tor ekranda (375 pt, katta shrift) — faqat vaqt
+                ViewThatFits(in: .horizontal) {
+                    Text("\(tr("Yangilandi", "Обновлено", "Updated")) \(BoardTime.time(updated))")
+                    Text(BoardTime.time(updated))
+                }
+                .font(Theme.Font.caption.monospacedDigit())
+                .foregroundStyle(stale ? Theme.warn : Theme.muted)
+                .contentTransition(.numericText())
+                .lineLimit(1)
             }
         }
         .animation(Motion.snappy, value: refreshing)

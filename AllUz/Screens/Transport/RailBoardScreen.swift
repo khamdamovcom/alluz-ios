@@ -15,7 +15,7 @@ private struct RailBoardResponse: Decodable, Sendable {
     let stale: Bool?
 }
 
-struct RailBoardRow: Identifiable, Hashable, Sendable {
+private struct RailBoardRow: Identifiable, Hashable, Sendable {
     let number: String
     let at: Date
     let timeText: String
@@ -29,13 +29,13 @@ struct RailBoardRow: Identifiable, Hashable, Sendable {
     var id: String { "\(number)|\(at.timeIntervalSince1970)" }
 }
 
-struct RailSeat: Hashable, Sendable {
+private struct RailSeat: Hashable, Sendable {
     let label: String
     let n: Int
 }
 
 /// Poyezd tafsilotidan (item/train) olinadigan qo'shimcha: turi, yetib kelish, yo'lda
-struct RailTrainInfo: Hashable, Sendable {
+private struct RailTrainInfo: Hashable, Sendable {
     let type: String?
     let arrive: String?
     let arrivePlus: Int
@@ -51,7 +51,7 @@ private struct RailStop: Decodable, Sendable {
 }
 
 /// Sayt jadval qatorlaridan o'qish: <tr class="fb__r" data-k="753М|2026-10-30T17:16:00+05:00"> … <td data-c="t" data-v="17:16|">
-enum RailBoardParser {
+private enum RailBoardParser {
     static func parse(_ html: String) -> (rows: [RailBoardRow], message: String?) {
         var rows: [RailBoardRow] = []
         var message: String?
@@ -89,7 +89,7 @@ enum RailBoardParser {
         if s.contains("lyuks") || s.contains("люкс") { return tr("Lyuks", "Люкс", "Deluxe") }
         if s.contains("kupe") || s.contains("купе") { return tr("Kupe", "Купе", "Compartment") }
         if s.contains("platskart") || s.contains("плац") { return tr("Platskart", "Плацкарт", "Open sleeper") }
-        if s.contains("tiradigan") || s.contains("сид") { return tr("Oʻtiradigan", "Сидячий", "Seated") }
+        if s.contains("tiradigan") || s.contains("сид") || s.contains("cид") {   // manbada ba'zan lotin «C» return tr("Oʻtiradigan", "Сидячий", "Seated") }
         if s.contains("umumiy") || s.contains("общ") { return tr("Umumiy", "Общий", "Common") }
         return raw.capitalized
     }
@@ -157,7 +157,7 @@ enum RailBoardParser {
 }
 
 /// Vokzallar (jonli tablosi bor — «vokzal» turidagilar), mashhurlari oldin
-struct RailStation: Identifiable, Hashable, Sendable {
+private struct RailStation: Identifiable, Hashable, Sendable {
     let slug: String
     let name: String
     let sub: String?
@@ -181,7 +181,7 @@ struct RailStation: Identifiable, Hashable, Sendable {
 }
 
 @MainActor @Observable
-final class RailBoardViewModel {
+private final class RailBoardViewModel {
     private(set) var station: String
     private(set) var stations: [RailStation] = []
     private(set) var rows: [RailBoardRow] = []
@@ -473,8 +473,8 @@ private struct RailBoardRowView: View {
                 HStack(spacing: 4) {
                     Text(row.number).font(Theme.Font.boardCode).foregroundStyle(Theme.ink2)
                     if let n = row.name { Text("· \(n)").lineLimit(1) }
-                    if let t = info?.type, let l = typeLabel(t) {
-                        Text(l).font(Theme.Font.caption2Bold).foregroundStyle(Theme.teal)
+                    if let t = info?.type, let l = typeLabel(t), l != row.name {
+                        Text(l).font(Theme.Font.boardCaption2Bold).foregroundStyle(Theme.teal)
                             .padding(.horizontal, 5).padding(.vertical, 1)
                             .background(Theme.teal.opacity(0.12), in: Capsule())
                     }
@@ -562,9 +562,6 @@ private struct RailBoardRowView: View {
     }
 }
 
-extension Theme.Font {
-    static let caption2Bold = SwiftUI.Font.caption2.weight(.bold)
-}
 
 // MARK: - Vokzal tanlash (qidiruv bilan)
 
