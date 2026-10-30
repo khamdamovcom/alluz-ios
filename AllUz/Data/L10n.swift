@@ -5,7 +5,7 @@ import Foundation
 enum Lang: String, CaseIterable, Identifiable, Codable, Sendable {
     case uz, ru, en
     var id: String { rawValue }
-    var title: String { switch self { case .uz: "O'zbekcha"; case .ru: "Русский"; case .en: "English" } }
+    var title: String { switch self { case .uz: "Oʻzbekcha"; case .ru: "Русский"; case .en: "English" } }
     var locale: Locale { Locale(identifier: self == .uz ? "uz_Latn_UZ" : self == .ru ? "ru_RU" : "en_US") }
 
     static let storeKey = "app.lang"

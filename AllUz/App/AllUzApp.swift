@@ -42,7 +42,7 @@ struct RootView: View {
             if let t = model.toast { ToastView(text: t).padding(.bottom, 96).transition(.move(edge: .bottom).combined(with: .opacity)) }
         }
         .sheet(item: $model.webURL) { SafariView(url: $0.url).ignoresSafeArea() }
-        .fullScreenCover(isPresented: Binding(get: { !model.onboarded && !ShotMode.active }, set: { if !$0 { model.onboarded = true } })) {
+        .fullScreenCover(isPresented: Binding(get: { (!model.onboarded && !ShotMode.active) || ShotMode.spec == "onboarding" }, set: { if !$0 { model.onboarded = true } })) {
             OnboardingView()
         }
         .task {
