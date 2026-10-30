@@ -29,7 +29,7 @@ private struct DetailPage: View {
         ScrollView {
             VStack(spacing: 0) {
                 DetailHero(images: c.images, region: c.item.type == "region" ? c.item.slug : (c.item.region ?? c.regionCard?.slug), icon: c.item.icon,
-                           unesco: c.item.unesco == true, title: c.title, page: $page)
+                           unesco: c.item.unesco == true, title: c.title, symbol: c.typeSymbol, page: $page)
                     .onGeometryChange(for: Bool.self) { proxy in
                         proxy.frame(in: .scrollView(axis: .vertical)).maxY < 130
                     } action: { solid in

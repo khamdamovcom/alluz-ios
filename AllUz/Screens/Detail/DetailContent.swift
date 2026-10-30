@@ -304,7 +304,8 @@ extension DetailContent {
 
         let kick = it.kicker ?? DetailJSON.str(t["kicker"]) ?? DetailJSON.str(t["role"])
         tagline = kick.flatMap { $0.isEmpty || $0 == name ? nil : $0 }
-        typeSymbol = it.icon != nil ? SymbolMap.symbol(it.icon) : SymbolMap.forType(it.type)
+        let sym = SymbolMap.symbol(it.icon)
+        typeSymbol = sym == SymbolMap.symbol(nil) ? SymbolMap.forType(it.type) : sym
 
         // Koordinata
         var la = it.lat, lo = it.lon
@@ -347,9 +348,11 @@ extension DetailContent {
         locationCards = [districtCard, regionCard].compactMap { $0 }.filter { $0.ref != it.ref }
 
         // «Qisqacha» — text.facts (katakda bor qiymatlar takrorlanmaydi)
-        let shown = Set((facts + rows).map(\.value))
+        let shown = Set((facts + rows).map(\.value)), shownLabels = Set((facts + rows).map { $0.label.lowercased() })
         let rawPairs = DetailJSON.pairs(t["facts"]).isEmpty ? DetailJSON.pairs(d["info"]?["facts"]) : DetailJSON.pairs(t["facts"])
-        info = rawPairs.enumerated().filter { !shown.contains($0.element.1) }.map { DetailPair(id: $0.offset, label: $0.element.0, value: $0.element.1) }
+        info = rawPairs.enumerated()
+            .filter { !shown.contains($0.element.1) && !shownLabels.contains($0.element.0.lowercased()) }
+            .map { DetailPair(id: $0.offset, label: $0.element.0, value: $0.element.1) }
 
         // Maqola
         var secs = DetailJSON.sections(t["body"])
@@ -541,13 +544,14 @@ private struct DetailBuilder {
     mutating func area() {
         let isRegion = item.type == "region"
         if !isRegion, let k = s("type") { fact("dtype", "building.2", tr("Maqomi", "Статус", "Status"), DetailLabels.districtType(k)) }
-        fact("capital", "building.columns", tr("Markaz", "Центр", "Capital"), s("capital") ?? s("center"))
+        if isRegion { fact("capital", "building.columns", tr("Markazi", "Административный центр", "Capital"), s("capital")) }
+        else { fact("capital", "building.columns", tr("Markazi", "Центр", "Centre"), s("center") ?? s("capital")) }
         if let p = i("population"), p > 0 {
             let y = i("population_year").map { " (\($0))" } ?? ""
             fact("population", "person.3", tr("Aholisi", "Население", "Population"), Fmt.num(p) + y)
         }
         if let a = DetailJSON.double(d["area_km2"]), a > 0 {
-            fact("area", "square.dashed", tr("Maydoni", "Площадь", "Area"), (a >= 100 ? Fmt.num(Int(a.rounded())) : Fmt.num(a, digits: 1)) + " km²")
+            fact("area", "square.dashed", tr("Maydoni", "Площадь", "Area"), (a >= 100 ? Fmt.num(Int(a.rounded())) : Fmt.num(a, digits: 1)) + tr(" km²", " км²", " km²"))
         }
         if let y = i("founded") { fact("founded", "calendar", isRegion ? tr("Tashkil topgan", "Образована", "Established") : tr("Asos solingan", "Основан", "Founded"), DetailLabels.year(y)) }
         else { fact("founded", "calendar", tr("Asos solingan", "Основан", "Founded"), s("founded")) }

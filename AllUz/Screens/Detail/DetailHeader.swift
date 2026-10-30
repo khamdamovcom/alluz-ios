@@ -10,6 +10,7 @@ struct DetailHero: View {
     let icon: String?
     let unesco: Bool
     let title: String
+    var symbol: String = "mappin.and.ellipse"
     @Binding var page: Int?
     @Environment(AppModel.self) private var model
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -18,8 +19,7 @@ struct DetailHero: View {
         let reduce = reduceMotion
         ZStack(alignment: .bottom) {
             if images.isEmpty {
-                Placeholder(region: region, icon: icon)
-                    .accessibilityHidden(true)
+                DetailHeroPlaceholder(region: region, symbol: symbol)
             } else {
                 pager
             }
@@ -77,6 +77,26 @@ struct DetailHero: View {
         .scrollIndicators(.hidden)
         .scrollPosition(id: $page)
         .scrollDisabled(images.count < 2)
+    }
+}
+
+/// Rasmsiz yozuv: hudud rangidagi gradient, katta tur ikonkasi va yumshoq doiralar (bezak)
+struct DetailHeroPlaceholder: View {
+    let region: String?
+    let symbol: String
+    var body: some View {
+        let hue = Theme.hue(region)
+        ZStack {
+            LinearGradient(colors: [hue.opacity(0.85), hue.opacity(0.45)], startPoint: .topLeading, endPoint: .bottomTrailing)
+            Circle().fill(.white.opacity(0.08)).frame(width: 320).offset(x: 150, y: -40)
+            Circle().fill(.white.opacity(0.06)).frame(width: 220).offset(x: -160, y: 70)
+            Image(systemName: symbol)
+                .font(.system(size: 64, weight: .light))
+                .foregroundStyle(.white.opacity(0.85))
+                .offset(y: 6)
+        }
+        .clipped()
+        .accessibilityHidden(true)
     }
 }
 
