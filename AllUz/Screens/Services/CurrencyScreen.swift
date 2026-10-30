@@ -100,10 +100,39 @@ enum CurrencyFmt {
     }
 }
 
+// MARK: - Telefondan yangilash
+/// cbu.uz chet eldagi serverlarni bloklaydi — server kursi eskirgan bo'lsa, telefon Markaziy bankning o'zidan oladi
+/// (O'zbekistonda ishlaydi; chet elda ochilmasa — server ma'lumoti qoladi).
+enum CurrencyLive {
+    private struct CBU: Decodable {
+        let Ccy: String; let Nominal: String; let Rate: String; let Diff: String; let Date: String
+        let CcyNm_UZ: String?; let CcyNm_RU: String?; let CcyNm_EN: String?
+    }
+    static func refresh(_ d: CurrencyData) async -> CurrencyData {
+        let today: String = { let f = DateFormatter(); f.dateFormat = "yyyy-MM-dd"; f.timeZone = TimeZone(identifier: "Asia/Tashkent"); return f.string(from: Date()) }()
+        guard d.stale == true || (d.date ?? "") < today,
+              let raw = try? await API.shared.fetchOfficial("https://cbu.uz/uz/arkhiv-kursov-valyut/json/"),
+              let list = try? JSONDecoder().decode([CBU].self, from: raw), !list.isEmpty else { return d }
+        var by: [String: CBU] = [:]
+        for x in list { by[x.Ccy] = x }
+        let num = { (s: String) -> Double? in Double(s.replacingOccurrences(of: ",", with: ".")).flatMap { $0.isFinite ? $0 : nil } }
+        let rates = d.rates.map { r -> CurrencyRate in
+            guard let x = by[r.code], let rate = num(x.Rate), rate > 0, let n = Int(x.Nominal), n > 0 else { return r }
+            return CurrencyRate(code: r.code, name: r.name, nominal: n, rate: rate, diff: num(x.Diff) ?? 0, unit: rate / Double(n), top: r.top, trend: r.trend)
+        }
+        // Sana: «29.10.2026» → 2026-10-29
+        let p = list[0].Date.split(separator: ".")
+        let iso = p.count == 3 ? "\(p[2])-\(p[1])-\(p[0])" : d.date
+        let label = Fmt.date(iso).map { Fmt.day($0) + " " + String(iso?.prefix(4) ?? "") } ?? d.dateLabel
+        return CurrencyData(date: iso, dateLabel: label, updated: Date().timeIntervalSince1970 * 1000, stale: false, som: d.som, title: d.title,
+                            note: d.note, source: d.source, main: d.main, rates: rates, stats: d.stats, banks: d.banks, tipsTitle: d.tipsTitle, tips: d.tips)
+    }
+}
+
 // MARK: - Ekran
 struct CurrencyScreen: View {
     var body: some View {
-        Loadable(load: { try await API.shared.get("currency") as CurrencyData }) { d in
+        Loadable(load: { await CurrencyLive.refresh(try await API.shared.get("currency") as CurrencyData) }) { d in
             CurrencyContent(data: d)
         }
         .background(Theme.paper)

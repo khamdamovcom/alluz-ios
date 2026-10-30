@@ -113,6 +113,30 @@ final class API: @unchecked Sendable {
     }
     private func cached(_ key: String) -> Data? { try? Data(contentsOf: cacheDir.appendingPathComponent(key)) }
 
+    // MARK: rasmiy manba (faqat ruxsat etilgan xostlar)
+    /// Ba'zi rasmiy saytlar (cbu.uz) O'zbekistondan tashqaridagi serverlarni bloklaydi — ularni telefonning o'zidan o'qiymiz.
+    /// Faqat shu ro'yxatdagi xostlarga, faqat https GET, cookie'siz; javob — ochiq ma'lumot (kurslar), shaxsiy ma'lumot yuborilmaydi.
+    static let officialHosts: Set<String> = ["cbu.uz"]
+    private lazy var officialSession: URLSession = {
+        let c = URLSessionConfiguration.ephemeral
+        c.timeoutIntervalForRequest = 8
+        c.timeoutIntervalForResource = 15
+        c.httpCookieAcceptPolicy = .never
+        c.httpShouldSetCookies = false
+        c.httpCookieStorage = nil
+        c.urlCredentialStorage = nil
+        c.urlCache = nil
+        c.tlsMinimumSupportedProtocolVersion = .TLSv12
+        c.httpAdditionalHeaders = ["Accept": "application/json", "User-Agent": API.userAgent]
+        return URLSession(configuration: c)
+    }()
+    func fetchOfficial(_ urlString: String) async throws -> Data {
+        guard let url = URL(string: urlString), url.scheme == "https", let h = url.host, API.officialHosts.contains(h) else { throw APIError.notFound }
+        let (data, resp) = try await officialSession.data(from: url)
+        guard (resp as? HTTPURLResponse)?.statusCode == 200, (resp.url?.host).map(API.officialHosts.contains) == true else { throw APIError.server(0) }
+        return data
+    }
+
     /// Sozlamalar → «Keshni tozalash»
     func clearCache() {
         try? FileManager.default.removeItem(at: cacheDir)
