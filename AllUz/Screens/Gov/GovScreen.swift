@@ -8,6 +8,7 @@ struct GovScreen: View {
     @State private var region: String?
     @State private var district: String?
     @State private var kind: String?
+    @State private var level: String?
     @State private var query = ""
     @State private var data: GovData?
     @State private var error: Error?
@@ -18,8 +19,8 @@ struct GovScreen: View {
     @Environment(\.accessibilityReduceMotion) private var reduce
 
     private var trimmed: String { query.trimmingCharacters(in: .whitespacesAndNewlines) }
-    private var filterKey: String { "\(region ?? "")|\(district ?? "")|\(kind ?? "")|\(trimmed)|\(attempt)|\(model.reloadToken)" }
-    private var filtered: Bool { region != nil || kind != nil || !trimmed.isEmpty }
+    private var filterKey: String { "\(region ?? "")|\(district ?? "")|\(kind ?? "")|\(level ?? "")|\(trimmed)|\(attempt)|\(model.reloadToken)" }
+    private var filtered: Bool { region != nil || kind != nil || level != nil || !trimmed.isEmpty }
 
     var body: some View {
         Group {
@@ -119,7 +120,7 @@ struct GovScreen: View {
                 if filtered {
                     Button {
                         Haptics.select()
-                        withAnimation(Motion.snappy) { region = nil; district = nil; kind = nil; query = "" }
+                        withAnimation(Motion.snappy) { region = nil; district = nil; kind = nil; level = nil; query = "" }
                     } label: { Image(systemName: "xmark.circle.fill").font(.title3).foregroundStyle(Theme.muted).frame(width: 44, height: 44) }
                     .accessibilityLabel(tr("Filtrni tozalash", "Сбросить фильтр", "Clear filters"))
                 }
@@ -168,17 +169,17 @@ struct GovScreen: View {
             SectionHeaderInline(title: tr("Vazirliklar va idoralar", "Министерства и ведомства", "Ministries and agencies"), count: d.rep.count)
             ChipBarInline(kinds: d.kinds.filter(\.rep)) { k in withAnimation(Motion.snappy) { kind = k } }
             LazyVStack(spacing: 0) {
-                ForEach(Array(d.rep.prefix(12).enumerated()), id: \.element.id) { i, c in
+                ForEach(Array(d.rep.enumerated()), id: \.element.id) { i, c in
                     GovOrgRow(card: c)
-                    if i < min(d.rep.count, 12) - 1 { Divider().overlay(Theme.line).padding(.leading, 56) }
+                    if i < d.rep.count - 1 { Divider().overlay(Theme.line).padding(.leading, 56) }
                 }
             }
             .padding(.horizontal, 12)
             .background(Theme.card, in: RoundedRectangle(cornerRadius: Theme.Radius.l, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: Theme.Radius.l, style: .continuous).strokeBorder(Theme.line.opacity(0.6)))
-            if d.rep.count > 12 {
-                Button { Haptics.select(); withAnimation(Motion.snappy) { kind = d.kinds.first(where: \.rep)?.kind } } label: {
-                    Text(tr("Hammasi", "Все", "See all")).font(Theme.Font.sub.weight(.semibold)).frame(maxWidth: .infinity)
+            if d.nRep > d.rep.count {
+                Button { Haptics.select(); withAnimation(Motion.snappy) { level = "respublika" } } label: {
+                    Text(tr("Hammasi (\(d.nRep))", "Все (\(d.nRep))", "See all (\(d.nRep))")).font(Theme.Font.sub.weight(.semibold)).frame(maxWidth: .infinity)
                 }
                 .secondaryButton().tint(Theme.accent)
             }
@@ -229,7 +230,7 @@ struct GovScreen: View {
     // MARK: amallar
     private func setRegion(_ r: String?) {
         Haptics.select()
-        withAnimation(Motion.snappy) { region = r; district = nil }
+        withAnimation(Motion.snappy) { region = r; district = nil; if r != nil, level == "respublika" { level = nil } }
     }
 
     private var queryItems: [String: String] {
@@ -237,6 +238,7 @@ struct GovScreen: View {
         if let region { q["region"] = region }
         if let district { q["district"] = district }
         if let kind { q["kind"] = kind }
+        if let level { q["level"] = level }
         if !trimmed.isEmpty { q["q"] = trimmed }
         return q
     }

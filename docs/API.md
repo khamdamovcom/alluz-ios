@@ -80,7 +80,7 @@ Bitta bo'lim to'liq — `item/post/:slug`.
 
 ## Davlat idoralari — `/opt/alluz/src/pages/app-gov.js` (mantiq: gov.js data, sayt /davlat-idoralari bilan bir xil filtr)
 `gov?region=&district=&kind=&level=&q=&offset=&limit=` (limit ≤ 200, standart 60) →
-`{total, nRep, nRegions, nDistricts, filter{region, district, kind, level, q}, emergency[{num, tel, icon, label, sub}], hotlines[{num, tel, icon, kind, count, label, sub, slug}], regions[{slug, name, count}], districts[{slug, name, type, count}] (region bo'lsa), kinds[{kind, label, icon, rep, count}] (joriy doirada), levels[{level, label, count}], rep[Card] (filtrsiz — respublika idoralari), results{total, offset, limit, sections[{key, title, items[Card]}]} | null (filtr bo'lmasa), web}`
+`{total, nRep, nRegions, nDistricts, filter{region, district, kind, level, q}, emergency[{num, tel, icon, label, sub}], hotlines[{num, tel, icon, kind, count, label, sub, slug}], regions[{slug, name, count}], districts[{slug, name, type, count}] (region bo'lsa), kinds[{kind, label, icon, rep, count}] (joriy doirada), levels[{level, label, count}], rep[Card] (filtrsiz — respublika idoralaridan 12 tasi; hammasi: `level=respublika`), results{total, offset, limit, sections[{key, title, items[Card]}]} | null (filtr bo'lmasa), web}`
 - `emergency`: 112, 101, 102, 103, 104, 1050, 1173 (manba: qo'llanma `xavfsizlik-va-favqulodda-raqamlar`, FVV yozuvi, viza qoidalari «tourism»).
 - `hotlines` — idoralar ma'lumotidan (gov.js, eng ko'p ishlatiladigan qisqa raqamlar), favqulodda raqamlar takrorlanmaydi.
 - Card (org): `sub` — «Tur · shahar/tuman (yoki «Respublika darajasi»)», `icon` — tur belgisi (sayt nomi), `kind` — tur.
