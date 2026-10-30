@@ -272,10 +272,9 @@ private struct HomeHeroPage: View {
         }
         .buttonStyle(.press)
         .contextMenu { CardMenu(card: card) }
-        .accessibilityElement(children: .ignore)
+        .accessibilityElement(children: .combine)
         .accessibilityLabel([card.name, card.sub, card.kicker].compactMap { $0 }.joined(separator: ", "))
         .accessibilityValue(tr("\(index + 1)-sahifa, jami \(total)", "\(index + 1) из \(total)", "\(index + 1) of \(total)"))
-        .accessibilityAddTraits(.isButton)
     }
 }
 
