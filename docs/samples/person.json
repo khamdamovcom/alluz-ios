@@ -1,0 +1,179 @@
+{
+    "type": "person",
+    "slug": "al-xorazmiy",
+    "name": "Muhammad al-Khwarizmi",
+    "sub": "Person",
+    "kicker": "Mathematician, astronomer, geographer",
+    "summary": "A 9th-century scholar from Khorezm who worked in Baghdad and founded algebra as a discipline; the word “algorithm” derives from his name.",
+    "icon": "user",
+    "kind": "olim",
+    "region": null,
+    "rating": null,
+    "unesco": false,
+    "lat": null,
+    "lon": null,
+    "img": {
+        "u": "/img/person/al-xorazmiy/0",
+        "w": 2400,
+        "h": 1601,
+        "focus": null,
+        "title": "Statue of Muhammad ibn Musa al-Khwarizmi in Urgench",
+        "author": "Adam Harangozó",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Statue_of_Muhammad_ibn_Musa_al-Khwarizmi_in_Urgench_(2).jpg",
+        "sourceName": "Wikimedia Commons"
+    },
+    "web": "https://alluzbekistan.com/en/allomalar/al-xorazmiy",
+    "text": {
+        "name": "Muhammad al-Khwarizmi",
+        "role": "Mathematician, astronomer, geographer",
+        "summary": "A 9th-century scholar from Khorezm who worked in Baghdad and founded algebra as a discipline; the word “algorithm” derives from his name.",
+        "body": [
+            {
+                "h": "From Khorezm to Baghdad",
+                "p": [
+                    "Abu Abdullah Muhammad ibn Musa al-Khwarizmi was born around 783 in Khorezm; Uzbek and Russian sources usually name Khiva as his birthplace, though very little is known about his life. In his homeland he would have encountered the old scientific traditions of Khwarazm alongside Indian and Greek learning. In the 810s he seems to have joined the circle of scholars around the future caliph al-Ma'mun, then governor in Merv, before moving to Baghdad, where he became a leading figure at the House of Wisdom (Bayt al-Hikma). He died in Baghdad around 850."
+                ]
+            },
+            {
+                "h": "Algebra and the algorithm",
+                "p": [
+                    "His most famous work is “The Compendious Book on Calculation by Completion and Balancing”, written some time between 813 and 833. It presented systematic methods, with geometric proofs, for solving linear and quadratic equations, and its key term al-jabr gave its name to algebra. His treatise on Indian numerals and decimal place-value notation circulated in Latin as “Algoritmi de numero Indorum”, introducing Europe to a new way of calculating — and giving us the word “algorithm”.",
+                    "He also compiled astronomical tables (a zij), and his geographical work “Surat al-Ard” (The Image of the Earth) listed the coordinates of hundreds of cities, mountains and rivers. According to the sources, he took part in al-Ma'mun's project to measure an arc of the Earth's meridian."
+                ]
+            },
+            {
+                "h": "His legacy in Uzbekistan",
+                "p": [
+                    "The 1,200th anniversary of his birth was marked internationally in 1983 with conferences in Moscow, Tashkent and Urgench. A statue of al-Khwarizmi stands in Khiva, near the west gate of Itchan Kala. Urgench State University and Tashkent's University of Information Technologies bear his name, as do many streets and schools in Khorezm Region. The Khiva statue makes a natural starting point for a walk around Itchan Kala."
+                ]
+            }
+        ],
+        "facts": [
+            [
+                "Born",
+                "c. 783, Khorezm (traditionally Khiva)"
+            ],
+            [
+                "Died",
+                "c. 850, Baghdad"
+            ],
+            [
+                "Key works",
+                "Al-Jabr, treatise on Indian arithmetic, Zij, Surat al-Ard"
+            ],
+            [
+                "Memorials",
+                "Statue in Khiva; Urgench State University bears his name"
+            ]
+        ]
+    },
+    "data": {
+        "slug": "al-xorazmiy",
+        "born": 783,
+        "died": 850,
+        "regions": [
+            "xorazm"
+        ],
+        "field": "olim",
+        "places": [
+            "al-xorazmiy-majmuasi-urganch"
+        ],
+        "sources": [
+            "https://en.wikipedia.org/wiki/Al-Khwarizmi",
+            "https://ru.wikipedia.org/wiki/Аль-Хорезми",
+            "https://uz.wikipedia.org/wiki/Al-Xorazmiy"
+        ]
+    },
+    "images": [
+        {
+            "u": "/img/person/al-xorazmiy/0",
+            "w": 2400,
+            "h": 1601,
+            "focus": null,
+            "title": "Statue of Muhammad ibn Musa al-Khwarizmi in Urgench",
+            "author": "Adam Harangozó",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Statue_of_Muhammad_ibn_Musa_al-Khwarizmi_in_Urgench_(2).jpg",
+            "sourceName": "Wikimedia Commons"
+        },
+        {
+            "u": "/img/person/al-xorazmiy/1",
+            "w": 2400,
+            "h": 1600,
+            "focus": null,
+            "title": "Statue of Muhammad ibn Musa al-Khwarizmi in Urgench",
+            "author": "Adam Harangozó",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Statue_of_Muhammad_ibn_Musa_al-Khwarizmi_in_Urgench.jpg",
+            "sourceName": "Wikimedia Commons"
+        }
+    ],
+    "refs": {
+        "regions": [
+            {
+                "type": "region",
+                "slug": "xorazm",
+                "name": "Xorazm Region",
+                "sub": "Region",
+                "kicker": "An ancient oasis between two deserts — and Khiva",
+                "summary": "An ancient oasis on the lower Amu Darya: Khiva’s UNESCO-listed Itchan Kala, the birthplace of al-Khwarizmi and al-Biruni, the land of lazgi dance and…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 41.5735,
+                "lon": 60.507,
+                "img": {
+                    "u": "/img/region/xorazm/0",
+                    "w": 2400,
+                    "h": 1600,
+                    "focus": null,
+                    "title": "Skyline of Khiva, Uzbekistan",
+                    "author": "Nassima Chahboun",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Khiva_skyline.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/xorazm"
+            }
+        ],
+        "places": [
+            {
+                "type": "place",
+                "slug": "al-xorazmiy-majmuasi-urganch",
+                "name": "Al-Khwarizmi Complex (Urgench)",
+                "sub": "Modern · Khorezm Region",
+                "kicker": "A memorial to the man behind the word “algorithm”",
+                "summary": "A symbolic mausoleum and garden honouring the great mathematician Muhammad al-Khwarizmi, completed in Urgench in 2000. The al-Biruni complex stands across the…",
+                "icon": "building-2",
+                "kind": "zamonaviy",
+                "region": "xorazm",
+                "rating": 1,
+                "unesco": false,
+                "lat": 41.5817,
+                "lon": 60.6319,
+                "img": {
+                    "u": "/img/place/al-xorazmiy-majmuasi-urganch/0",
+                    "w": 2400,
+                    "h": 1800,
+                    "focus": null,
+                    "title": "Al-Xorazmiy me’moriy majmuasi: Xorazm viloyati, Urganch, Al-Xorazmiy koʻchasi",
+                    "author": "SAKRI",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Al-Xorazmiy_me%60moriy_majmuasi,_Xorazm_viloyati,_Urganch,_Al-Xorazmiy_ko%60chasi.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/joylar/al-xorazmiy-majmuasi-urganch"
+            }
+        ]
+    },
+    "regionName": null,
+    "districtName": null
+}

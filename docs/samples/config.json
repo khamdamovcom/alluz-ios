@@ -1,0 +1,58 @@
+{
+    "site": "https://alluzbekistan.com",
+    "lang": "en",
+    "langs": [
+        "uz",
+        "ru",
+        "en"
+    ],
+    "imgWidths": [
+        480,
+        960,
+        1600,
+        2400
+    ],
+    "imgExt": "webp",
+    "ios": {
+        "minBuild": 1,
+        "latestBuild": null,
+        "storeUrl": null
+    },
+    "counts": {
+        "region": 14,
+        "district": 209,
+        "place": 406,
+        "venue": 723,
+        "org": 1233,
+        "bank": 35,
+        "post": 1910,
+        "airport": 16,
+        "rail_station": 46,
+        "train": 66,
+        "bus_station": 19,
+        "bus_route": 71,
+        "city_transport": 2,
+        "metro": 1,
+        "person": 60,
+        "era": 9,
+        "hist_event": 80,
+        "cuisine": 36,
+        "craft": 21,
+        "tradition": 18,
+        "holiday": 10,
+        "fest": 26,
+        "guide": 17,
+        "route": 12
+    },
+    "links": {
+        "privacy": "https://alluzbekistan.com/en/maxfiylik",
+        "about": "https://alluzbekistan.com/en/haqida",
+        "photos": "https://alluzbekistan.com/en/rasmlar"
+    },
+    "cultureTypes": [
+        "cuisine",
+        "craft",
+        "tradition",
+        "holiday"
+    ]
+}

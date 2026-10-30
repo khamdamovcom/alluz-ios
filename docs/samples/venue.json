@@ -1,0 +1,145 @@
+{
+    "type": "venue",
+    "slug": "bogishamol-hotel-andijon",
+    "name": "Bogishamol Hotel",
+    "sub": "Hotel · Andijan Region",
+    "kicker": "Large 138-room hotel near the station",
+    "summary": "One of Andijan's biggest hotels, with a heated infinity pool, a Turkish restaurant and a gym, about 800 m from the railway station.",
+    "icon": "hotel",
+    "kind": "hotel",
+    "region": "andijon",
+    "rating": null,
+    "unesco": false,
+    "lat": 40.766492,
+    "lon": 72.357468,
+    "img": null,
+    "web": "https://alluzbekistan.com/en/mehmonxonalar/bogishamol-hotel-andijon",
+    "text": {
+        "name": "Bogishamol Hotel",
+        "kicker": "Large 138-room hotel near the station",
+        "summary": "One of Andijan's biggest hotels, with a heated infinity pool, a Turkish restaurant and a gym, about 800 m from the railway station.",
+        "body": [
+            {
+                "h": "",
+                "p": [
+                    "Bogishamol is a 138-room business hotel that opened in 2015. It stands on Milliy Tiklanish Street, around 800 metres from the railway station, facing the Pushkin Children's Park with its rides and Ferris wheel.",
+                    "Facilities include a heated infinity pool, a gym, conference rooms and the Ali Baba Turkish restaurant. Guests praise the spacious rooms, new furnishings and the generous breakfast. Airport and station transfers can be arranged."
+                ]
+            }
+        ],
+        "tips": [
+            "The railway station is about 800 m away",
+            "Travelling with children? The park opposite is just 170 m away"
+        ]
+    },
+    "data": {
+        "slug": "bogishamol-hotel-andijon",
+        "kind": "hotel",
+        "region": "andijon",
+        "district": "andijon-shahri",
+        "coords": [
+            40.766492,
+            72.357468
+        ],
+        "address": "38A Milliy Tiklanish St",
+        "phones": [
+            "+998 74 228 21 12",
+            "+998 74 228 26 62"
+        ],
+        "website": "https://bogishamolhotel.uz/",
+        "telegram": null,
+        "instagram": "hotelbogishamol",
+        "email": null,
+        "stars": null,
+        "price": null,
+        "cuisine": [],
+        "features": [
+            "wifi",
+            "breakfast",
+            "parking",
+            "pool",
+            "gym",
+            "restaurant",
+            "transfer",
+            "ac",
+            "terrace",
+            "card"
+        ],
+        "hours": null,
+        "checkin": "14:00",
+        "checkout": "12:00",
+        "rooms": 138,
+        "opened": 2015,
+        "sources": [
+            "https://yandex.uz/maps/org/bog_ishamol_mehmonxonasi/115442607870/",
+            "https://bogishamolhotel.uz/",
+            "https://www.instagram.com/hotelbogishamol/",
+            "https://www.openstreetmap.org/way/124552435"
+        ]
+    },
+    "images": [],
+    "refs": {
+        "region": [
+            {
+                "type": "region",
+                "slug": "andijon",
+                "name": "Andijan Region",
+                "sub": "Region",
+                "kicker": "Babur's homeland, Uzbekistan's most crowded and easternmost region",
+                "summary": "Small in area but the most densely populated region of Uzbekistan, at the eastern end of the Fergana Valley: Babur's birthplace Andijan, ancient Mingtepa and…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 40.7305,
+                "lon": 72.303,
+                "img": {
+                    "u": "/img/region/andijon/0",
+                    "w": 2400,
+                    "h": 1798,
+                    "focus": null,
+                    "title": "Devonaboy Jome Mosque, Andijan, Uzbekistan",
+                    "author": "Petar Milošević",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Devonaboy_Jome_Mosque,_Andijan,_Uzbekistan.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/andijon"
+            }
+        ],
+        "district": [
+            {
+                "type": "district",
+                "slug": "andijon--andijon-shahri",
+                "name": "Andijan",
+                "sub": "City / district · Andijan Region",
+                "kicker": "Babur's birthplace and the valley's eastern gateway",
+                "summary": "The regional capital in the east of the Fergana Valley, birthplace of Zahiriddin Muhammad Babur, known for the Jome complex and Babur National Park.",
+                "icon": "building-2",
+                "kind": "shahar",
+                "region": "andijon",
+                "rating": null,
+                "unesco": false,
+                "lat": 40.78082,
+                "lon": 72.34493,
+                "img": {
+                    "u": "/img/district/andijon--andijon-shahri/0",
+                    "w": 2400,
+                    "h": 1600,
+                    "focus": null,
+                    "title": "Andijon Bosh jome masjidi",
+                    "author": "Yoshlar ishlari agentligi",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Andijon_BOSH_jome_masjidi_-2.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/andijon/andijon-shahri"
+            }
+        ]
+    },
+    "regionName": "Andijan Region",
+    "districtName": "Andijan"
+}

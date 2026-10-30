@@ -1,0 +1,113 @@
+{
+    "type": "org",
+    "slug": "andijon-viloyati-hokimligi",
+    "name": "Andijan Regional Khokimiyat",
+    "sub": "Public office · Andijan Region",
+    "kicker": null,
+    "summary": "Executive authority of Andijan Region: local budget, development programmes, citizens' appeals and receptions with the khokim.",
+    "icon": "building-2",
+    "kind": "hokimiyat",
+    "region": "andijon",
+    "rating": null,
+    "unesco": false,
+    "lat": 40.78163,
+    "lon": 72.34928,
+    "img": null,
+    "web": "https://alluzbekistan.com/en/davlat-idoralari/andijon-viloyati-hokimligi",
+    "text": {
+        "name": "Andijan Regional Khokimiyat",
+        "summary": "Executive authority of Andijan Region: local budget, development programmes, citizens' appeals and receptions with the khokim."
+    },
+    "data": {
+        "slug": "andijon-viloyati-hokimligi",
+        "kind": "hokimiyat",
+        "level": "viloyat",
+        "parent": null,
+        "region": "andijon",
+        "district": "andijon-shahri",
+        "serves": null,
+        "coords": [
+            40.78163,
+            72.34928
+        ],
+        "address": "239 A. Fitrat St, Andijan",
+        "phones": [
+            "+998 74 223 30 31"
+        ],
+        "hotline": "+998 74 225 80 00",
+        "website": "https://gov.uz/oz/andijan",
+        "telegram": "https://t.me/andpress",
+        "email": "qabulhona@andijan.uz",
+        "hours": "Mon–Fri 9:00–18:00, lunch 13:00–14:00",
+        "reception": null,
+        "sources": [
+            "https://gov.uz/oz/andijan/contacts",
+            "https://www.openstreetmap.org/way/124697504"
+        ]
+    },
+    "images": [],
+    "refs": {
+        "region": [
+            {
+                "type": "region",
+                "slug": "andijon",
+                "name": "Andijan Region",
+                "sub": "Region",
+                "kicker": "Babur's homeland, Uzbekistan's most crowded and easternmost region",
+                "summary": "Small in area but the most densely populated region of Uzbekistan, at the eastern end of the Fergana Valley: Babur's birthplace Andijan, ancient Mingtepa and…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 40.7305,
+                "lon": 72.303,
+                "img": {
+                    "u": "/img/region/andijon/0",
+                    "w": 2400,
+                    "h": 1798,
+                    "focus": null,
+                    "title": "Devonaboy Jome Mosque, Andijan, Uzbekistan",
+                    "author": "Petar Milošević",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Devonaboy_Jome_Mosque,_Andijan,_Uzbekistan.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/andijon"
+            }
+        ],
+        "district": [
+            {
+                "type": "district",
+                "slug": "andijon--andijon-shahri",
+                "name": "Andijan",
+                "sub": "City / district · Andijan Region",
+                "kicker": "Babur's birthplace and the valley's eastern gateway",
+                "summary": "The regional capital in the east of the Fergana Valley, birthplace of Zahiriddin Muhammad Babur, known for the Jome complex and Babur National Park.",
+                "icon": "building-2",
+                "kind": "shahar",
+                "region": "andijon",
+                "rating": null,
+                "unesco": false,
+                "lat": 40.78082,
+                "lon": 72.34493,
+                "img": {
+                    "u": "/img/district/andijon--andijon-shahri/0",
+                    "w": 2400,
+                    "h": 1600,
+                    "focus": null,
+                    "title": "Andijon Bosh jome masjidi",
+                    "author": "Yoshlar ishlari agentligi",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Andijon_BOSH_jome_masjidi_-2.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/andijon/andijon-shahri"
+            }
+        ]
+    },
+    "regionName": "Andijan Region",
+    "districtName": "Andijan"
+}

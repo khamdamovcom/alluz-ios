@@ -1,0 +1,356 @@
+{
+    "type": "bank",
+    "slug": "hamkorbank",
+    "name": "Hamkorbank JSCB",
+    "sub": "Bank",
+    "kicker": null,
+    "summary": "A bank with foreign capital founded in Andijan in 1991 and still headquartered there, known for small-business lending; it offers cards, currency exchange and…",
+    "icon": "credit-card",
+    "kind": null,
+    "region": null,
+    "rating": null,
+    "unesco": false,
+    "lat": 40.76968,
+    "lon": 72.34193,
+    "img": null,
+    "web": "https://alluzbekistan.com/en/banklar/hamkorbank",
+    "text": {
+        "name": "Hamkorbank JSCB",
+        "short": "Hamkorbank",
+        "summary": "A bank with foreign capital founded in Andijan in 1991 and still headquartered there, known for small-business lending; it offers cards, currency exchange and international money transfers.",
+        "body": [
+            {
+                "h": null,
+                "p": [
+                    "Hamkorbank was founded in Andijan in 1991 as Andijanbank and took its present name in 2000. Its head office is still in Andijan, on Bobur Avenue, rather than in Tashkent. The Central Bank classifies it as a bank with foreign capital. According to the bank's website (February 2025), individuals hold 60.8% of the shares and legal entities 39.2%; the largest institutional shareholders are the Dutch development bank FMO (14.55%), responsAbility funds (13.21% combined) and the International Finance Corporation (IFC, 7.28%).",
+                    "The bank concentrates on lending to small and medium-sized businesses, including through credit lines from IFC, the EBRD and the Asian Development Bank. Retail customers are offered cards, deposits, car loans, mortgages, microloans and online loans. According to its website, the bank has more than 160 offices across all regions of the country."
+                ]
+            },
+            {
+                "h": "For travellers",
+                "p": [
+                    "Exchange offices buy foreign currency from residents and non-residents with no limit on the amount. Currency is sold to non-residents against an exchange certificate (form 9002), a terminal or ATM receipt, or another document showing the money was legally obtained in Uzbekistan. Cash can also be drawn there from international cards, in soums or in foreign currency.",
+                    "International transfers can be collected through Zolotaya Korona, MoneyGram, Ria, Astrasend, KwikPay, Asia Express, UPT, Swiss Remit and OlmaPay, and Zolotaya Korona, Astrasend and KwikPay transfers can be paid straight onto a card in the Hamkor app. The bank issues Uzcard, HUMO, Visa and UnionPay cards; the tariffs for its foreign-currency Visa Classic and UnionPay Classic cards include terms for non-residents. The Hamkor app is available in Uzbek, Russian and English."
+                ]
+            }
+        ]
+    },
+    "data": {
+        "slug": "hamkorbank",
+        "ownership": "xorijiy",
+        "founded": 1991,
+        "license": {
+            "number": "64",
+            "date": "2021-12-25"
+        },
+        "mfo": "00083",
+        "swift": "KHKKUZ22",
+        "hq": {
+            "region": "andijon",
+            "district": "andijon-shahri",
+            "coords": [
+                40.76968,
+                72.34193
+            ],
+            "address": "85 Bobur Avenue, Andijan 170119"
+        },
+        "phones": [
+            "+998 78 150 91 25"
+        ],
+        "short_number": "1256",
+        "website": "https://hamkorbank.uz",
+        "telegram": "Hamkorbankuz",
+        "email": "contact@hamkorbank.uz",
+        "apps": [
+            {
+                "name": "Hamkor",
+                "ios": "https://apps.apple.com/uz/app/hamkor/id1602323485",
+                "android": "https://play.google.com/store/apps/details?id=com.hamkorbank.mobile"
+            },
+            {
+                "name": "HamkorMobile for Business",
+                "ios": "https://apps.apple.com/uz/app/hamkormobile-for-business/id1318817185",
+                "android": "https://play.google.com/store/apps/details?id=uz.fb.cib.mobile.Hamkorbank"
+            }
+        ],
+        "cards": [
+            "uzcard",
+            "humo",
+            "visa",
+            "unionpay"
+        ],
+        "services": [
+            "fx",
+            "transfers",
+            "online_card",
+            "nonresident_account",
+            "deposits",
+            "mortgage",
+            "auto_loan",
+            "microloan",
+            "business"
+        ],
+        "transfers": [
+            "Zolotaya Korona",
+            "MoneyGram",
+            "Ria",
+            "Astrasend",
+            "KwikPay",
+            "Asia Express",
+            "UPT",
+            "Swiss Remit",
+            "OlmaPay"
+        ],
+        "hours": "Mon–Fri 9:00–17:00",
+        "branches": [
+            {
+                "region": "toshkent-shahri",
+                "district": "chilonzor",
+                "name": "Tashkent regional banking services office",
+                "address": "14 Furqat Street, Olmazor estate, Chilanzar district, Tashkent",
+                "coords": [
+                    41.30921,
+                    69.24417
+                ],
+                "phones": [
+                    "+998 78 150 67 17"
+                ],
+                "hours": "Mon–Fri 9:00–17:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "toshkent-shahri",
+                "district": "mirobod",
+                "name": "Mirabad regional banking services office",
+                "address": "101/1 Eski Saraykul Street, Mirabad district, Tashkent",
+                "coords": [
+                    41.2798,
+                    69.29461
+                ],
+                "phones": [
+                    "+998 78 129 57 57"
+                ],
+                "hours": "Mon–Fri 9:00–17:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "toshkent-viloyati",
+                "district": "nurafshon-shahri",
+                "name": "Nurafshon universal banking services office",
+                "address": "32 Toshkent Yoli Street, Nurafshon, Tashkent Region",
+                "coords": [
+                    41.0286,
+                    69.35966
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 9:00–17:00"
+            },
+            {
+                "region": "toshkent-viloyati",
+                "district": "chirchiq-shahri",
+                "name": "Chirchik universal banking services office",
+                "address": "4 Alisher Navoi Street, Chirchik, Tashkent Region",
+                "coords": [
+                    41.44976,
+                    69.56216
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 9:00–17:00"
+            },
+            {
+                "region": "andijon",
+                "district": "andijon-shahri",
+                "name": "Shokir Ibrohim regional banking services office",
+                "address": "85A Bobur Avenue, Andijan",
+                "coords": [
+                    40.7697,
+                    72.34184
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "andijon",
+                "district": "andijon-shahri",
+                "name": "Nodirabegim universal banking services office",
+                "address": "2 Bozor Street, Andijan",
+                "coords": [
+                    40.7839,
+                    72.34689
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "buxoro",
+                "district": "buxoro-shahri",
+                "name": "Bukhara regional banking services office",
+                "address": "5 K. Murtazoyev Street, Bukhara",
+                "coords": [
+                    39.75529,
+                    64.42755
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "fargona",
+                "district": "fargona-shahri",
+                "name": "Fergana regional banking services office",
+                "address": "41 Murabbiylar Street, Fergana",
+                "coords": [
+                    40.39175,
+                    71.78233
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "jizzax",
+                "district": "jizzax-shahri",
+                "name": "Jizzakh regional banking services office",
+                "address": "35 Sharof Rashidov Street, Kassoblik mahalla, Jizzakh",
+                "coords": [
+                    40.14377,
+                    67.82133
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 9:00–17:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "xorazm",
+                "district": "urganch-shahri",
+                "name": "Khorezm regional banking services office",
+                "address": "2/1 Yogdu Street, Urgench",
+                "coords": [
+                    41.55694,
+                    60.62002
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "xorazm",
+                "district": "urganch-shahri",
+                "name": "Urgench universal banking services office",
+                "address": "59 Pahlavon Mahmud Street, Urgench",
+                "coords": [
+                    41.56111,
+                    60.61384
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "namangan",
+                "district": "namangan-shahri",
+                "name": "Namangan regional banking services office",
+                "address": "110 Amir Temur Street, Namangan",
+                "coords": [
+                    40.99479,
+                    71.63481
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 9:00–17:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "navoiy",
+                "district": "navoiy-shahri",
+                "name": "Navoiy regional banking services office",
+                "address": "198V Galaba Avenue, Navoiy",
+                "coords": [
+                    40.11152,
+                    65.37761
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "qashqadaryo",
+                "district": "qarshi-shahri",
+                "name": "Kashkadarya regional banking services office",
+                "address": "52 Islom Karimov Street, Oqtepa mahalla, Karshi",
+                "coords": [
+                    38.82968,
+                    65.79266
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "qashqadaryo",
+                "district": "qarshi-shahri",
+                "name": "Karshi universal banking services office",
+                "address": "41 Amir Temur Street, Karshi",
+                "coords": [
+                    38.85434,
+                    65.7924
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "qoraqalpogiston",
+                "district": "nukus-shahri",
+                "name": "Nukus regional banking services office",
+                "address": "135 Amir Temur Street, Nukus",
+                "coords": [
+                    42.45606,
+                    59.61279
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 9:00–17:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "samarqand",
+                "district": "samarqand-shahri",
+                "name": "Samarkand regional banking services office",
+                "address": "149 Amir Temur Street, Samarkand",
+                "coords": [
+                    39.6464,
+                    66.92909
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "sirdaryo",
+                "district": "guliston-shahri",
+                "name": "Gulistan regional banking services office",
+                "address": "121A Islom Karimov Street, Gulistan",
+                "coords": [
+                    40.50563,
+                    68.77381
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            },
+            {
+                "region": "surxondaryo",
+                "district": "termiz-shahri",
+                "name": "Termez regional banking services office",
+                "address": "15A At-Termiziy Street, Termez",
+                "coords": [
+                    37.23844,
+                    67.27935
+                ],
+                "phones": [],
+                "hours": "Mon–Fri 8:00–20:00, Sat 9:00–13:00"
+            }
+        ],
+        "sources": [
+            "https://cbu.uz/uz/credit-organizations/banks/head-offices/",
+            "https://cbu.uz/uz/credit-organizations/banks/head-offices/inb/hamkorbank/",
+            "https://hamkorbank.uz/contact/",
+            "https://hamkorbank.uz/about-bank/bank-details/",
+            "https://hamkorbank.uz/about-bank/bank-history/",
+            "https://hamkorbank.uz/for-investors/form-of-share-capital/",
+            "https://hamkorbank.uz/physical/money-transfers/",
+            "https://hamkorbank.uz/physical/currency-exchange-offices/",
+            "https://hamkorbank.uz/api-next/branches/",
+            "https://www.openstreetmap.org/way/464718249"
+        ]
+    },
+    "images": [],
+    "refs": {},
+    "regionName": null,
+    "districtName": null
+}

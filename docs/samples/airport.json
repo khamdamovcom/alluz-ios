@@ -1,0 +1,131 @@
+{
+    "type": "airport",
+    "slug": "andijon-aeroporti",
+    "name": "Andijan International Airport",
+    "sub": "Airport · Andijan Region",
+    "kicker": null,
+    "summary": "An airport on the south-western edge of Andijan. Its airfield was expanded in 2025, it handled its first wide-body passenger flight in 2026, and a new…",
+    "icon": "plane",
+    "kind": null,
+    "region": "andijon",
+    "rating": null,
+    "unesco": false,
+    "lat": 40.72778,
+    "lon": 72.29389,
+    "img": null,
+    "web": "https://alluzbekistan.com/en/transport/aeroportlar/andijon-aeroporti",
+    "text": {
+        "name": "Andijan International Airport",
+        "city": "Andijan",
+        "summary": "An airport on the south-western edge of Andijan. Its airfield was expanded in 2025, it handled its first wide-body passenger flight in 2026, and a new terminal is under construction.",
+        "body": [
+            {
+                "h": "Terminal and flights",
+                "p": [
+                    "Work to extend the runway, taxiways and apron was completed in March 2025, and scheduled services resumed after a technical flight on 15 March. On 3 July 2026 the airport received its first wide-body passenger flight, a flyadeal Airbus A330 from Medina. The contract to build a new passenger terminal was signed on 5 February 2026.",
+                    "On the board for 20–22 October 2026: Tashkent (Silk Avia) and Moscow (Vnukovo)."
+                ]
+            },
+            {
+                "h": "Getting to town",
+                "p": [
+                    "Central Andijan is about 8 km away by road — a taxi is the easiest option."
+                ]
+            }
+        ],
+        "facts": [
+            [
+                "IATA / ICAO",
+                "AZN / UZFA"
+            ],
+            [
+                "Airfield rebuilt",
+                "March 2025"
+            ],
+            [
+                "To the centre",
+                "≈ 8 km"
+            ],
+            [
+                "Live board",
+                "uzairports.com"
+            ]
+        ]
+    },
+    "data": {
+        "iata": "AZN",
+        "icao": "UZFA",
+        "slug": "andijon-aeroporti",
+        "region": "andijon",
+        "district": "oltinkol",
+        "coords": [
+            40.72778,
+            72.29389
+        ],
+        "website": "https://uzairports.com/page/20",
+        "phones": [
+            "+998 74 228 18 31"
+        ],
+        "telegram": null,
+        "sources": [
+            "https://uzairports.com/page/20",
+            "https://uzairports.com/flights/departure?status=departure&airport=AZN",
+            "https://en.wikipedia.org/wiki/Andizhan_Airport",
+            "https://ru.wikipedia.org/wiki/Андижан_(аэропорт)"
+        ]
+    },
+    "images": [],
+    "refs": {
+        "region": [
+            {
+                "type": "region",
+                "slug": "andijon",
+                "name": "Andijan Region",
+                "sub": "Region",
+                "kicker": "Babur's homeland, Uzbekistan's most crowded and easternmost region",
+                "summary": "Small in area but the most densely populated region of Uzbekistan, at the eastern end of the Fergana Valley: Babur's birthplace Andijan, ancient Mingtepa and…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 40.7305,
+                "lon": 72.303,
+                "img": {
+                    "u": "/img/region/andijon/0",
+                    "w": 2400,
+                    "h": 1798,
+                    "focus": null,
+                    "title": "Devonaboy Jome Mosque, Andijan, Uzbekistan",
+                    "author": "Petar Milošević",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Devonaboy_Jome_Mosque,_Andijan,_Uzbekistan.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/andijon"
+            }
+        ],
+        "district": [
+            {
+                "type": "district",
+                "slug": "andijon--oltinkol",
+                "name": "Oltinkul District",
+                "sub": "City / district · Andijan Region",
+                "kicker": "Crowded oases at the heart of the region",
+                "summary": "A compact district in the centre of the region, between the Kara Darya to the north and the Great Fergana Canal to the south, packed with villages and orchards.",
+                "icon": "building-2",
+                "kind": "tuman",
+                "region": "andijon",
+                "rating": null,
+                "unesco": false,
+                "lat": 40.78324,
+                "lon": 72.18816,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/hududlar/andijon/oltinkol"
+            }
+        ]
+    },
+    "regionName": "Andijan Region",
+    "districtName": "Oltinkul District"
+}

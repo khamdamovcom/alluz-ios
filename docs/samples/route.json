@@ -1,0 +1,270 @@
+{
+    "type": "route",
+    "slug": "ipak-yoli-klassikasi-8-kun",
+    "name": "Silk Road classic: Tashkent, Samarkand, Bukhara and Khiva in 8 days",
+    "sub": "Itinerary",
+    "kicker": null,
+    "summary": "The favourite first-timer's route: four historic cities — three with UNESCO-listed old towns — linked by high-speed train, a desert drive and a flight home.",
+    "icon": "route",
+    "kind": null,
+    "region": null,
+    "rating": null,
+    "unesco": false,
+    "lat": null,
+    "lon": null,
+    "img": {
+        "u": "/img/route/ipak-yoli-klassikasi-8-kun/0",
+        "w": 2400,
+        "h": 1350,
+        "focus": null,
+        "title": "Площадь Регистан, находится в центре города Самарканда (Узбекистан)",
+        "author": "Shuhrataxmedov",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Registan_square_(Samarkand).jpg",
+        "sourceName": "Wikimedia Commons"
+    },
+    "web": "https://alluzbekistan.com/en/marshrutlar/ipak-yoli-klassikasi-8-kun",
+    "text": {
+        "title": "Silk Road classic: Tashkent, Samarkand, Bukhara and Khiva in 8 days",
+        "summary": "The favourite first-timer's route: four historic cities — three with UNESCO-listed old towns — linked by high-speed train, a desert drive and a flight home.",
+        "body": [
+            {
+                "h": "About the route",
+                "p": [
+                    "This itinerary strings together the four best-known cities of the Great Silk Road: the modern capital, Tashkent; Timurid Samarkand; Bukhara, a living medieval city; and walled Khiva. The historic centres of Samarkand, Bukhara and Khiva are all World Heritage Sites.",
+                    "It allows at least two nights in each city — enough to see the monuments in morning and evening light and still linger in the bazaars and teahouses."
+                ]
+            },
+            {
+                "h": "Getting around",
+                "p": [
+                    "Tashkent–Samarkand–Bukhara by Afrosiyob high-speed train; Bukhara–Khiva by road across the Kyzylkum (a car with driver is easiest) or by train; then fly from Urgench back to Tashkent.",
+                    "In high season, book train tickets several weeks ahead."
+                ]
+            },
+            {
+                "h": "When to go",
+                "p": [
+                    "April–May and September–October. Summer days in Bukhara and Khiva are very hot, so shift sightseeing to early morning and evening.",
+                    "With a spare day, add a trip from Samarkand to Shahrisabz or a night in a desert yurt camp near Nurata."
+                ]
+            }
+        ]
+    },
+    "data": {
+        "slug": "ipak-yoli-klassikasi-8-kun",
+        "days": 8,
+        "regions": [
+            "toshkent-shahri",
+            "samarqand",
+            "buxoro",
+            "xorazm"
+        ],
+        "theme": "klassik",
+        "best_season": [
+            4,
+            5,
+            9,
+            10
+        ],
+        "stops": [
+            {
+                "day": 1,
+                "place": null,
+                "place_hint": "hazrati-imom-majmuasi",
+                "region": "toshkent-shahri",
+                "text": "Tashkent: the Hazrati Imam complex, home of the seventh-century Uthman Quran, Chorsu Bazaar and Kukeldash Madrasa; Amir Timur Square in the evening."
+            },
+            {
+                "day": 2,
+                "place": null,
+                "place_hint": "registon",
+                "region": "samarqand",
+                "text": "Morning Afrosiyob to Samarkand (about two hours). The Registan and the Gur-e-Amir mausoleum; return to the Registan to see it lit up at night."
+            },
+            {
+                "day": 3,
+                "place": null,
+                "place_hint": "shohi-zinda",
+                "region": "samarqand",
+                "text": "Samarkand: the Shah-i-Zinda necropolis, Bibi-Khanym Mosque, Siab Bazaar, Ulugh Beg's Observatory and the Afrasiyab Museum."
+            },
+            {
+                "day": 4,
+                "place": null,
+                "place_hint": "poi-kalon",
+                "region": "buxoro",
+                "text": "Train to Bukhara. Lyab-i Hauz, the domed bazaars and, at sunset, the Poi Kalyan ensemble — the Kalyan Minaret, its mosque and the Mir-i-Arab Madrasa."
+            },
+            {
+                "day": 5,
+                "place": null,
+                "place_hint": "buxoro-arki",
+                "region": "buxoro",
+                "text": "Bukhara: the Ark fortress, Bolo Hauz Mosque, the tenth-century Samanid Mausoleum and Chor Minor."
+            },
+            {
+                "day": 5,
+                "place": null,
+                "place_hint": "bahouddin-naqshband-majmuasi",
+                "region": "buxoro",
+                "text": "In the afternoon, the outskirts: the Bahauddin Naqshband complex and the last emir's summer residence, Sitorai Mohi Khosa."
+            },
+            {
+                "day": 6,
+                "place": null,
+                "place_hint": null,
+                "region": "xorazm",
+                "text": "Across the Kyzylkum to Khiva (about 450 km, a full day on the road), with desert views and a stop by the Amu Darya. Sunset from the walls of Itchan Kala."
+            },
+            {
+                "day": 7,
+                "place": null,
+                "place_hint": "ichan-qala",
+                "region": "xorazm",
+                "text": "Khiva's Itchan Kala: Kalta Minor, Kunya-Ark, the Juma Mosque, the Islam Khodja Minaret, Tash-Hauli Palace and the Pahlavan Mahmud Mausoleum."
+            },
+            {
+                "day": 8,
+                "place": null,
+                "place_hint": null,
+                "region": "xorazm",
+                "text": "Early-morning lanes of Itchan Kala and craft workshops, then a flight back to Tashkent from Urgench."
+            }
+        ]
+    },
+    "images": [
+        {
+            "u": "/img/route/ipak-yoli-klassikasi-8-kun/0",
+            "w": 2400,
+            "h": 1350,
+            "focus": null,
+            "title": "Площадь Регистан, находится в центре города Самарканда (Узбекистан)",
+            "author": "Shuhrataxmedov",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Registan_square_(Samarkand).jpg",
+            "sourceName": "Wikimedia Commons"
+        }
+    ],
+    "refs": {
+        "regions": [
+            {
+                "type": "region",
+                "slug": "toshkent-shahri",
+                "name": "Tashkent",
+                "sub": "Region",
+                "kicker": "Ancient Chach, modern capital",
+                "summary": "Uzbekistan's capital and Central Asia's largest city: an Old City around Hazrati Imam and Chorsu, UNESCO-listed modernist landmarks, a showpiece metro and…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 41.2755,
+                "lon": 69.3349,
+                "img": {
+                    "u": "/img/region/toshkent-shahri/0",
+                    "w": 2400,
+                    "h": 1800,
+                    "focus": null,
+                    "title": "Center of Islamic Civilization of Uzbekistan at the Hazrati Imam Complex in Tashkent, Uzbekistan. View 003.",
+                    "author": "Зинҳор Насрӣ",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Center_of_Islamic_Civilization_of_Uzbekistan_Tashkent_2026_003.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/toshkent-shahri"
+            },
+            {
+                "type": "region",
+                "slug": "samarqand",
+                "name": "Samarkand Region",
+                "sub": "Region",
+                "kicker": "Timur’s capital and the Zarafshan oasis",
+                "summary": "The heart of the Zarafshan valley: the Registan and Shah-i-Zinda, the Imam al-Bukhari memorial, Urgut’s bazaar and the Amankutan valley. Uzbekistan’s most…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 39.9485,
+                "lon": 66.2852,
+                "img": {
+                    "u": "/img/region/samarqand/0",
+                    "w": 2400,
+                    "h": 1800,
+                    "focus": null,
+                    "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                    "author": "Екатерина Борисова",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/samarqand"
+            },
+            {
+                "type": "region",
+                "slug": "buxoro",
+                "name": "Bukhara Region",
+                "sub": "Region",
+                "kicker": "A thousand years of trade and learning",
+                "summary": "Set in the lower Zarafshan oasis on the edge of the Kyzylkum, Bukhara Region is home to UNESCO-listed Bukhara, the shrines of the 'seven saints' and the ruins…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 40.214,
+                "lon": 63.6272,
+                "img": {
+                    "u": "/img/region/buxoro/0",
+                    "w": 2400,
+                    "h": 1601,
+                    "focus": null,
+                    "title": "Masjidi kalon: Buxoro viloyati, Buxoro, “I. Buxoriy” MFY, X. Nurabod koʻchasi",
+                    "author": "Spartak22",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%9A%D0%B0%D0%BB%D0%BE%D0%BD3.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/buxoro"
+            },
+            {
+                "type": "region",
+                "slug": "xorazm",
+                "name": "Xorazm Region",
+                "sub": "Region",
+                "kicker": "An ancient oasis between two deserts — and Khiva",
+                "summary": "An ancient oasis on the lower Amu Darya: Khiva’s UNESCO-listed Itchan Kala, the birthplace of al-Khwarizmi and al-Biruni, the land of lazgi dance and…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 41.5735,
+                "lon": 60.507,
+                "img": {
+                    "u": "/img/region/xorazm/0",
+                    "w": 2400,
+                    "h": 1600,
+                    "focus": null,
+                    "title": "Skyline of Khiva, Uzbekistan",
+                    "author": "Nassima Chahboun",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:Khiva_skyline.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/xorazm"
+            }
+        ],
+        "stops": []
+    },
+    "regionName": null,
+    "districtName": null
+}

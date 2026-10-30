@@ -1,0 +1,114 @@
+{
+    "type": "fest",
+    "slug": "sharq-taronalari",
+    "name": "Sharq Taronalari International Music Festival",
+    "sub": "Event",
+    "kicker": null,
+    "summary": "A UNESCO-supported festival of the world’s traditional music, held in Samarkand every two years since 1997.",
+    "icon": "calendar-days",
+    "kind": null,
+    "region": null,
+    "rating": null,
+    "unesco": false,
+    "lat": null,
+    "lon": null,
+    "img": null,
+    "web": "https://alluzbekistan.com/en/tadbirlar/sharq-taronalari",
+    "text": {
+        "name": "Sharq Taronalari International Music Festival",
+        "summary": "A UNESCO-supported festival of the world’s traditional music, held in Samarkand every two years since 1997.",
+        "body": [
+            {
+                "h": "About the festival",
+                "p": [
+                    "Sharq Taronalari (‘Melodies of the East’) is one of Central Asia’s largest music and cultural festivals. Held in Samarkand every two years since 1997, it traditionally takes place on an open-air stage on the Registan, in front of the three madrasas. Singers, musicians and dancers from around the world compete in a traditional-music contest over a week that also includes exhibitions, an academic conference and a closing gala concert.",
+                    "The festival was established by a government resolution of 11 March 1997. After a five-year pause caused by the pandemic, the 13th edition took place on 26–30 August 2024 at the Eternal City complex, with more than 300 performers from over 70 countries; the Grand Prix is worth US$10,000. The Ministry of Culture announces each edition’s dates and venue separately, and hotels fill quickly during festival week."
+                ]
+            }
+        ],
+        "when": "Every two years, usually in late August; the next date has not been officially announced"
+    },
+    "data": {
+        "slug": "sharq-taronalari",
+        "regions": [
+            "samarqand"
+        ],
+        "recurring": "biennial",
+        "month": 8,
+        "start": null,
+        "end": null,
+        "place": "registon",
+        "sources": [
+            "https://en.wikipedia.org/wiki/Sharq_Taronalari",
+            "https://lex.uz/docs/-509710",
+            "https://kun.uz/en/news/2024/08/06/samarkand-to-host-13th-sharq-taronalari-festival-after-five-year-hiatus",
+            "https://www.advantour.com/uzbekistan/festivals/sharq-taronalari.htm",
+            "https://ich.unesco.org/en/state/uzbekistan-UZ"
+        ]
+    },
+    "images": [],
+    "refs": {
+        "regions": [
+            {
+                "type": "region",
+                "slug": "samarqand",
+                "name": "Samarkand Region",
+                "sub": "Region",
+                "kicker": "Timur’s capital and the Zarafshan oasis",
+                "summary": "The heart of the Zarafshan valley: the Registan and Shah-i-Zinda, the Imam al-Bukhari memorial, Urgut’s bazaar and the Amankutan valley. Uzbekistan’s most…",
+                "icon": "map",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": 39.9485,
+                "lon": 66.2852,
+                "img": {
+                    "u": "/img/region/samarqand/0",
+                    "w": 2400,
+                    "h": 1800,
+                    "focus": null,
+                    "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                    "author": "Екатерина Борисова",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/hududlar/samarqand"
+            }
+        ],
+        "place": [
+            {
+                "type": "place",
+                "slug": "registon",
+                "name": "Registan",
+                "sub": "Ensemble · Samarkand Region",
+                "kicker": "The great square of three madrasas",
+                "summary": "The heart of Samarkand: a square framed by the Ulugh Beg, Sher-Dor and Tilya-Kori madrasas of the 15th–17th centuries — Central Asia's most celebrated…",
+                "icon": "landmark",
+                "kind": "ansambl",
+                "region": "samarqand",
+                "rating": 3,
+                "unesco": true,
+                "lat": 39.65469,
+                "lon": 66.97587,
+                "img": {
+                    "u": "/img/place/registon/0",
+                    "w": 2400,
+                    "h": 1600,
+                    "focus": null,
+                    "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                    "author": "Bok",
+                    "license": "CC BY-SA 4.0",
+                    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                    "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4,_%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_20230501_01.jpg",
+                    "sourceName": "Wikimedia Commons"
+                },
+                "web": "https://alluzbekistan.com/en/joylar/registon"
+            }
+        ]
+    },
+    "regionName": null,
+    "districtName": null
+}

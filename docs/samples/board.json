@@ -1,0 +1,3030 @@
+{
+    "airport": "TAS",
+    "dir": "dep",
+    "day": "today",
+    "date": "2026-10-30",
+    "lang": "en",
+    "generatedAt": "2026-10-30T03:47:34.845Z",
+    "state": "ok",
+    "updatedAt": "2026-10-30T03:46:03.962Z",
+    "source": "https://tashkent-airport.uz/flights/departure?status=departure&airport=TAS",
+    "observed": false,
+    "flights": [
+        {
+            "key": "20261030-0040-TK363",
+            "flight": "TK 363",
+            "airline": {
+                "code": "TK",
+                "name": "Turkish Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T00:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B2",
+            "desks": "16-18",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Scheduled",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0220-C6531",
+            "flight": "C6 531",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "MLE",
+                "city": "Male"
+            },
+            "scheduled": "2026-10-30T02:20:00+05:00",
+            "estimated": "2026-10-30T02:10:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B6",
+            "desks": "6-9",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Malé",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0240-EY831",
+            "flight": "EY 831",
+            "airline": {
+                "code": "EY",
+                "name": "Etihad Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "AUH",
+                "city": "Abu-dabi"
+            },
+            "scheduled": "2026-10-30T02:40:00+05:00",
+            "estimated": "2026-10-30T03:19:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B2",
+            "desks": "33-38",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Abu Dhabi",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0240-HY421",
+            "flight": "HY 421",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DEL",
+                "city": "Deli"
+            },
+            "scheduled": "2026-10-30T02:40:00+05:00",
+            "estimated": "2026-10-30T03:18:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B1",
+            "desks": "41-44",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Delhi",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0250-DP742",
+            "flight": "DP 742",
+            "airline": {
+                "code": "DP",
+                "name": "Pobeda"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "VKO",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T02:50:00+05:00",
+            "estimated": "2026-10-30T09:10:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed until 09:10",
+            "terminal": "2",
+            "gate": "B7",
+            "desks": "21-23",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Delayed",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0300-U62008",
+            "flight": "U6 2008",
+            "airline": {
+                "code": "U6",
+                "name": "Ural Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SVX",
+                "city": "Ekaterinburg"
+            },
+            "scheduled": "2026-10-30T03:00:00+05:00",
+            "estimated": "2026-10-30T03:30:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B12",
+            "desks": "39-41",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Yekaterinburg",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0330-J2532",
+            "flight": "J2 532",
+            "airline": {
+                "code": "J2",
+                "name": "Azerbaijan Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "GYD",
+                "city": "Boku"
+            },
+            "scheduled": "2026-10-30T03:30:00+05:00",
+            "estimated": "2026-10-30T03:36:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B11",
+            "desks": "25-28",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Baku",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0330-TK371",
+            "flight": "TK 371",
+            "airline": {
+                "code": "TK",
+                "name": "Turkish Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T03:30:00+05:00",
+            "estimated": "2026-10-30T04:23:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B5",
+            "desks": "15-20",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0340-G9271",
+            "flight": "G9 271",
+            "airline": {
+                "code": "G9",
+                "name": "Air Arabia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SHJ",
+                "city": "Sharja"
+            },
+            "scheduled": "2026-10-30T03:40:00+05:00",
+            "estimated": "2026-10-30T04:05:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B8",
+            "desks": "12-14",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Sharjah",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0345-SU1871",
+            "flight": "SU 1871",
+            "airline": {
+                "code": "SU",
+                "name": "Aeroflot"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SVO",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T03:45:00+05:00",
+            "estimated": "2026-10-30T05:14:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B10",
+            "desks": "46-48",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0355-C6561",
+            "flight": "C6 561",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "LHE",
+                "city": "Lahore"
+            },
+            "scheduled": "2026-10-30T03:55:00+05:00",
+            "estimated": "2026-10-30T03:59:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B9",
+            "desks": "6-10",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Lahore",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0400-FZ1942",
+            "flight": "FZ 1942",
+            "airline": {
+                "code": "FZ",
+                "name": "flydubai"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DXB",
+                "city": "Dubay"
+            },
+            "scheduled": "2026-10-30T04:00:00+05:00",
+            "estimated": "2026-10-30T04:39:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B6",
+            "desks": "2-5",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Dubai",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0400-HY465",
+            "flight": "HY 465",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ISB",
+                "city": "Islamabad"
+            },
+            "scheduled": "2026-10-30T04:00:00+05:00",
+            "estimated": "2026-10-30T04:16:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B12",
+            "desks": "29-30",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Islamabad",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0440-XQ803",
+            "flight": "XQ 803",
+            "airline": {
+                "code": "XQ",
+                "name": "SunExpress"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ADB",
+                "city": "Izmir"
+            },
+            "scheduled": "2026-10-30T04:40:00+05:00",
+            "estimated": "2026-10-30T05:10:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B11",
+            "desks": "33-36",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Izmir",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0505-HH575",
+            "flight": "HH 575",
+            "airline": {
+                "code": "HH",
+                "name": "Qanot Sharq"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T05:05:00+05:00",
+            "estimated": "2026-10-30T05:29:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B8",
+            "desks": "39-42",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0540-C6205",
+            "flight": "C6 205",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ALA",
+                "city": "Olmaota"
+            },
+            "scheduled": "2026-10-30T05:40:00+05:00",
+            "estimated": "2026-10-30T05:33:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B12",
+            "desks": "25-28",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Almaty",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0555-TK365",
+            "flight": "TK 365",
+            "airline": {
+                "code": "TK",
+                "name": "Turkish Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T05:55:00+05:00",
+            "estimated": "2026-10-30T06:37:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B5",
+            "desks": "15-18",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0600-UH701",
+            "flight": "UH 701",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "KSQ",
+                "city": "Qarshi"
+            },
+            "scheduled": "2026-10-30T06:00:00+05:00",
+            "estimated": "2026-10-30T06:01:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "1",
+            "desks": "8",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Karshi",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0615-VF586",
+            "flight": "VF 586",
+            "airline": {
+                "code": "VF",
+                "name": "AJet"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ESB",
+                "city": "Ankara"
+            },
+            "scheduled": "2026-10-30T06:15:00+05:00",
+            "estimated": "2026-10-30T06:22:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B6",
+            "desks": "2-5",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Ankara",
+            "statusLabel": "Delayed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0620-UH801",
+            "flight": "UH 801",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "BHK",
+                "city": "Buxoro"
+            },
+            "scheduled": "2026-10-30T06:20:00+05:00",
+            "estimated": "2026-10-30T06:15:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "4",
+            "desks": "9",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Bukhara",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0630-HY51",
+            "flight": "HY 51",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "UGC",
+                "city": "Urganch"
+            },
+            "scheduled": "2026-10-30T06:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "3",
+            "desks": "1-6",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Urgench",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0630-UH751",
+            "flight": "UH 751",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "TMJ",
+                "city": "Termez"
+            },
+            "scheduled": "2026-10-30T06:30:00+05:00",
+            "estimated": "2026-10-30T06:29:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "2",
+            "desks": "7",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Termez",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0705-HY11",
+            "flight": "HY 11",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "NCU",
+                "city": "Nukus"
+            },
+            "scheduled": "2026-10-30T07:05:00+05:00",
+            "estimated": "2026-10-30T07:01:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "1",
+            "desks": "1-2",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Nukus",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0710-HY21",
+            "flight": "HY 21",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "BHK",
+                "city": "Buxoro"
+            },
+            "scheduled": "2026-10-30T07:10:00+05:00",
+            "estimated": "2026-10-30T07:13:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "4",
+            "desks": "3-4",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Bukhara",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0730-HY603",
+            "flight": "HY 603",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DME",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T07:30:00+05:00",
+            "estimated": "2026-10-30T09:30:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed until 09:30",
+            "terminal": "2",
+            "gate": "B12",
+            "desks": "43-44",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Delayed",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0735-C6351",
+            "flight": "C6 351",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DXB",
+                "city": "Dubay"
+            },
+            "scheduled": "2026-10-30T07:35:00+05:00",
+            "estimated": "2026-10-30T07:29:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B10",
+            "desks": "21-24",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Dubai",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0735-HY333",
+            "flight": "HY 333",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DXB",
+                "city": "Dubay"
+            },
+            "scheduled": "2026-10-30T07:35:00+05:00",
+            "estimated": "2026-10-30T07:38:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B2",
+            "desks": "9-14",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Dubai",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": true
+        },
+        {
+            "key": "20261030-0740-HY271",
+            "flight": "HY 271",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T07:40:00+05:00",
+            "estimated": "2026-10-30T07:52:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed",
+            "terminal": "2",
+            "gate": "B1",
+            "desks": "33-38",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Delayed",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0745-C6557",
+            "flight": "C6 557",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DEL",
+                "city": "Deli"
+            },
+            "scheduled": "2026-10-30T07:45:00+05:00",
+            "estimated": "2026-10-30T07:48:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B8",
+            "desks": "42-43",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Delhi",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0800-HY761",
+            "flight": "HY 761",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ALA",
+                "city": "Olmaota"
+            },
+            "scheduled": "2026-10-30T08:00:00+05:00",
+            "estimated": "2026-10-30T07:50:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B11",
+            "desks": "33-37",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Almaty",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0800-UH851",
+            "flight": "UH 851",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "NVI",
+                "city": "Navoiy"
+            },
+            "scheduled": "2026-10-30T08:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "2",
+            "desks": "9",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Navoi",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0805-HY745",
+            "flight": "HY 745",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "TBS",
+                "city": "Tbilisi"
+            },
+            "scheduled": "2026-10-30T08:05:00+05:00",
+            "estimated": "2026-10-30T08:00:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B12",
+            "desks": "39-41",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Tbilisi",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0830-UH1001",
+            "flight": "UH 1001",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "OMN",
+                "city": "Zomin"
+            },
+            "scheduled": "2026-10-30T08:30:00+05:00",
+            "estimated": "2026-10-30T08:26:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "3",
+            "gate": "3",
+            "desks": "8",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Zaamin",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0850-HY9701",
+            "flight": "HY 9701",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "GRV",
+                "city": "Grozniy"
+            },
+            "scheduled": "2026-10-30T08:50:00+05:00",
+            "estimated": "2026-10-30T08:43:00+05:00",
+            "actual": null,
+            "status": "departed",
+            "statusText": "Departed",
+            "terminal": "2",
+            "gate": "B9",
+            "desks": "7-8",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Grozny",
+            "statusLabel": "Departed",
+            "past": true,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0930-HY211",
+            "flight": "HY 211",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "RIX",
+                "city": "Riga"
+            },
+            "scheduled": "2026-10-30T09:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B6",
+            "desks": "25-28",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Riga",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0945-HY9673",
+            "flight": "HY 9673",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IKT",
+                "city": "Irkutsk"
+            },
+            "scheduled": "2026-10-30T09:45:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B8",
+            "desks": "46-48",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Irkutsk",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-0955-TK369",
+            "flight": "TK 369",
+            "airline": {
+                "code": "TK",
+                "name": "Turkish Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T09:55:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B5",
+            "desks": "15-18",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1025-LO192",
+            "flight": "LO 192",
+            "airline": {
+                "code": "LO",
+                "name": "LOT Polish Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "WAW",
+                "city": "Varshava"
+            },
+            "scheduled": "2026-10-30T10:25:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B1",
+            "desks": "11-14",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Warsaw",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1040-2U5501",
+            "flight": "2U 5501",
+            "airline": {
+                "code": "2U",
+                "name": "Fly Khiva"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SSH",
+                "city": "Sharm el-Shayx"
+            },
+            "scheduled": "2026-10-30T10:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B11",
+            "desks": "39-42",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Sharm El Sheikh",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1100-C6219",
+            "flight": "C6 219",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "BSZ",
+                "city": "Bishkek"
+            },
+            "scheduled": "2026-10-30T11:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B2",
+            "desks": "33-35",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Bishkek",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1100-UH601",
+            "flight": "UH 601",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "AZN",
+                "city": "Andijon"
+            },
+            "scheduled": "2026-10-30T11:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Andijan",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1120-FZ1402",
+            "flight": "FZ 1402",
+            "airline": {
+                "code": "FZ",
+                "name": "flydubai"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DXB",
+                "city": "Dubay"
+            },
+            "scheduled": "2026-10-30T11:20:00+05:00",
+            "estimated": "2026-10-30T12:00:00+05:00",
+            "actual": null,
+            "status": "delayed",
+            "statusText": "Delayed until 12:00",
+            "terminal": "2",
+            "gate": "B10",
+            "desks": "2-5",
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Dubai",
+            "statusLabel": "Delayed",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1120-UH401",
+            "flight": "UH 401",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "FEG",
+                "city": "Farg'ona"
+            },
+            "scheduled": "2026-10-30T11:20:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Fergana",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1140-UH761",
+            "flight": "UH 761",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IYO",
+                "city": "Sariosiyo"
+            },
+            "scheduled": "2026-10-30T11:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Sariosiyo",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1200-UH721",
+            "flight": "UH 721",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "RBZ",
+                "city": "Shahrisabz"
+            },
+            "scheduled": "2026-10-30T12:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Shahrisabz",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1235-UH753",
+            "flight": "UH 753",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "TMJ",
+                "city": "Termez"
+            },
+            "scheduled": "2026-10-30T12:35:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Termez",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1250-HH5561",
+            "flight": "HH 5561",
+            "airline": {
+                "code": "HH",
+                "name": "Qanot Sharq"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "MED",
+                "city": "Madina"
+            },
+            "scheduled": "2026-10-30T12:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B8",
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Medina",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1310-KC128",
+            "flight": "KC 128",
+            "airline": {
+                "code": "KC",
+                "name": "Air Astana"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ALA",
+                "city": "Olmaota"
+            },
+            "scheduled": "2026-10-30T13:10:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B6",
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Almaty",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1320-SZ226",
+            "flight": "SZ 226",
+            "airline": {
+                "code": "SZ",
+                "name": "Somon Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DYU",
+                "city": "Dushanbe"
+            },
+            "scheduled": "2026-10-30T13:20:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B5",
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Dushanbe",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1330-GJ8976",
+            "flight": "GJ 8976",
+            "airline": {
+                "code": "GJ",
+                "name": "Loong Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "TFU",
+                "city": "Chengdu"
+            },
+            "scheduled": "2026-10-30T13:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B1",
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Chengdu",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1345-HY201",
+            "flight": "HY 201",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "LHR",
+                "city": "London"
+            },
+            "scheduled": "2026-10-30T13:45:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B2",
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "London",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1345-HY55",
+            "flight": "HY 55",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "UGC",
+                "city": "Urganch"
+            },
+            "scheduled": "2026-10-30T13:45:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Urgench",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1355-HY251",
+            "flight": "HY 251",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "CDG",
+                "city": "Paris"
+            },
+            "scheduled": "2026-10-30T13:55:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": "B10",
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Paris",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1410-G9274",
+            "flight": "G9 274",
+            "airline": {
+                "code": "G9",
+                "name": "Air Arabia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SHJ",
+                "city": "Sharja"
+            },
+            "scheduled": "2026-10-30T14:10:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Sharjah",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1450-UH803",
+            "flight": "UH 803",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "BHK",
+                "city": "Buxoro"
+            },
+            "scheduled": "2026-10-30T14:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Bukhara",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1455-KC124",
+            "flight": "KC 124",
+            "airline": {
+                "code": "KC",
+                "name": "Air Astana"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "NQZ",
+                "city": "Astana"
+            },
+            "scheduled": "2026-10-30T14:55:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Astana",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1500-UH501",
+            "flight": "UH 501",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "NMA",
+                "city": "Namangan"
+            },
+            "scheduled": "2026-10-30T15:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Namangan",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1510-HY255",
+            "flight": "HY 255",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "MXP",
+                "city": "Milan"
+            },
+            "scheduled": "2026-10-30T15:10:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Milan",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1510-HY721",
+            "flight": "HY 721",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "NQZ",
+                "city": "Astana"
+            },
+            "scheduled": "2026-10-30T15:10:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Astana",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1515-HY755",
+            "flight": "HY 755",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "GYD",
+                "city": "Boku"
+            },
+            "scheduled": "2026-10-30T15:15:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Baku",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1520-HY777",
+            "flight": "HY 777",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "BSZ",
+                "city": "Bishkek"
+            },
+            "scheduled": "2026-10-30T15:20:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Bishkek",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1530-C6151",
+            "flight": "C6 151",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "FRA",
+                "city": "Frankfurt"
+            },
+            "scheduled": "2026-10-30T15:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Frankfurt",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1540-SU1873",
+            "flight": "SU 1873",
+            "airline": {
+                "code": "SU",
+                "name": "Aeroflot"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SVO",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T15:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1550-S75566",
+            "flight": "S7 5566",
+            "airline": {
+                "code": "S7",
+                "name": "S7 Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "OVB",
+                "city": "Novosibirsk"
+            },
+            "scheduled": "2026-10-30T15:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Novosibirsk",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1600-KC212",
+            "flight": "KC 212",
+            "airline": {
+                "code": "KC",
+                "name": "Air Astana"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ALA",
+                "city": "Olmaota"
+            },
+            "scheduled": "2026-10-30T16:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Almaty",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1615-TK367",
+            "flight": "TK 367",
+            "airline": {
+                "code": "TK",
+                "name": "Turkish Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T16:15:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1630-C6221",
+            "flight": "C6 221",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "TBS",
+                "city": "Tbilisi"
+            },
+            "scheduled": "2026-10-30T16:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Tbilisi",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1640-C6215",
+            "flight": "C6 215",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "OSS",
+                "city": "O‘sh"
+            },
+            "scheduled": "2026-10-30T16:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Osh",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1650-HY273",
+            "flight": "HY 273",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T16:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1700-HY335",
+            "flight": "HY 335",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "JED",
+                "city": "Jidda"
+            },
+            "scheduled": "2026-10-30T17:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Jeddah",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1700-HY613",
+            "flight": "HY 613",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "VKO",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T17:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1710-FZ1946",
+            "flight": "FZ 1946",
+            "airline": {
+                "code": "FZ",
+                "name": "flydubai"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DXB",
+                "city": "Dubay"
+            },
+            "scheduled": "2026-10-30T17:10:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Dubai",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1715-HY507",
+            "flight": "HY 507",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "URC",
+                "city": "Urumqi"
+            },
+            "scheduled": "2026-10-30T17:15:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Ürümqi",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1720-HH701",
+            "flight": "HH 701",
+            "airline": {
+                "code": "HH",
+                "name": "Qanot Sharq"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DME",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T17:20:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1730-C6511",
+            "flight": "C6 511",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "CAN",
+                "city": "Guanchjou"
+            },
+            "scheduled": "2026-10-30T17:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Guangzhou",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1800-HY97",
+            "flight": "HY 97",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "AZN",
+                "city": "Andijon"
+            },
+            "scheduled": "2026-10-30T18:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Andijan",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1805-C6455",
+            "flight": "C6 455",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "KJA",
+                "city": "Krasnoyarsk"
+            },
+            "scheduled": "2026-10-30T18:05:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Krasnoyarsk",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1810-HY631",
+            "flight": "HY 631",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "LED",
+                "city": "St. Peterburg"
+            },
+            "scheduled": "2026-10-30T18:10:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "St Petersburg",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1820-KA708",
+            "flight": "KA 708",
+            "airline": {
+                "code": "KA",
+                "name": "Aero Nomad"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "BSZ",
+                "city": "Bishkek"
+            },
+            "scheduled": "2026-10-30T18:20:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Bishkek",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1825-UH805",
+            "flight": "UH 805",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "BHK",
+                "city": "Buxoro"
+            },
+            "scheduled": "2026-10-30T18:25:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Bukhara",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1830-RT706",
+            "flight": "RT 706",
+            "airline": {
+                "code": "RT",
+                "name": "UVT AERO"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "PEE",
+                "city": "Perm"
+            },
+            "scheduled": "2026-10-30T18:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Perm",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1840-C6303",
+            "flight": "C6 303",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "IST",
+                "city": "Istanbul"
+            },
+            "scheduled": "2026-10-30T18:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Istanbul",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1840-HY573",
+            "flight": "HY 573",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "CAN",
+                "city": "Guanchjou"
+            },
+            "scheduled": "2026-10-30T18:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Guangzhou",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1850-C6251",
+            "flight": "C6 251",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "GYD",
+                "city": "Boku"
+            },
+            "scheduled": "2026-10-30T18:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Baku",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1900-HY601",
+            "flight": "HY 601",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "DME",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T19:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1905-UH755",
+            "flight": "UH 755",
+            "airline": {
+                "code": "UH",
+                "name": "Silk Avia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "TMJ",
+                "city": "Termez"
+            },
+            "scheduled": "2026-10-30T19:05:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Termez",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1930-C6403",
+            "flight": "C6 403",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SVO",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T19:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-1940-7Q127",
+            "flight": "7Q 127",
+            "airline": {
+                "code": "7Q",
+                "name": null
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "MED",
+                "city": "Madina"
+            },
+            "scheduled": "2026-10-30T19:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Medina",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2000-HY17",
+            "flight": "HY 17",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "NCU",
+                "city": "Nukus"
+            },
+            "scheduled": "2026-10-30T20:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Nukus",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2010-C6467",
+            "flight": "C6 467",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "KUF",
+                "city": "Samara"
+            },
+            "scheduled": "2026-10-30T20:10:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Samara",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2015-HY667",
+            "flight": "HY 667",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "OVB",
+                "city": "Novosibirsk"
+            },
+            "scheduled": "2026-10-30T20:15:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Novosibirsk",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2020-SU1975",
+            "flight": "SU 1975",
+            "airline": {
+                "code": "SU",
+                "name": "Aeroflot"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SVO",
+                "city": "Moskva"
+            },
+            "scheduled": "2026-10-30T20:20:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Moscow",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2035-C6207",
+            "flight": "C6 207",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "NQZ",
+                "city": "Astana"
+            },
+            "scheduled": "2026-10-30T20:35:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Astana",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2040-HY57",
+            "flight": "HY 57",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "UGC",
+                "city": "Urganch"
+            },
+            "scheduled": "2026-10-30T20:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "3",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Urgench",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2040-HY765",
+            "flight": "HY 765",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ALA",
+                "city": "Olmaota"
+            },
+            "scheduled": "2026-10-30T20:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Almaty",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2050-C6453",
+            "flight": "C6 453",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "AER",
+                "city": "Sochi"
+            },
+            "scheduled": "2026-10-30T20:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Sochi",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2100-HY537",
+            "flight": "HY 537",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "HKT",
+                "city": "Phuket"
+            },
+            "scheduled": "2026-10-30T21:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Phuket",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2200-C6551",
+            "flight": "C6 551",
+            "airline": {
+                "code": "C6",
+                "name": "Centrum Air"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "HYD",
+                "city": "HYD"
+            },
+            "scheduled": "2026-10-30T22:00:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "HYD",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2230-HY513",
+            "flight": "HY 513",
+            "airline": {
+                "code": "HY",
+                "name": "Uzbekistan Airways"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "ICN",
+                "city": "Seul"
+            },
+            "scheduled": "2026-10-30T22:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Seoul",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2240-MU856",
+            "flight": "MU 856",
+            "airline": {
+                "code": "MU",
+                "name": "China Eastern Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "XIY",
+                "city": "Xian"
+            },
+            "scheduled": "2026-10-30T22:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Xi’an",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2250-CZ6028",
+            "flight": "CZ 6028",
+            "airline": {
+                "code": "CZ",
+                "name": "China Southern Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "PKX",
+                "city": "Pekin"
+            },
+            "scheduled": "2026-10-30T22:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Beijing",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2330-OD752",
+            "flight": "OD 752",
+            "airline": {
+                "code": "OD",
+                "name": "Batik Air Malaysia"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "KUL",
+                "city": "Kuala lumpur"
+            },
+            "scheduled": "2026-10-30T23:30:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Kuala Lumpur",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2340-FV6726",
+            "flight": "FV 6726",
+            "airline": {
+                "code": "FV",
+                "name": "Rossiya"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "KJA",
+                "city": "Krasnoyarsk"
+            },
+            "scheduled": "2026-10-30T23:40:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Krasnoyarsk",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        },
+        {
+            "key": "20261030-2350-U62962",
+            "flight": "U6 2962",
+            "airline": {
+                "code": "U6",
+                "name": "Ural Airlines"
+            },
+            "direction": "dep",
+            "airport": "TAS",
+            "other": {
+                "iata": "SVX",
+                "city": "Ekaterinburg"
+            },
+            "scheduled": "2026-10-30T23:50:00+05:00",
+            "estimated": null,
+            "actual": null,
+            "status": "scheduled",
+            "statusText": "On schedule",
+            "terminal": "2",
+            "gate": null,
+            "desks": null,
+            "belt": null,
+            "aircraft": null,
+            "codeshares": [],
+            "city": "Yekaterinburg",
+            "statusLabel": "Scheduled",
+            "past": false,
+            "removedFromSource": false
+        }
+    ]
+}

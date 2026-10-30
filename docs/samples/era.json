@@ -1,0 +1,1260 @@
+{
+    "type": "era",
+    "slug": "temuriylar",
+    "name": "The Timurid era",
+    "sub": "History",
+    "kicker": null,
+    "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+    "icon": "scroll-text",
+    "kind": null,
+    "region": null,
+    "rating": null,
+    "unesco": false,
+    "lat": null,
+    "lon": null,
+    "img": {
+        "u": "/img/era/temuriylar/0",
+        "w": 2400,
+        "h": 1615,
+        "focus": null,
+        "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+        "author": "Bgag",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+        "sourceName": "Wikimedia Commons"
+    },
+    "web": "https://alluzbekistan.com/en/tarix/temuriylar",
+    "text": {
+        "name": "The Timurid era",
+        "years": "1370–1507",
+        "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and Babur's prose: the “Timurid Renaissance”.",
+        "body": [
+            {
+                "h": "Timur's empire",
+                "p": [
+                    "Having become ruler of Transoxiana in 1370, Timur (1336–1405) spent the next 35 years campaigning in Khwarazm, Iran, the Golden Horde, India, Syria and Anatolia, building an empire that stretched from Central Asia to Asia Minor. His campaigns brought the destruction of many cities and enormous loss of life, and historians judge him in very different ways. At the same time he lavished attention on his capital, Samarkand: architects, painters and craftsmen were brought from conquered lands, and gardens such as Bagh-i Dilkusha and Bagh-i Chinar were laid out around the city."
+                ]
+            },
+            {
+                "h": "Architecture: the age of blue domes",
+                "p": [
+                    "Timurid architecture is famed for colossal portals, double-shelled ribbed domes, glazed tilework and mosaic. Samarkand gained the Bibi-Khanym Mosque (1399–1404), the Gur-e Amir mausoleum and the Shah-i Zinda ensemble; Shakhrisabz the Ak-Saray palace (1380–1404) and the Dorus-Saodat complex. Timur also commissioned the mausoleum of Khoja Ahmad Yasawi in Turkestan. The style went on to shape architecture in Iran and India, including the buildings of the Mughals."
+                ]
+            },
+            {
+                "h": "Shah Rukh and Ulugh Beg: a centre of science",
+                "p": [
+                    "After Timur's death his son Shah Rukh (1409–1447) moved the capital to Herat, while his grandson Mirzo Ulugh Beg governed Samarkand for almost forty years. Ulugh Beg built madrasas in Bukhara (1417), Samarkand (1417–1420) and Gijduvan (1433), and in 1424–1428 an observatory, where with Jamshid al-Kashi, Qadi Zada al-Rumi and Ali Qushji he compiled his famous Zij, giving the positions of 1,018 stars. In 1449 Ulugh Beg was murdered on the orders of his son Abd al-Latif, and the observatory was destroyed."
+                ]
+            },
+            {
+                "h": "Herat and a literary flowering",
+                "p": [
+                    "In the later 15th century the centre of Timurid culture shifted to Herat under Sultan Husayn Bayqara. There Alisher Navoi wrote his Khamsa and other works in Chagatai Turkic, proving the power of the language as a literary medium; Abd al-Rahman Jami reached the heights of Persian poetry, and Kamoliddin Behzod those of miniature painting. The Timurid prince Zahir ud-Din Muhammad Babur would later write his memoirs, the Baburnama."
+                ]
+            },
+            {
+                "h": "The end of the Timurids",
+                "p": [
+                    "Feuds among Timurid princes weakened the state. In 1500 Muhammad Shaybani Khan, leader of the Uzbeks of the Dasht-i Kipchak, took Samarkand, and in 1507 Herat. Babur withdrew to Kabul and then India, where in 1526 he founded the Mughal Empire. The Timurid legacy lives on in the monuments of Samarkand, Shakhrisabz, Bukhara and Gijduvan, and in the State Museum of Timurid History in Tashkent."
+                ]
+            }
+        ]
+    },
+    "data": {
+        "slug": "temuriylar",
+        "years": "1370–1507",
+        "sources": [
+            "https://en.wikipedia.org/wiki/Timurid_Empire",
+            "https://en.wikipedia.org/wiki/Timurid_Renaissance",
+            "https://en.wikipedia.org/wiki/Ulugh_Beg",
+            "https://ru.wikipedia.org/wiki/Тимуриды",
+            "https://whc.unesco.org/en/list/603/"
+        ]
+    },
+    "images": [
+        {
+            "u": "/img/era/temuriylar/0",
+            "w": 2400,
+            "h": 1615,
+            "focus": null,
+            "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+            "author": "Bgag",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+            "sourceName": "Wikimedia Commons"
+        },
+        {
+            "u": "/img/era/temuriylar/1",
+            "w": 2400,
+            "h": 1696,
+            "focus": null,
+            "title": "Timur takes Baghdad in August 1401. Zafarnama of 1436. Facing folios 346v (left) 345r (right) Reference: Sims, E. G. (1991): Ibrahim-Sultan's Illustrated Zafar-nameh of 839/1436. Islamic Art 4, pp. 17",
+            "author": "1436 artist",
+            "license": "Public domain",
+            "licenseUrl": null,
+            "source": "https://commons.wikimedia.org/wiki/File:Timur_takes_Baghdad_in_August_1401._Zafarnama_of_1436._Facing_folios_346v_(left)_345r_(right).jpg",
+            "sourceName": "Wikimedia Commons"
+        },
+        {
+            "u": "/img/era/temuriylar/2",
+            "w": 2400,
+            "h": 1462,
+            "focus": null,
+            "title": "Gur-e Amir, Samarkand, Uzbekistan",
+            "author": "Bgag",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:Gur-e_Amir_03.jpg",
+            "sourceName": "Wikimedia Commons"
+        },
+        {
+            "u": "/img/era/temuriylar/3",
+            "w": 2400,
+            "h": 3360,
+            "focus": null,
+            "title": "Statue of Ulugh Beg, Samarkand, Uzbekistan",
+            "author": "Bgag",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:Statue_of_Ulugh_Beg_(Samarkand)_02.jpg",
+            "sourceName": "Wikimedia Commons"
+        }
+    ],
+    "refs": {},
+    "regionName": null,
+    "districtName": null,
+    "sections": {
+        "events": [
+            {
+                "type": "hist_event",
+                "slug": "temur-hokimiyati",
+                "name": "Timur comes to power",
+                "sub": "Historical event",
+                "kicker": null,
+                "summary": "",
+                "icon": "history",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": null,
+                "lon": null,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/tarix/temuriylar#temur-hokimiyati",
+                "text": {
+                    "title": "Timur comes to power",
+                    "text": "A Barlas emir from Kesh, Timur rose through the power struggles of Transoxiana in the 1360s, and in 1370 he defeated his former ally Amir Husayn at Balkh and was proclaimed supreme ruler by a kurultai. Marrying the Chinggisid princess Saray Mulk Khanum, he took the title gurkan, “royal son-in-law”, and made Samarkand his capital. Over the next 35 years he campaigned in Khwarazm, Iran, the Golden Horde, India, Syria and Anatolia, building a vast empire at the cost of many ruined cities and enormous loss of life. At the same time craftsmen from conquered lands were brought to Samarkand, Shakhrisabz and other towns, and the masterpieces of Timurid architecture took shape."
+                },
+                "data": {
+                    "slug": "temur-hokimiyati",
+                    "year": 1370,
+                    "era": "temuriylar",
+                    "regions": [
+                        "samarqand",
+                        "qashqadaryo"
+                    ],
+                    "date": "1370",
+                    "places": [
+                        "gori-amir"
+                    ],
+                    "sources": [
+                        "https://en.wikipedia.org/wiki/Timur",
+                        "https://en.wikipedia.org/wiki/Timurid_Empire",
+                        "https://ru.wikipedia.org/wiki/Тимур"
+                    ]
+                },
+                "images": [],
+                "refs": {
+                    "regions": [
+                        {
+                            "type": "region",
+                            "slug": "samarqand",
+                            "name": "Samarkand Region",
+                            "sub": "Region",
+                            "kicker": "Timur’s capital and the Zarafshan oasis",
+                            "summary": "The heart of the Zarafshan valley: the Registan and Shah-i-Zinda, the Imam al-Bukhari memorial, Urgut’s bazaar and the Amankutan valley. Uzbekistan’s most…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 39.9485,
+                            "lon": 66.2852,
+                            "img": {
+                                "u": "/img/region/samarqand/0",
+                                "w": 2400,
+                                "h": 1800,
+                                "focus": null,
+                                "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                                "author": "Екатерина Борисова",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/samarqand"
+                        },
+                        {
+                            "type": "region",
+                            "slug": "qashqadaryo",
+                            "name": "Kashkadarya Region",
+                            "sub": "Region",
+                            "kicker": "Timur’s homeland and the ancient Nasaf oasis",
+                            "summary": "A region stretching from the Hisor mountains to the Qarshi steppe: UNESCO-listed Shahrisabz, 2,700-year-old Qarshi, mountain villages and nature reserves.",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 38.7888,
+                            "lon": 66.0821,
+                            "img": {
+                                "u": "/img/region/qashqadaryo/0",
+                                "w": 2400,
+                                "h": 1601,
+                                "focus": null,
+                                "title": "Amir Temur haykali: Qashqadaryo viloyati, Shahrisabz, “Oʻrda” MFY Shahrisabz Tarixiy markazi",
+                                "author": "Marat Nadjibaev",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Amir_Temur_5.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/qashqadaryo"
+                        }
+                    ],
+                    "places": [
+                        {
+                            "type": "place",
+                            "slug": "gori-amir",
+                            "name": "Gur-e-Amir",
+                            "sub": "Mausoleum · Samarkand Region",
+                            "kicker": "Tomb of Timur and his dynasty",
+                            "summary": "The mausoleum of Timur, his sons and grandsons, among them Ulugh Beg (1403–1404): a ribbed turquoise dome and a gilded interior make it a high point of…",
+                            "icon": "landmark",
+                            "kind": "maqbara",
+                            "region": "samarqand",
+                            "rating": 3,
+                            "unesco": true,
+                            "lat": 39.64861,
+                            "lon": 66.96932,
+                            "img": {
+                                "u": "/img/place/gori-amir/0",
+                                "w": 2400,
+                                "h": 1597,
+                                "focus": null,
+                                "title": "Amir Temur mausoleum complex. 1, Ak Sarai street, Samarkand, Uzbekistan.",
+                                "author": "Arina Pan",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D0%B8%D0%B9_%D0%93%D1%83%D1%80-%D0%AD%D0%BC%D0%B8%D1%80.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/gori-amir"
+                        }
+                    ],
+                    "era": [
+                        {
+                            "type": "era",
+                            "slug": "temuriylar",
+                            "name": "The Timurid era",
+                            "sub": "History",
+                            "kicker": null,
+                            "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+                            "icon": "scroll-text",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": null,
+                            "lon": null,
+                            "img": {
+                                "u": "/img/era/temuriylar/0",
+                                "w": 2400,
+                                "h": 1615,
+                                "focus": null,
+                                "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+                                "author": "Bgag",
+                                "license": "CC0",
+                                "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/tarix/temuriylar"
+                        }
+                    ]
+                },
+                "regionName": null,
+                "districtName": null
+            },
+            {
+                "type": "hist_event",
+                "slug": "oqsaroy-qurilishi",
+                "name": "Building the Ak-Saray in Shakhrisabz",
+                "sub": "Historical event",
+                "kicker": null,
+                "summary": "",
+                "icon": "history",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": null,
+                "lon": null,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/tarix/temuriylar#oqsaroy-qurilishi",
+                "text": {
+                    "title": "Building the Ak-Saray in Shakhrisabz",
+                    "text": "In 1380 Timur began building a vast summer palace, the Ak-Saray or “White Palace”, in his home town of Kesh, today's Shakhrisabz. Work went on for more than two decades: the Castilian envoy Clavijo, who came here in 1404, found it still unfinished and marvelled at halls adorned with gold and blue. The palace was later destroyed, and only the two colossal piers of its entrance arch survive, their height hinting at the scale of the lost portal. With the Kok Gumbaz mosque and the Dorus-Saodat and Dorut-Tilovat complexes, Ak-Saray forms the Historic Centre of Shakhrisyabz, a UNESCO World Heritage Site since 2000."
+                },
+                "data": {
+                    "slug": "oqsaroy-qurilishi",
+                    "year": 1380,
+                    "era": "temuriylar",
+                    "regions": [
+                        "qashqadaryo"
+                    ],
+                    "date": "1380–1404",
+                    "places": [
+                        "oqsaroy-shahrisabz"
+                    ],
+                    "sources": [
+                        "https://en.wikipedia.org/wiki/Ak-Saray_Palace",
+                        "https://whc.unesco.org/en/list/885/"
+                    ]
+                },
+                "images": [],
+                "refs": {
+                    "regions": [
+                        {
+                            "type": "region",
+                            "slug": "qashqadaryo",
+                            "name": "Kashkadarya Region",
+                            "sub": "Region",
+                            "kicker": "Timur’s homeland and the ancient Nasaf oasis",
+                            "summary": "A region stretching from the Hisor mountains to the Qarshi steppe: UNESCO-listed Shahrisabz, 2,700-year-old Qarshi, mountain villages and nature reserves.",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 38.7888,
+                            "lon": 66.0821,
+                            "img": {
+                                "u": "/img/region/qashqadaryo/0",
+                                "w": 2400,
+                                "h": 1601,
+                                "focus": null,
+                                "title": "Amir Temur haykali: Qashqadaryo viloyati, Shahrisabz, “Oʻrda” MFY Shahrisabz Tarixiy markazi",
+                                "author": "Marat Nadjibaev",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Amir_Temur_5.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/qashqadaryo"
+                        }
+                    ],
+                    "places": [
+                        {
+                            "type": "place",
+                            "slug": "oqsaroy-shahrisabz",
+                            "name": "Ak-Saray Palace",
+                            "sub": "Ensemble · Kashkadarya Region",
+                            "kicker": "What remains of Timur’s colossal palace in his home town",
+                            "summary": "Timur’s residence in Shahrisabz, begun in 1380 and under construction for some two decades. Two pylons of its gigantic portal survive, still clad in brilliant…",
+                            "icon": "landmark",
+                            "kind": "ansambl",
+                            "region": "qashqadaryo",
+                            "rating": 3,
+                            "unesco": true,
+                            "lat": 39.06078,
+                            "lon": 66.82948,
+                            "img": {
+                                "u": "/img/place/oqsaroy-shahrisabz/0",
+                                "w": 2400,
+                                "h": 1601,
+                                "focus": null,
+                                "title": "Oqsaroy qal’asi: Qashqadaryo viloyati, Dehqonobod tumani, “Oqrabod” QFY",
+                                "author": "Marat Nadjibaev",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Oqsaroy_qal%E2%80%99asi_1.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/oqsaroy-shahrisabz"
+                        }
+                    ],
+                    "era": [
+                        {
+                            "type": "era",
+                            "slug": "temuriylar",
+                            "name": "The Timurid era",
+                            "sub": "History",
+                            "kicker": null,
+                            "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+                            "icon": "scroll-text",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": null,
+                            "lon": null,
+                            "img": {
+                                "u": "/img/era/temuriylar/0",
+                                "w": 2400,
+                                "h": 1615,
+                                "focus": null,
+                                "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+                                "author": "Bgag",
+                                "license": "CC0",
+                                "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/tarix/temuriylar"
+                        }
+                    ]
+                },
+                "regionName": null,
+                "districtName": null
+            },
+            {
+                "type": "hist_event",
+                "slug": "klavixo-elchiligi",
+                "name": "Clavijo's embassy to Timur",
+                "sub": "Historical event",
+                "kicker": null,
+                "summary": "",
+                "icon": "history",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": null,
+                "lon": null,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/tarix/temuriylar#klavixo-elchiligi",
+                "text": {
+                    "title": "Clavijo's embassy to Timur",
+                    "text": "In 1404 Ruy González de Clavijo, envoy of King Henry III of Castile, travelled to the court of Timur. The embassy crossed the Amu Darya at Termez, passed through the Iron Gate gorge in the Baysun mountains and Kesh (Shakhrisabz), and reached Samarkand in September. Clavijo's journal describes receptions and feasts in the gardens around the city, its bazaars, the unfinished Ak-Saray and the Bibi-Khanym Mosque under construction. The envoys left in November; in February 1405 Timur died at Otrar. Clavijo's book remains one of the most vivid European accounts of Timurid Transoxiana."
+                },
+                "data": {
+                    "slug": "klavixo-elchiligi",
+                    "year": 1404,
+                    "era": "temuriylar",
+                    "regions": [
+                        "samarqand",
+                        "qashqadaryo",
+                        "surxondaryo"
+                    ],
+                    "date": "August–November 1404",
+                    "places": [
+                        "bibixonim-masjidi",
+                        "oqsaroy-shahrisabz"
+                    ],
+                    "sources": [
+                        "https://en.wikipedia.org/wiki/Ruy_González_de_Clavijo",
+                        "https://ru.wikipedia.org/wiki/Гонсалес_де_Клавихо,_Руй"
+                    ]
+                },
+                "images": [],
+                "refs": {
+                    "regions": [
+                        {
+                            "type": "region",
+                            "slug": "samarqand",
+                            "name": "Samarkand Region",
+                            "sub": "Region",
+                            "kicker": "Timur’s capital and the Zarafshan oasis",
+                            "summary": "The heart of the Zarafshan valley: the Registan and Shah-i-Zinda, the Imam al-Bukhari memorial, Urgut’s bazaar and the Amankutan valley. Uzbekistan’s most…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 39.9485,
+                            "lon": 66.2852,
+                            "img": {
+                                "u": "/img/region/samarqand/0",
+                                "w": 2400,
+                                "h": 1800,
+                                "focus": null,
+                                "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                                "author": "Екатерина Борисова",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/samarqand"
+                        },
+                        {
+                            "type": "region",
+                            "slug": "qashqadaryo",
+                            "name": "Kashkadarya Region",
+                            "sub": "Region",
+                            "kicker": "Timur’s homeland and the ancient Nasaf oasis",
+                            "summary": "A region stretching from the Hisor mountains to the Qarshi steppe: UNESCO-listed Shahrisabz, 2,700-year-old Qarshi, mountain villages and nature reserves.",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 38.7888,
+                            "lon": 66.0821,
+                            "img": {
+                                "u": "/img/region/qashqadaryo/0",
+                                "w": 2400,
+                                "h": 1601,
+                                "focus": null,
+                                "title": "Amir Temur haykali: Qashqadaryo viloyati, Shahrisabz, “Oʻrda” MFY Shahrisabz Tarixiy markazi",
+                                "author": "Marat Nadjibaev",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Amir_Temur_5.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/qashqadaryo"
+                        },
+                        {
+                            "type": "region",
+                            "slug": "surxondaryo",
+                            "name": "Surkhandarya Region",
+                            "sub": "Region",
+                            "kicker": "Bactrian heritage in Uzbekistan’s far south",
+                            "summary": "The country’s southernmost region, from the Amu Darya to the Hisor peaks: Buddhist Termez, Kushan cities, Boysun’s living traditions and Uzbekistan’s highest…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 38.1084,
+                            "lon": 67.5415,
+                            "img": {
+                                "u": "/img/region/surxondaryo/0",
+                                "w": 2400,
+                                "h": 1734,
+                                "focus": null,
+                                "title": "Sultan Saodat Complex: Surxondaryo Region, Termiz District, \"Namuna\" Mahalla",
+                                "author": "Iaa2023",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Sulton_Saodat_majmuasi._01.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/surxondaryo"
+                        }
+                    ],
+                    "places": [
+                        {
+                            "type": "place",
+                            "slug": "bibixonim-masjidi",
+                            "name": "Bibi-Khanym Mosque",
+                            "sub": "Mosque · Samarkand Region",
+                            "kicker": "Timur's colossal Friday mosque",
+                            "summary": "The congregational mosque Timur built after his Indian campaign (1399–1404): among the largest mosques of the Islamic world in its day, a ruin for centuries…",
+                            "icon": "landmark",
+                            "kind": "masjid",
+                            "region": "samarqand",
+                            "rating": 3,
+                            "unesco": true,
+                            "lat": 39.66069,
+                            "lon": 66.98006,
+                            "img": {
+                                "u": "/img/place/bibixonim-masjidi/0",
+                                "w": 2400,
+                                "h": 1581,
+                                "focus": null,
+                                "title": "Арка. Мечеть Биби Ханум. Самарканд",
+                                "author": "Шухрат Саъдиев",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%91%D0%B8%D0%B1%D0%B8_%D0%A5%D0%B0%D0%BD%D1%83%D0%BC._%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/bibixonim-masjidi"
+                        },
+                        {
+                            "type": "place",
+                            "slug": "oqsaroy-shahrisabz",
+                            "name": "Ak-Saray Palace",
+                            "sub": "Ensemble · Kashkadarya Region",
+                            "kicker": "What remains of Timur’s colossal palace in his home town",
+                            "summary": "Timur’s residence in Shahrisabz, begun in 1380 and under construction for some two decades. Two pylons of its gigantic portal survive, still clad in brilliant…",
+                            "icon": "landmark",
+                            "kind": "ansambl",
+                            "region": "qashqadaryo",
+                            "rating": 3,
+                            "unesco": true,
+                            "lat": 39.06078,
+                            "lon": 66.82948,
+                            "img": {
+                                "u": "/img/place/oqsaroy-shahrisabz/0",
+                                "w": 2400,
+                                "h": 1601,
+                                "focus": null,
+                                "title": "Oqsaroy qal’asi: Qashqadaryo viloyati, Dehqonobod tumani, “Oqrabod” QFY",
+                                "author": "Marat Nadjibaev",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Oqsaroy_qal%E2%80%99asi_1.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/oqsaroy-shahrisabz"
+                        }
+                    ],
+                    "era": [
+                        {
+                            "type": "era",
+                            "slug": "temuriylar",
+                            "name": "The Timurid era",
+                            "sub": "History",
+                            "kicker": null,
+                            "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+                            "icon": "scroll-text",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": null,
+                            "lon": null,
+                            "img": {
+                                "u": "/img/era/temuriylar/0",
+                                "w": 2400,
+                                "h": 1615,
+                                "focus": null,
+                                "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+                                "author": "Bgag",
+                                "license": "CC0",
+                                "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/tarix/temuriylar"
+                        }
+                    ]
+                },
+                "regionName": null,
+                "districtName": null
+            },
+            {
+                "type": "hist_event",
+                "slug": "ulugbek-madrasalari",
+                "name": "Ulugh Beg's madrasas",
+                "sub": "Historical event",
+                "kicker": null,
+                "summary": "",
+                "icon": "history",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": null,
+                "lon": null,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/tarix/temuriylar#ulugbek-madrasalari",
+                "text": {
+                    "title": "Ulugh Beg's madrasas",
+                    "text": "Mirzo Ulugh Beg, ruler of Samarkand, made learning a priority and founded three madrasas. The Bukhara madrasa of 1417 is among the oldest surviving in Central Asia; its door bears the hadith “The pursuit of knowledge is the duty of every Muslim man and woman.” The madrasa on Samarkand's Registan, built in 1417–1420, became a leading university of its age, teaching mathematics and astronomy alongside theology, and sources say Ulugh Beg lectured there himself. A third followed in Gijduvan in 1433. All three still stand and can be visited."
+                },
+                "data": {
+                    "slug": "ulugbek-madrasalari",
+                    "year": 1417,
+                    "era": "temuriylar",
+                    "regions": [
+                        "buxoro",
+                        "samarqand"
+                    ],
+                    "date": "1417–1433",
+                    "places": [
+                        "ulugbek-madrasasi-buxoro",
+                        "ulugbek-madrasasi"
+                    ],
+                    "sources": [
+                        "https://en.wikipedia.org/wiki/Ulugh_Beg_Madrasa_(Bukhara)",
+                        "https://en.wikipedia.org/wiki/Ulugh_Beg_Madrasa_(Samarkand)",
+                        "https://ru.wikipedia.org/wiki/Медресе_Улугбека_(Бухара)"
+                    ]
+                },
+                "images": [],
+                "refs": {
+                    "regions": [
+                        {
+                            "type": "region",
+                            "slug": "buxoro",
+                            "name": "Bukhara Region",
+                            "sub": "Region",
+                            "kicker": "A thousand years of trade and learning",
+                            "summary": "Set in the lower Zarafshan oasis on the edge of the Kyzylkum, Bukhara Region is home to UNESCO-listed Bukhara, the shrines of the 'seven saints' and the ruins…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 40.214,
+                            "lon": 63.6272,
+                            "img": {
+                                "u": "/img/region/buxoro/0",
+                                "w": 2400,
+                                "h": 1601,
+                                "focus": null,
+                                "title": "Masjidi kalon: Buxoro viloyati, Buxoro, “I. Buxoriy” MFY, X. Nurabod koʻchasi",
+                                "author": "Spartak22",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%9A%D0%B0%D0%BB%D0%BE%D0%BD3.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/buxoro"
+                        },
+                        {
+                            "type": "region",
+                            "slug": "samarqand",
+                            "name": "Samarkand Region",
+                            "sub": "Region",
+                            "kicker": "Timur’s capital and the Zarafshan oasis",
+                            "summary": "The heart of the Zarafshan valley: the Registan and Shah-i-Zinda, the Imam al-Bukhari memorial, Urgut’s bazaar and the Amankutan valley. Uzbekistan’s most…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 39.9485,
+                            "lon": 66.2852,
+                            "img": {
+                                "u": "/img/region/samarqand/0",
+                                "w": 2400,
+                                "h": 1800,
+                                "focus": null,
+                                "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                                "author": "Екатерина Борисова",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/samarqand"
+                        }
+                    ],
+                    "places": [
+                        {
+                            "type": "place",
+                            "slug": "ulugbek-madrasasi-buxoro",
+                            "name": "Ulugh Beg Madrasa",
+                            "sub": "Madrasa · Bukhara Region",
+                            "kicker": "The oldest of Ulugh Beg's three madrasas",
+                            "summary": "Built by Ulugh Beg in 1417, this is the only Timurid building of its size left in Bukhara and the oldest of his madrasas.",
+                            "icon": "library",
+                            "kind": "madrasa",
+                            "region": "buxoro",
+                            "rating": 2,
+                            "unesco": true,
+                            "lat": 39.77668,
+                            "lon": 64.41753,
+                            "img": {
+                                "u": "/img/place/ulugbek-madrasasi-buxoro/0",
+                                "w": 2400,
+                                "h": 1601,
+                                "focus": null,
+                                "title": "Ulugh Beg madrasa in Bukhara",
+                                "author": "Adam Harangozó",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_madrasa_(Bukhara).jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/ulugbek-madrasasi-buxoro"
+                        },
+                        {
+                            "type": "place",
+                            "slug": "ulugbek-madrasasi",
+                            "name": "Ulugh Beg Madrasa",
+                            "sub": "Madrasa · Samarkand Region",
+                            "kicker": "The astronomer-king's university",
+                            "summary": "The oldest building on the Registan (1417–1420), built by Mirzo Ulugh Beg as one of the leading colleges of the 15th-century Islamic world, and famous for the…",
+                            "icon": "library",
+                            "kind": "madrasa",
+                            "region": "samarqand",
+                            "rating": 3,
+                            "unesco": true,
+                            "lat": 39.65465,
+                            "lon": 66.97489,
+                            "img": {
+                                "u": "/img/place/ulugbek-madrasasi/0",
+                                "w": 2400,
+                                "h": 1800,
+                                "focus": null,
+                                "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                                "author": "Azamat Samatov",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Registan,_Ulughbek_madrasa.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/ulugbek-madrasasi"
+                        }
+                    ],
+                    "era": [
+                        {
+                            "type": "era",
+                            "slug": "temuriylar",
+                            "name": "The Timurid era",
+                            "sub": "History",
+                            "kicker": null,
+                            "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+                            "icon": "scroll-text",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": null,
+                            "lon": null,
+                            "img": {
+                                "u": "/img/era/temuriylar/0",
+                                "w": 2400,
+                                "h": 1615,
+                                "focus": null,
+                                "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+                                "author": "Bgag",
+                                "license": "CC0",
+                                "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/tarix/temuriylar"
+                        }
+                    ]
+                },
+                "regionName": null,
+                "districtName": null
+            },
+            {
+                "type": "hist_event",
+                "slug": "bobur-taxtga-chiqishi",
+                "name": "Eleven-year-old Babur takes the throne in Andijan",
+                "sub": "Historical event",
+                "kicker": null,
+                "summary": "",
+                "icon": "history",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": null,
+                "lon": null,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/tarix/temuriylar#bobur-taxtga-chiqishi",
+                "text": {
+                    "title": "Eleven-year-old Babur takes the throne in Andijan",
+                    "text": "In June 1494 Umar Shaikh Mirza, ruler of Fergana, was killed at the fortress of Akhsi when a dovecote on the edge of a ravine collapsed beneath him. His son Zahir ud-Din Muhammad Babur, born in Andijan in 1483, became ruler in Andijan at the age of eleven — the opening scene of the Baburnama. Years of struggle for Samarkand followed: Babur twice took the city briefly but lost out to Muhammad Shaybani Khan and left for Kabul in 1504. In 1526 his victory at Panipat founded the Mughal Empire in India. Andijan's Babur National Park holds the “Babur and World Culture” museum and a symbolic mausoleum of the poet."
+                },
+                "data": {
+                    "slug": "bobur-taxtga-chiqishi",
+                    "year": 1494,
+                    "era": "temuriylar",
+                    "regions": [
+                        "andijon",
+                        "fargona",
+                        "namangan"
+                    ],
+                    "date": "June 1494",
+                    "places": [],
+                    "sources": [
+                        "https://en.wikipedia.org/wiki/Babur",
+                        "https://ru.wikipedia.org/wiki/Бабур",
+                        "https://en.wikipedia.org/wiki/Baburnama"
+                    ]
+                },
+                "images": [],
+                "refs": {
+                    "regions": [
+                        {
+                            "type": "region",
+                            "slug": "andijon",
+                            "name": "Andijan Region",
+                            "sub": "Region",
+                            "kicker": "Babur's homeland, Uzbekistan's most crowded and easternmost region",
+                            "summary": "Small in area but the most densely populated region of Uzbekistan, at the eastern end of the Fergana Valley: Babur's birthplace Andijan, ancient Mingtepa and…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 40.7305,
+                            "lon": 72.303,
+                            "img": {
+                                "u": "/img/region/andijon/0",
+                                "w": 2400,
+                                "h": 1798,
+                                "focus": null,
+                                "title": "Devonaboy Jome Mosque, Andijan, Uzbekistan",
+                                "author": "Petar Milošević",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Devonaboy_Jome_Mosque,_Andijan,_Uzbekistan.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/andijon"
+                        },
+                        {
+                            "type": "region",
+                            "slug": "fargona",
+                            "name": "Fergana Region",
+                            "sub": "Region",
+                            "kicker": "The valley of silk, ceramics and a khans' capital",
+                            "summary": "The southern Fergana Valley: the Kokand khans' palace, Margilan ikat silk, Rishtan ceramics and mountain Shohimardon — Uzbekistan's most crowded and most…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 40.456,
+                            "lon": 71.2244,
+                            "img": {
+                                "u": "/img/region/fargona/0",
+                                "w": 2400,
+                                "h": 1600,
+                                "focus": null,
+                                "title": "Khudayar Khan Palace (main entrance), Kokand, Uzbekistan",
+                                "author": "ElenaLitera",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_%D0%9A%D0%BE%D0%BA%D0%B0%D0%BD%D0%B4,_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%A5%D1%83%D0%B4%D0%BE%D1%8F%D1%80-%D1%85%D0%B0%D0%BD%D0%B0_(9).jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/fargona"
+                        },
+                        {
+                            "type": "region",
+                            "slug": "namangan",
+                            "name": "Namangan Region",
+                            "sub": "Region",
+                            "kicker": "A valley of flowers, madrasas and Akhsikath",
+                            "summary": "The northern Fergana Valley: the ruins of Akhsikath, the Mullah Kyrgyz Madrasa, a flower festival held since 1961, Chust knives and the foothills of the…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 41.093,
+                            "lon": 71.3497,
+                            "img": {
+                                "u": "/img/region/namangan/0",
+                                "w": 2400,
+                                "h": 1800,
+                                "focus": null,
+                                "title": "Mulla Qirgʻiz madrasasi. Namangan",
+                                "author": "Jamshid Nurkulov",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Mulla_Qirg%CA%BBiz_madrasasi_04.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/namangan"
+                        }
+                    ],
+                    "era": [
+                        {
+                            "type": "era",
+                            "slug": "temuriylar",
+                            "name": "The Timurid era",
+                            "sub": "History",
+                            "kicker": null,
+                            "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+                            "icon": "scroll-text",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": null,
+                            "lon": null,
+                            "img": {
+                                "u": "/img/era/temuriylar/0",
+                                "w": 2400,
+                                "h": 1615,
+                                "focus": null,
+                                "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+                                "author": "Bgag",
+                                "license": "CC0",
+                                "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/tarix/temuriylar"
+                        }
+                    ]
+                },
+                "regionName": null,
+                "districtName": null
+            },
+            {
+                "type": "hist_event",
+                "slug": "ulugbek-rasadxonasi-qurilishi",
+                "name": "Ulugh Beg's observatory",
+                "sub": "Historical event",
+                "kicker": null,
+                "summary": "",
+                "icon": "history",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": null,
+                "lon": null,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/tarix/temuriylar#ulugbek-rasadxonasi-qurilishi",
+                "text": {
+                    "title": "Ulugh Beg's observatory",
+                    "text": "In 1424–1428 Mirzo Ulugh Beg built an observatory on the Kuhak (Chupan-Ata) hill outside Samarkand. Inside a three-storey cylindrical building about 46 metres across stood a giant sextant with a radius of over 40 metres, the largest astronomical instrument of its day. Jamshid al-Kashi, Qadi Zada al-Rumi, Ali Qushji and Ulugh Beg himself observed here, producing the Zij-i Gurgani, tables giving the positions of 1,018 stars. After Ulugh Beg's murder in 1449 the observatory was destroyed. In 1908 the archaeologist Vasily Vyatkin unearthed the underground section of the sextant, now covered by a museum."
+                },
+                "data": {
+                    "slug": "ulugbek-rasadxonasi-qurilishi",
+                    "year": 1424,
+                    "era": "temuriylar",
+                    "regions": [
+                        "samarqand"
+                    ],
+                    "date": "1424–1428",
+                    "places": [
+                        "ulugbek-rasadxonasi"
+                    ],
+                    "sources": [
+                        "https://en.wikipedia.org/wiki/Ulugh_Beg_Observatory",
+                        "https://ru.wikipedia.org/wiki/Обсерватория_Улугбека"
+                    ]
+                },
+                "images": [],
+                "refs": {
+                    "regions": [
+                        {
+                            "type": "region",
+                            "slug": "samarqand",
+                            "name": "Samarkand Region",
+                            "sub": "Region",
+                            "kicker": "Timur’s capital and the Zarafshan oasis",
+                            "summary": "The heart of the Zarafshan valley: the Registan and Shah-i-Zinda, the Imam al-Bukhari memorial, Urgut’s bazaar and the Amankutan valley. Uzbekistan’s most…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 39.9485,
+                            "lon": 66.2852,
+                            "img": {
+                                "u": "/img/region/samarqand/0",
+                                "w": 2400,
+                                "h": 1800,
+                                "focus": null,
+                                "title": "Registon majmuasi (Ulugʻbek, Sherdor, Tilla Kori): Samarqand viloyati, Samarqand, Registon maydoni, Tilla Kori madrasasi",
+                                "author": "Екатерина Борисова",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD,_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/samarqand"
+                        }
+                    ],
+                    "places": [
+                        {
+                            "type": "place",
+                            "slug": "ulugbek-rasadxonasi",
+                            "name": "Ulugh Beg Observatory",
+                            "sub": "Museum · Samarkand Region",
+                            "kicker": "The greatest astronomical instrument of the Middle Ages",
+                            "summary": "The remains of the observatory Mirzo Ulugh Beg built on Kuhak hill in the 1420s: a giant meridian arc cut into the rock, beside a museum devoted to the…",
+                            "icon": "library",
+                            "kind": "muzey",
+                            "region": "samarqand",
+                            "rating": 3,
+                            "unesco": true,
+                            "lat": 39.67506,
+                            "lon": 67.00534,
+                            "img": {
+                                "u": "/img/place/ulugbek-rasadxonasi/0",
+                                "w": 2400,
+                                "h": 1600,
+                                "focus": null,
+                                "title": "Ulugbek observatory, entrance",
+                                "author": "Adam Harangozó",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugbek_observatory,_entrance.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/ulugbek-rasadxonasi"
+                        }
+                    ],
+                    "era": [
+                        {
+                            "type": "era",
+                            "slug": "temuriylar",
+                            "name": "The Timurid era",
+                            "sub": "History",
+                            "kicker": null,
+                            "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+                            "icon": "scroll-text",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": null,
+                            "lon": null,
+                            "img": {
+                                "u": "/img/era/temuriylar/0",
+                                "w": 2400,
+                                "h": 1615,
+                                "focus": null,
+                                "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+                                "author": "Bgag",
+                                "license": "CC0",
+                                "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/tarix/temuriylar"
+                        }
+                    ]
+                },
+                "regionName": null,
+                "districtName": null
+            },
+            {
+                "type": "hist_event",
+                "slug": "temur-darvozasi-bitiklari",
+                "name": "The inscriptions of Tamerlane's Gate",
+                "sub": "Historical event",
+                "kicker": null,
+                "summary": "",
+                "icon": "history",
+                "kind": null,
+                "region": null,
+                "rating": null,
+                "unesco": false,
+                "lat": null,
+                "lon": null,
+                "img": null,
+                "web": "https://alluzbekistan.com/en/tarix/temuriylar#temur-darvozasi-bitiklari",
+                "text": {
+                    "title": "The inscriptions of Tamerlane's Gate",
+                    "text": "Near Jizzakh the Sanzar river cuts a narrow gorge between the Malguzar and Nuratau ranges, long the route from the Samarkand oasis to the steppe. Nineteenth-century travellers called it the Gate of Tamerlane; locally it is Ilan-Uti. One Persian inscription carved into the rock records Mirzo Ulugh Beg's safe return from a campaign to the “land of the Moghuls” in 1425. Another, of 1571–1572, claims that Abdullah Khan's army routed “400,000” men from Turkestan, Tashkent and Fergana — a figure best taken as the author's boast. Today the Tashkent–Samarkand highway and railway run through the gorge."
+                },
+                "data": {
+                    "slug": "temur-darvozasi-bitiklari",
+                    "year": 1425,
+                    "era": "temuriylar",
+                    "regions": [
+                        "jizzax"
+                    ],
+                    "date": "1425 and 1571–1572 (inscriptions)",
+                    "places": [
+                        "temur-darvozasi"
+                    ],
+                    "sources": [
+                        "https://en.wikipedia.org/wiki/Ilan_Uti",
+                        "https://ru.wikipedia.org/wiki/Тамерлановы_Ворота"
+                    ]
+                },
+                "images": [],
+                "refs": {
+                    "regions": [
+                        {
+                            "type": "region",
+                            "slug": "jizzax",
+                            "name": "Jizzakh Region",
+                            "sub": "Region",
+                            "kicker": "Where mountains, steppe and lakes meet",
+                            "summary": "A region between Tashkent and Samarkand: the juniper forests of Zaamin, the inscriptions of Tamerlane's Gate, the desert lakes of Aydar-Arnasay and villages…",
+                            "icon": "map",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": 40.3566,
+                            "lon": 67.5099,
+                            "img": {
+                                "u": "/img/region/jizzax/0",
+                                "w": 2400,
+                                "h": 1600,
+                                "focus": null,
+                                "title": "Зааминский государственный горно-арчовый заповедник: Джизакская область",
+                                "author": "Ivan Kondyukov",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D1%81_%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%B0%D0%BB%D0%B0_%D0%BD%D0%B0_%D0%97%D0%B0%D0%B0%D0%BC%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/hududlar/jizzax"
+                        }
+                    ],
+                    "places": [
+                        {
+                            "type": "place",
+                            "slug": "temur-darvozasi",
+                            "name": "Tamerlane's Gate (Jizzakh Pass)",
+                            "sub": "Nature · Jizzakh Region",
+                            "kicker": "Five centuries of history carved in stone",
+                            "summary": "A narrow gorge 15–16 km south-west of Jizzakh where the Sanzar River cuts between the Malguzar and Nuratau ranges, its cliffs bearing inscriptions of Ulugh…",
+                            "icon": "mountain",
+                            "kind": "tabiat",
+                            "region": "jizzax",
+                            "rating": 3,
+                            "unesco": false,
+                            "lat": 40.07218,
+                            "lon": 67.69169,
+                            "img": {
+                                "u": "/img/place/temur-darvozasi/0",
+                                "w": 2400,
+                                "h": 1481,
+                                "focus": null,
+                                "title": "OTY Afrosiyob 768 Tashkent - Bukhara pictured between Jizzax and Gallarol, Uzbekistan",
+                                "author": "Kabelleger",
+                                "license": "CC BY-SA 4.0",
+                                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                                "source": "https://commons.wikimedia.org/wiki/File:OTY_Afrosiyob_Jizzax_-_Gallaorol.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/joylar/temur-darvozasi"
+                        }
+                    ],
+                    "era": [
+                        {
+                            "type": "era",
+                            "slug": "temuriylar",
+                            "name": "The Timurid era",
+                            "sub": "History",
+                            "kicker": null,
+                            "summary": "The age of Timur and his descendants — a vast empire, the architectural masterpieces of Samarkand and Shakhrisabz, Ulugh Beg's observatory, Navoi's poetry and…",
+                            "icon": "scroll-text",
+                            "kind": null,
+                            "region": null,
+                            "rating": null,
+                            "unesco": false,
+                            "lat": null,
+                            "lon": null,
+                            "img": {
+                                "u": "/img/era/temuriylar/0",
+                                "w": 2400,
+                                "h": 1615,
+                                "focus": null,
+                                "title": "Ulugh Beg Madrasa, Samarkand, Uzbekistan",
+                                "author": "Bgag",
+                                "license": "CC0",
+                                "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                                "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg_Madrasa,_Samarkand.jpg",
+                                "sourceName": "Wikimedia Commons"
+                            },
+                            "web": "https://alluzbekistan.com/en/tarix/temuriylar"
+                        }
+                    ]
+                },
+                "regionName": null,
+                "districtName": null
+            }
+        ]
+    }
+}

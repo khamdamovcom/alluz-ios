@@ -1,0 +1,74 @@
+{
+    "type": "guide",
+    "slug": "viza-va-kirish",
+    "name": "Visas and visa-free entry",
+    "sub": "Tip",
+    "kicker": null,
+    "summary": "Who needs no visa, how to get an e-visa and how the 30-day clock works — based on the Cabinet of Ministers resolution and Foreign Ministry data, as of October…",
+    "icon": "info",
+    "kind": null,
+    "region": null,
+    "rating": null,
+    "unesco": false,
+    "lat": null,
+    "lon": null,
+    "img": null,
+    "web": "https://alluzbekistan.com/en/sayohatchilarga/viza-va-kirish",
+    "text": {
+        "title": "Visas and visa-free entry",
+        "summary": "Who needs no visa, how to get an e-visa and how the 30-day clock works — based on the Cabinet of Ministers resolution and Foreign Ministry data, as of October 2026.",
+        "body": [
+            {
+                "h": "Visa-free entry: the basics",
+                "p": [
+                    "The list of visa-free countries is set out in Annex 5 to Cabinet of Ministers Resolution No. 408 of 21 November 1996. The current wording was updated by Resolution No. 662 of 21 October 2025 and is published on lex.uz.",
+                    "No time limit (under bilateral agreements): Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan, Moldova, Russia and Ukraine. Citizens of Kyrgyzstan may stay up to 60 days, citizens of Tajikistan up to 30 days.",
+                    "Up to 30 days visa-free: all 27 EU member states, the UK, Switzerland, Norway, Iceland, Canada, Australia, New Zealand, Japan, South Korea, Singapore, Malaysia, Indonesia, Brunei, Turkey, Israel, the UAE, Mongolia, Argentina, Brazil, Chile, Mexico and a number of Caribbean and Central American states. In October 2025 Bahrain, Saudi Arabia, Oman, Qatar, Kuwait, Jordan and China were added.",
+                    "Hong Kong residents get up to 7 days visa-free when arriving through an international airport with a return ticket."
+                ]
+            },
+            {
+                "h": "What changed in 2026",
+                "p": [
+                    "Under a presidential decree of 3 November 2025, US citizens have been able to stay up to 30 days without a visa since 1 January 2026 (previously only travellers aged 55 and over qualified).",
+                    "Since 1 September 2026 Indian citizens can also enter visa-free for up to 30 days — provided they hold a valid multiple-entry visa for the US, UK, Schengen Area, Canada, Australia, New Zealand, Japan or South Korea, plus a ticket to India or a third country. Other Indian passport holders still need an e-visa.",
+                    "Foreign nationals with UAE residency can enter visa-free for 30 days by showing the original residence visa, valid for at least 90 more days."
+                ]
+            },
+            {
+                "h": "The e-visa (e-visa.gov.uz)",
+                "p": [
+                    "Citizens of countries on the e-visa list apply only through the official portal, e-visa.gov.uz. Processing takes two working days, not counting the day of application.",
+                    "According to the Foreign Ministry, the fee is US$20 for a single-entry e-visa, US$35 for a double-entry e-visa of up to 30 days and US$50 for a multiple-entry e-visa of up to 30 days. Print the visa or keep it on your phone.",
+                    "Plenty of look-alike commercial sites charge extra for the same service — make sure the address is exactly e-visa.gov.uz."
+                ]
+            },
+            {
+                "h": "Time limits and passports",
+                "p": [
+                    "The 30- and 60-day periods start when you cross the border, and you must leave before they run out. Longer stays require one of the regular visa categories.",
+                    "The note to the official list requires a passport valid for at least six months. Children under 16 travelling with a legal guardian on a biometric document stay visa-free for the length of the guardian's visa, up to 90 days.",
+                    "Citizens of the countries in Annex 2 can also use a visa-free transit of up to five days through international airports if they hold an onward Uzbekistan Airways ticket to a third country.",
+                    "The lists change often: check the Foreign Ministry page and e-visa.gov.uz before you travel."
+                ]
+            }
+        ]
+    },
+    "data": {
+        "slug": "viza-va-kirish",
+        "icon": "passport",
+        "updated": "2026-10-20",
+        "sources": [
+            "https://lex.uz/docs/7623461",
+            "https://lex.uz/docs/512233",
+            "https://lex.uz/docs/7782935",
+            "https://e-visa.gov.uz/",
+            "https://www.gazeta.uz/en/2025/11/03/usa-uzbekistan-visa-free/",
+            "https://www.gazeta.uz/ru/2026/09/03/india-visa-uzbekistan/"
+        ]
+    },
+    "images": [],
+    "refs": {},
+    "regionName": null,
+    "districtName": null
+}
