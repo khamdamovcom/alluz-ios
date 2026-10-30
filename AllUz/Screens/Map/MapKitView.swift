@@ -33,6 +33,9 @@ struct MapKitView: UIViewRepresentable {
     func updateUIView(_ m: MKMapView, context: Context) {
         let c = context.coordinator
         c.bottomInset = bottomInset
+        // Tungi/kunduzgi mavzu ilova ichida tanlanadi — xarita plitkalari ham shunga ergashsin
+        let style: UIUserInterfaceStyle = context.environment.colorScheme == .dark ? .dark : .light
+        if m.overrideUserInterfaceStyle != style { m.overrideUserInterfaceStyle = style }
         if m.showsUserLocation != showsUser { m.showsUserLocation = showsUser }
         if c.appliedVersion != version {
             c.appliedVersion = version
