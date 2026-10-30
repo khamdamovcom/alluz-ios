@@ -301,7 +301,7 @@ private struct DistancesContent: View {
     private func modes(_ r: DistPair) -> some View {
         VStack(spacing: 12) {
             modeCard("tram.fill", tr("Poyezdda", "На поезде", "By train"), Theme.teal) { trainBody(r) }
-            modeCard("airplane", tr("Samolyotda", "На самолёте", "By plane"), Color(uiColor: .systemBlue)) { planeBody(r) }
+            modeCard("airplane", tr("Samolyotda", "На самолёте", "By plane"), Theme.blue) { planeBody(r) }
             modeCard("bus.fill", tr("Avtobusda", "На автобусе", "By bus"), Theme.gold) { busBody(r) }
         }
     }

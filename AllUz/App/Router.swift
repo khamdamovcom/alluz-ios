@@ -40,6 +40,7 @@ enum Route: Hashable, Sendable {
     case culture                       // madaniyat: oshxona, hunarmandchilik, an'analar, bayramlar, festivallar — CultureHub
     case history                       // tarix: davrlar va voqealar — HistoryScreen
     case gallery([Img], Int)           // to'liq ekran galereya — GalleryScreen
+    case map(ItemRef?)                 // xaritada ko'rsatish (yozuvga yaqinlashib) — MapScreen(focus:)
     // Transport
     case board(String?)                // aeroport tablosi (IATA) — BoardScreen
     case railBoard(String?)            // vokzal tablosi (bekat slug) — RailBoardScreen
@@ -63,10 +64,11 @@ enum Route: Hashable, Sendable {
         let a1 = p.count > 1 && !p[1].isEmpty ? p[1] : nil, a2 = p.count > 2 && !p[2].isEmpty ? p[2] : nil
         switch p[0] {
         case "item": guard let a1, let a2 else { return nil }; self = .item(ItemRef(type: a1, slug: a2))
-        case "list": guard let a1 else { return nil }; self = .list(ListSpec(type: a1, kind: a2))
+        case "list": guard let a1 else { return nil }; self = .list(ListSpec(type: a1, kind: a2, unesco: p.count > 3 && p[3] == "unesco"))
         case "regions": self = .regions
         case "culture": self = .culture
         case "history": self = .history
+        case "map": self = .map(a1.flatMap { t in a2.map { ItemRef(type: t, slug: $0) } })
         case "board": self = .board(a1)
         case "rail": self = .railBoard(a1)
         case "transport": self = .transport

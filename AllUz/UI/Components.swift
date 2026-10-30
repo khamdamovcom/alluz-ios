@@ -24,6 +24,8 @@ struct Loadable<T: Sendable, Content: View>: View {
     @State private var value: T?
     @State private var error: Error?
     @State private var attempt = 0
+    /// Qaysi kalit bilan yuklangan — ekranga qaytilganda qayta so'ralmaydi (faqat til almashsa yoki «qayta urinish»da)
+    @State private var loadedKey: String?
     @Environment(AppModel.self) private var model
 
     var body: some View {
@@ -37,7 +39,12 @@ struct Loadable<T: Sendable, Content: View>: View {
             }
         }
         .animation(Motion.gentle, value: value == nil)
-        .task(id: "\(attempt)-\(model.reloadToken)") { await run() }
+        .task(id: "\(attempt)-\(model.reloadToken)") {
+            let key = "\(attempt)-\(model.reloadToken)"
+            if value != nil, loadedKey == key { return }
+            await run()
+            if value != nil { loadedKey = key }
+        }
         .refreshable { await run() }
     }
 
@@ -275,13 +282,17 @@ struct ChipBar: View {
     @Binding var selected: String?
     var allTitle: String = tr("Hammasi", "Все", "All")
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 8) {
-                chip(nil, allTitle, nil)
-                ForEach(items, id: \.key) { chip($0.key, $0.label, $0.count) }
+        ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    chip(nil, allTitle, nil).id("__all")
+                    ForEach(items, id: \.key) { chip($0.key, $0.label, $0.count).id($0.key) }
+                }
+                .padding(.horizontal, Theme.gutter)
+                .padding(.vertical, 2)
             }
-            .padding(.horizontal, Theme.gutter)
-            .padding(.vertical, 2)
+            .onAppear { if let s = selected { DispatchQueue.main.async { proxy.scrollTo(s, anchor: .center) } } }
+            .onChange(of: selected) { _, s in withAnimation(Motion.snappy) { proxy.scrollTo(s ?? "__all", anchor: .center) } }
         }
     }
     private func chip(_ key: String?, _ label: String, _ count: Int?) -> some View {

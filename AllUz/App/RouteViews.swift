@@ -10,6 +10,7 @@ extension Route {
         case .culture: CultureHub()
         case .history: HistoryScreen()
         case .gallery(let imgs, let i): GalleryScreen(images: imgs, index: i)
+        case .map(let ref): MapScreen(focus: ref)
         case .board(let iata): BoardScreen(iata: iata)
         case .railBoard(let st): RailBoardScreen(station: st)
         case .transport: TransportHub()

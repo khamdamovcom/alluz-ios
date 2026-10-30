@@ -20,6 +20,7 @@ enum Theme {
     static let accentInk = dyn(0xFFFFFF, 0x1A0F0A)  // urg'u ustidagi matn
     static let teal = dyn(0x13696D, 0x55B8B3)       // ikkinchi urg'u
     static let gold = dyn(0xA87F32, 0xD6B46B)       // UNESCO, reyting
+    static let blue = dyn(0x2F5E9E, 0x7FA8E0)       // transport (aeroport, vokzal)
     static let ok = dyn(0x2E7D4F, 0x6CC58E)
     static let warn = dyn(0xB7791F, 0xE3B261)
     static let bad = dyn(0xB3261E, 0xF2877F)

@@ -41,7 +41,7 @@ enum MapCategory: String, CaseIterable, Identifiable, Sendable {
         case .place: Theme.accent
         case .stay: Theme.teal
         case .eat: Theme.gold
-        case .transport: Color(uiColor: .systemBlue)
+        case .transport: Theme.blue
         }
     }
     var uiColor: UIColor { UIColor(color) }
