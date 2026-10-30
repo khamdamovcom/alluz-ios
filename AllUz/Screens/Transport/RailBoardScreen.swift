@@ -89,7 +89,7 @@ private enum RailBoardParser {
         if s.contains("lyuks") || s.contains("люкс") { return tr("Lyuks", "Люкс", "Deluxe") }
         if s.contains("kupe") || s.contains("купе") { return tr("Kupe", "Купе", "Compartment") }
         if s.contains("platskart") || s.contains("плац") { return tr("Platskart", "Плацкарт", "Open sleeper") }
-        if s.contains("tiradigan") || s.contains("сид") || s.contains("cид") {   // manbada ba'zan lotin «C» return tr("Oʻtiradigan", "Сидячий", "Seated") }
+        if s.contains("tiradigan") || s.contains("сид") || s.contains("cид") { return tr("Oʻtiradigan", "Сидячий", "Seated") }   // manbada ba'zan lotin «C»
         if s.contains("umumiy") || s.contains("общ") { return tr("Umumiy", "Общий", "Common") }
         return raw.capitalized
     }
