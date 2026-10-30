@@ -58,3 +58,19 @@ Namuna javoblar: `docs/samples/*.json`. Jonli tekshirish: `curl -s https://alluz
 - Sinov: o'z nusxangizda — `PORT=48xx NODE_ENV=development ALLUZ_NO_SERVICES=1 ALLUZ_DATA=<scratch nusxa> node src/server.js`
   (baza nusxasi: `sqlite3 /opt/alluz/data/alluz.db ".backup <scratch>/alluz.db"`). Jonli serverni (pm2 alluz) QAYTA ISHGA TUSHIRMANG
   va `_ready.json` ga tegmang — koordinator tekshirib, jonliga chiqaradi.
+
+## Masofalar (`/opt/alluz/src/pages/app-distances.js`, Xarita agenti)
+Hisob — sayt moduli `src/pages/distances.js` (`appApi` eksporti): OSRM yo'l matritsasi (`content/distances/road.json`), to'g'ri chiziq (haversine),
+mashhur juftliklar yo'l chizig'i (`routes.json`), poyezdlar (store `train`), reyslar (tablo keshi), avtobuslar (store `bus_route`). Slug'lar sayt
+`/masofalar/<a>-<b>` bilan bir xil (slug'da defis yo'q).
+| Yo'l | Javob |
+|---|---|
+| `distances` | `{cities: [City], popular: [{pair, from, to, fromName, toName, km, min}], source{road, attribution, license, fetched}}` (28 shahar, `order` bo'yicha) |
+| `distances/:a-:b` yoki `distances?from=a&to=b` | `{pair, canonical, from: City, to: City, road{km, min}, air{km}, line: [[lat, lon]]\|null, train, plane, bus, web, source}` — a → b yo'nalishida (teskarisi ham ishlaydi; `canonical` — sayt URL'i tartibi). Noto'g'ri/bir xil shahar → 404 `{"error":"not_found"}` |
+
+- **City** `{id, name, region, regionName, lat, lon, tier: "a"|"b", iata|null, rail: bool, order}`
+- **train** `{available, count, fastest: Train|null, list: [Train] (≤40), noStation?, nearest?{slug, name, km}}`;
+  **Train** `{slug, number, title, type: highspeed|fast|night|passenger|suburban|null, dep "HH:mm", arr, plusDay, min, from, to, days}` (`item/train/:slug`)
+- **plane** `{from{iata, own, km}|null, to, noAirport: slug|null, same, count (bugun+ertaga to'g'ri reyslar), min|null, hasData}`
+- **bus** `{count, daily, min|null, departures["HH:mm"]}`
+- `line` faqat mashhur juftliklarda (≈150 ta); bo'lmasa — mijoz to'g'ri chiziq chizadi. `road.min` — to'xtashlarsiz taxminiy vaqt (daqiqa).
