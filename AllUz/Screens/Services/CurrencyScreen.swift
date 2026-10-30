@@ -615,7 +615,8 @@ private struct CurrencyBankRow: View {
         Button { model.open(bank.card) } label: {
             HStack(spacing: 12) {
                 Text(initials)
-                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                    .font(Theme.Font.sub.weight(.bold))
+                    .minimumScaleFactor(0.7)
                     .foregroundStyle(tint)
                     .frame(width: 44, height: 44)
                     .background(tint.opacity(0.14), in: RoundedRectangle(cornerRadius: 12, style: .continuous))

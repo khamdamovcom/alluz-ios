@@ -408,8 +408,8 @@ struct WeatherBestTime: View {
                             }
                             .overlay {
                                 Text(m.tmax.map { "\(Int($0.rounded()))" } ?? "")
-                                    .font(.system(size: 10, weight: .semibold).monospacedDigit())
-                                    .foregroundStyle(Theme.accentInk)
+                                    .font(Theme.Font.caption.weight(.semibold).monospacedDigit())
+                                    .foregroundStyle(["okRain", "cool"].contains(m.cat ?? "") ? Theme.ink : Theme.accentInk)
                                     .minimumScaleFactor(0.6)
                             }
                         Text(String(m.label.prefix(1))).font(.caption2.weight(m.m == current ? .bold : .regular))

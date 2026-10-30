@@ -86,7 +86,7 @@ private struct WeatherRegionCard: View {
             } label: {
                 HStack(alignment: .center, spacing: 12) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Kicker(text: region.name, color: Theme.muted)
+                        Text(region.name.uppercased()).font(Theme.Font.kicker).tracking(1).foregroundStyle(Theme.muted).lineLimit(2)
                         Text(main?.name ?? region.name).font(Theme.Font.title3).foregroundStyle(Theme.ink)
                         if main?.ok == true {
                             Text(WeatherFmt.capitalized(main?.text)).font(Theme.Font.sub).foregroundStyle(Theme.ink2).lineLimit(2)
