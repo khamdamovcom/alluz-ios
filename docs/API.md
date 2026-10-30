@@ -74,3 +74,34 @@ mashhur juftliklar yo'l chizig'i (`routes.json`), poyezdlar (store `train`), rey
 - **plane** `{from{iata, own, km}|null, to, noAirport: slug|null, same, count (bugun+ertaga to'g'ri reyslar), min|null, hasData}`
 - **bus** `{count, daily, min|null, departures["HH:mm"]}`
 - `line` faqat mashhur juftliklarda (≈150 ta); bo'lmasa — mijoz to'g'ri chiziq chizadi. `road.min` — to'xtashlarsiz taxminiy vaqt (daqiqa).
+
+## Ob-havo (`/opt/alluz/src/pages/app-weather.js`)
+Manba — weather.js keshi (MET Norway locationforecast, kv `wx:fc:<id>`, nuqta 1 soatda ≤1 marta); iqlim — `content/climate.json`.
+Vaqtlar — ms (UTC epoch), ilovada Toshkent vaqtida ko'rsatiladi. Harorat °C, shamol m/s, bosim hPa, yog'in mm.
+`icon` — sayt ikonka turi: sun, moon, cloud-sun, cloud-moon, pc-day, pc-night, cloud, fog, drizzle, rain, rain-heavy, sun-rain,
+moon-rain, sleet, snow, thunder (ilovada SF Symbol). `cat` — oy toifasi: best, okRain, warm, hot, cool, cold, na (`catLabels`).
+
+| Yo'l | Javob |
+|---|---|
+| `weather` | `{updated, month(1–12), monthLabels[12], catLabels{cat: matn}, source{name, url, license, text, note}, regions[{slug, name, main, points[Brief], cats[12]?, tmax[12]?, best?}]}` |
+| `weather/:id` | `id` — hudud slug (samarqand) yoki nuqta id (xiva, chimyon → o'z hududi, `selected` = shu nuqta). `{region{slug, name, title}, selected, updated, month, catLabels, points[Forecast], climate?, source, web}` |
+
+- **Brief** `{id, name, kind (capital/city/town/resort), kindLabel, alt, lat, lon, ok, t, sym, icon, text, night, hi, lo, w, h, at}` (`ok=false` — ma'lumot hali yo'q)
+- **Forecast** — Brief maydonlari (id…at) + `stale` (3 soatdan eski), `now{time, t, feels, sym, icon, text, night, w, wd (qayerdan, °), h, c (bulut %), p, hi, lo, pr}`,
+  `hours[24]{time, label?, t, sym, icon, text, night, pr, w}`, `days[7]{d (YYYY-MM-DD), label (Bugun/Ertaga/hafta kuni), short, date, hi, lo, pr, w, sym, icon, text}`
+  (`feels` — Steadman «apparent temperature»; UV indeks MET compact'da yo'q)
+- **climate** `{station{name, alt, text}, months[12]{m, label, name, tmax, tmin, tmean, precip, pdays, sun, cat}, best[matn] (birinchisi — «Eng qulay oylar…»),
+  editorial?, tips[4]{season, title, months, text}, comfort{min, max}, sources[{name, url, period}], mountain?{name, alt, months, best, text}}`
+- Namuna: `curl -s https://alluzbekistan.com/en/api/app/v1/weather/samarqand | jq '.points[0].now'`
+
+## Valyuta va banklar (`/opt/alluz/src/pages/app-currency.js`)
+Manba — banks.js keshi (cbu.uz, kv `cbu:rates`, 1 soatda ≤1 marta fonda yangilanadi; `stale` — 3 soatdan eski), banklar — content/banks.
+
+| Yo'l | Javob |
+|---|---|
+| `currency` | `{date, dateLabel, updated (ms), stale, som, title, note, source{name, url, short}, main[USD, EUR, RUB], trendDays[YYYY-MM-DD], rates[Rate], stats{banks, branches}, banks[BankCard], tipsTitle, tips[Tip]}` |
+
+- **Rate** `{code, name (tilda), nominal, rate (nominal uchun so'm), diff (kechagiga nisbatan, nominal uchun), unit (1 birlik = so'm), top, trend[≤30]? (faqat main)}` —
+  tartib: USD, EUR, RUB, GBP, CNY, KZT, TRY, JPY, KRW, AED, CHF, KGS, TJS, INR, CAD, AZN, GEL, SAR, TMT, keyin qolganlari (cbu.uz tartibida)
+- **BankCard** — Card maydonlari (`type: "bank"`, slug, name, sub, summary, icon, lat, lon, img, web) + `short, own (davlat/xususiy/xorijiy), ownLabel, cards[Visa…], fx, atm, transfers, phone, branches`
+- **Tip** `{key (fx/cards/atm/transfer), symbol (SF Symbol), title, text, banks[{slug, name}], systems[]? (transfer)}`
