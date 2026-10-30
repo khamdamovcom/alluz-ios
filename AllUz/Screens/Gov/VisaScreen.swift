@@ -62,8 +62,13 @@ private struct VisaPickerList: View {
 
     @State private var query = ""
     @State private var mode: String?
-    @State private var shown: [VisaCountry] = []
+    @State private var shown: [VisaCountry]
     @Environment(\.accessibilityReduceMotion) private var reduce
+
+    init(data: VisaIndex, current: String?, onPick: @escaping (String) -> Void) {
+        self.data = data; self.current = current; self.onPick = onPick
+        _shown = State(initialValue: data.countries)
+    }
 
     /// Telefon mintaqasi (Locale) bo'yicha taklif; oldingi tanlov bo'lsa — u ham
     private var suggestions: [VisaCountry] {
@@ -101,7 +106,7 @@ private struct VisaPickerList: View {
                     ForEach(Array(shown.enumerated()), id: \.element.id) { i, c in
                         VisaCountryRow(country: c, highlighted: false) { onPick(c.code) }
                             .padding(.horizontal, Theme.gutter)
-                            .appear(delay: reduce ? 0 : min(Double(i) * 0.02, 0.3))
+                            .appear(delay: reduce || i > 14 ? 0 : Double(i) * 0.02)
                         if i < shown.count - 1 { Divider().overlay(Theme.line).padding(.leading, Theme.gutter + 52) }
                     }
                 }
@@ -124,6 +129,7 @@ private struct VisaPickerList: View {
             let q = query.trimmingCharacters(in: .whitespaces).postFolded
             let m = mode
             let list = data.countries.filter { c in (m == nil || c.mode == m) && (q.isEmpty || c.key.contains(q)) }
+            guard list != shown else { return }
             withAnimation(reduce ? nil : Motion.snappy) { shown = list }
         }
     }

@@ -58,3 +58,30 @@ Namuna javoblar: `docs/samples/*.json`. Jonli tekshirish: `curl -s https://alluz
 - Sinov: o'z nusxangizda — `PORT=48xx NODE_ENV=development ALLUZ_NO_SERVICES=1 ALLUZ_DATA=<scratch nusxa> node src/server.js`
   (baza nusxasi: `sqlite3 /opt/alluz/data/alluz.db ".backup <scratch>/alluz.db"`). Jonli serverni (pm2 alluz) QAYTA ISHGA TUSHIRMANG
   va `_ready.json` ga tegmang — koordinator tekshirib, jonliga chiqaradi.
+
+## Viza — `/opt/alluz/src/pages/app-visa.js` (mantiq: visa.js, maʼlumot: content/visa/*.json)
+| Yo'l | Javob |
+|---|---|
+| `visa` | `{asof, asofText, counts{visa_free, evisa, visa_required, special, total}, modes{mode: matn}, countries[VisaCountry], guide: Card?, web}` — davlatlar tildagi nom bo'yicha saralangan |
+| `visa/:code` (ISO-2, katta-kichik farqsiz) | `VisaCountry` + `{modeLabel, headline, title, unit, note, since, sinceText, special, lead[], conditions[], stepsTitle, steps[], notes[], evisaUrl, evisaLabel, embassiesUrl, embassiesLabel, after{title, items[], sources[]}, customs{…}, sourcesTitle, sources[{key, kind, number, date, title, edition, url}], contactsTitle, contacts[{id, icon, name, role, phones[{label, value, tel}], emails[], telegram, website, links[{label, url}], address, note, sources[]}], rulesTitle, rules[{id, icon, title, items[{text, sources[{label, url}]}]}], visaTypes{title, lead, items[{code, name, term}], note, sources[]}?, warning{title, text}, same[{code, name, flag}], asof, asofText, guide: Card?, web}`; noma'lum kod — 404 |
+
+**VisaCountry** `{code, name, flag, mode: visa_free|evisa|visa_required|special, days, unlimited, big: "30"|"∞"|null, term: «30 kungacha», transit, key}`
+(`key` — kod + uch tildagi nom + muqobil nomlar, kichik harf, apostrofsiz — ilova o'zi qidiradi). Barcha havolalar `https://`.
+
+## Pochta indekslari — `/opt/alluz/src/pages/app-post.js` (mantiq: post.js data/find)
+| Yo'l | Javob |
+|---|---|
+| `post` | `{total, active, withCoords, regions[{slug, name, count, active, prefix, min, max, checked}], soon[{slug, name}], callCenter: "1165", callCenterLabel, web}` — hududlar indeks tartibida |
+| `post/:region?q=` | `{region{slug, name, count, active, prefix, min, max}, q, groups[{key, name, type: shahar|tuman|null, count, items[PostOffice]}], items[], web}`; `q` bilan — `{mode, total, items[PostOffice] (≤80), groups: []}` |
+| `post-search?q=` | `{q, mode: index|dup|near|prefix|text|empty, total, items[PostOffice] (≤80)}` — 6 raqam: aniq indeks (topilmasa `near` — eng yaqinlari), 1–5 raqam: boshlanishi, matn: aholi punkti/tuman/manzil |
+
+**PostOffice** `{type: "post", slug, index, name, settlement, address, kind: pochtamt|bolim|agentlik|boshqa, kindLabel, status: faol|binosiz|yopiq|arxiv, statusLabel (faol — null), region, regionName, district, districtName, hours, phones[], lat, lon, web}`.
+Bitta bo'lim to'liq — `item/post/:slug`.
+
+## Davlat idoralari — `/opt/alluz/src/pages/app-gov.js` (mantiq: gov.js data, sayt /davlat-idoralari bilan bir xil filtr)
+`gov?region=&district=&kind=&level=&q=&offset=&limit=` (limit ≤ 200, standart 60) →
+`{total, nRep, nRegions, nDistricts, filter{region, district, kind, level, q}, emergency[{num, tel, icon, label, sub}], hotlines[{num, tel, icon, kind, count, label, sub, slug}], regions[{slug, name, count}], districts[{slug, name, type, count}] (region bo'lsa), kinds[{kind, label, icon, rep, count}] (joriy doirada), levels[{level, label, count}], rep[Card] (filtrsiz — respublika idoralari), results{total, offset, limit, sections[{key, title, items[Card]}]} | null (filtr bo'lmasa), web}`
+- `emergency`: 112, 101, 102, 103, 104, 1050, 1173 (manba: qo'llanma `xavfsizlik-va-favqulodda-raqamlar`, FVV yozuvi, viza qoidalari «tourism»).
+- `hotlines` — idoralar ma'lumotidan (gov.js, eng ko'p ishlatiladigan qisqa raqamlar), favqulodda raqamlar takrorlanmaydi.
+- Card (org): `sub` — «Tur · shahar/tuman (yoki «Respublika darajasi»)», `icon` — tur belgisi (sayt nomi), `kind` — tur.
+- Hudud tanlansa respublika idoralari chiqmaydi; tur tanlanmasa respublika idoralari faqat qidiruvda yoki `level=respublika` da.

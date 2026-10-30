@@ -132,7 +132,7 @@ private struct PostHomeView: View {
                 } else {
                     LazyVStack(spacing: 10) {
                         ForEach(Array(r.items.enumerated()), id: \.element.id) { i, p in
-                            PostOfficeRow(p: p, showRegion: true).appear(delay: reduce ? 0 : min(Double(i) * 0.03, 0.3))
+                            PostOfficeRow(p: p, showRegion: true).appear(delay: reduce || i > 10 ? 0 : Double(i) * 0.03)
                         }
                     }
                 }
@@ -217,9 +217,14 @@ private struct PostRegionView: View {
     let data: PostRegionData
     @State private var query = ""
     @State private var group: String?
-    @State private var shown: [PostRegionData.Group] = []
+    @State private var shown: [PostRegionData.Group]
     @State private var keys: [String: String] = [:]
     @Environment(\.accessibilityReduceMotion) private var reduce
+
+    init(data: PostRegionData) {
+        self.data = data
+        _shown = State(initialValue: data.groups)
+    }
 
     var body: some View {
         ScrollView {
@@ -302,7 +307,8 @@ private struct PostRegionView: View {
             let items = g.items.filter { p in let k = keys[p.slug] ?? ""; return words.allSatisfy { k.contains($0) } }
             return items.isEmpty ? nil : PostRegionData.Group(key: g.key, name: g.name, type: g.type, count: items.count, items: items)
         }
-        withAnimation(reduce || shown.isEmpty ? nil : Motion.snappy) { shown = out }
+        guard out != shown else { return }
+        withAnimation(reduce ? nil : Motion.snappy) { shown = out }
     }
 }
 
