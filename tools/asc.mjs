@@ -4,6 +4,7 @@
 //   signing <TEAM_ID>     — bundle ID (com.alluzbekistan.app), tarqatish sertifikati (mavjudi qayta ishlatiladi), App Store profili → GitHub secrets
 //   metadata              — App Store sahifasi matnlari (appstore/<til>/*.txt), toifa, mualliflik
 //   screenshots <papka>   — skrinshotlar (<papka>/phone/*.png → en-US va ru, ilova o'zbekcha)
+//   agerating [show]      — yosh reytingi (sam.uz dagidek); show — joriy holat
 //   setup                 — kontent huquqi, bepul narx, mavjudlik (Xitoysiz)
 //   review                — App Review izohi (hisob yo'q), kontakt sam.uz dan
 //   testflight | attach | submit — ichki sinov guruhi, buildni versiyaga biriktirish, ko'rib chiqishga yuborish (faqat egasi roziligi bilan)
@@ -196,7 +197,8 @@ async function screenshots(dir) {
     if (!l) { console.log('lokalizatsiya yo\'q:', loc, '— avval metadata'); continue; }
     const sets = (await get(`/v1/appStoreVersionLocalizations/${l.id}/appScreenshotSets`)).data;
     for (const [dev, type] of Object.entries(SETS)) {
-      const src = path.join(dir, dev);   // ilova faqat o'zbekcha — ikkala tilga bir xil skrinshotlar
+      // <papka>/<til>/phone (har til o'z skrinshotlari) yoki <papka>/phone (hamma tilga bir xil)
+      const src = [path.join(dir, loc, dev), path.join(dir, dev)].find((d) => fs.existsSync(d)) || path.join(dir, dev);
       if (!fs.existsSync(src)) continue;
       let set = sets.find((x) => x.attributes.screenshotDisplayType === type);
       if (set) { // eskilarini o'chiramiz
@@ -389,6 +391,25 @@ async function beta(sub, a1, a2) {
 }
 
 // ---------- status ----------
+// ---------- agerating: yosh reytingi so'rovnomasi — jamoaning tasdiqlangan sayohat ilovasidan (sam.uz) nusxa; «show» — faqat ko'rsatish ----------
+async function ageDecl(appIdv) {
+  const infos = (await get(`/v1/apps/${appIdv}/appInfos`)).data;
+  const info = infos.find((x) => !['READY_FOR_DISTRIBUTION', 'REPLACED_WITH_NEW_INFO'].includes(x.attributes.appStoreState || x.attributes.state)) || infos[0];
+  return (await get(`/v1/appInfos/${info.id}/ageRatingDeclaration`)).data;
+}
+async function agerating(mode) {
+  const id = await appId();
+  if (!id) throw new Error("ilova yo'q");
+  const mine = await ageDecl(id);
+  if (mode === 'show') { console.log(JSON.stringify(mine.attributes, null, 1)); return; }
+  const sam = (await get('/v1/apps?filter[bundleId]=uz.sam.app&limit=1')).data[0];
+  if (!sam) throw new Error("sam.uz ilovasi topilmadi");
+  const ref = (await ageDecl(sam.id)).attributes;
+  const attrs = Object.fromEntries(Object.entries(ref).filter(([k, v]) => v !== null && k in mine.attributes && k !== 'ageRatingOverride'));
+  await api('PATCH', `/v1/ageRatingDeclarations/${mine.id}`, { data: { type: 'ageRatingDeclarations', id: mine.id, attributes: attrs } });
+  console.log('yosh reytingi:', JSON.stringify(attrs));
+}
+
 async function status() {
   const id = await appId();
   if (!id) { console.log("ilova yo'q"); return; }
@@ -399,6 +420,6 @@ async function status() {
 }
 
 const [cmd, arg, arg2, arg3] = process.argv.slice(2);
-const run = { check, signing: () => signing(arg), metadata, setup, review, beta: () => beta(arg, arg2, arg3), screenshots: () => screenshots(arg), testflight, attach, submit, status }[cmd];
+const run = { check, signing: () => signing(arg), metadata, setup, review, beta: () => beta(arg, arg2, arg3), screenshots: () => screenshots(arg), agerating: () => agerating(arg), testflight, attach, submit, status }[cmd];
 if (!run) { console.log('buyruqlar: check | signing <TEAM_ID> | metadata | setup | review | beta add <email> [ism] | beta build | beta | screenshots <papka> | testflight | attach | submit | status'); process.exit(1); }
 run().catch((e) => { console.error('XATO:', e.message); process.exit(1); });

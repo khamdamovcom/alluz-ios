@@ -13,6 +13,11 @@ on:
         type: choice
         options: [build, shots, release]
         default: build
+      runner:
+        description: 'macOS runner (macos-26 band bo‘lsa — macos-15 / macos-15-intel, Xcode 26 tanlanadi)'
+        type: choice
+        options: [macos-26, macos-15, macos-15-intel]
+        default: macos-26
       list:
         description: 'Skrinshotlar: spec=nom bo‘sh joy bilan (bo‘sh — App Store to‘plami), masalan: tab:home=home item:place:registon=registon-dark'
         default: ''
@@ -26,7 +31,7 @@ concurrency:
 
 jobs:
   ios:
-    runs-on: macos-26
+    runs-on: ${{ inputs.runner || 'macos-26' }}
     # Imzolash kalitlari faqat «release» muhitida (faqat main branch'dan) — boshqa branch/rejim ularni ko'rmaydi
     environment: ${{ (inputs.mode == 'release' && github.ref == 'refs/heads/main') && 'release' || '' }}
     timeout-minutes: 60
@@ -40,6 +45,12 @@ jobs:
           persist-credentials: false
       - name: Xcode va vositalar
         run: |
+          # macos-15 da standart Xcode eskiroq — iOS 26 SDK (Liquid Glass) uchun eng yangi Xcode 26 tanlanadi
+          if ! xcodebuild -version | grep -q '^Xcode 26'; then
+            X="$(ls -d /Applications/Xcode_26*.app 2>/dev/null | sort -V | tail -1)"
+            [ -n "$X" ] || { echo "Xcode 26 topilmadi"; ls -d /Applications/Xcode*.app; exit 1; }
+            sudo xcode-select -s "$X"
+          fi
           xcodebuild -version
           command -v xcodegen >/dev/null || brew install xcodegen
           command -v xcbeautify >/dev/null || brew install xcbeautify
