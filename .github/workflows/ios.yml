@@ -65,6 +65,8 @@ jobs:
         if: env.MODE == 'shots'
         env:
           SHOT_LIST: ${{ inputs.list }}
+          WAIT: ${{ inputs.runner == 'macos-15-intel' && '18' || '8' }}
+          WARMUP: ${{ inputs.runner == 'macos-15-intel' && '90' || '60' }}
         run: bash scripts/shots.sh
       - name: App Store Connect'ga yuklash
         if: env.MODE == 'release'

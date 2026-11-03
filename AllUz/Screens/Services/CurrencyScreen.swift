@@ -132,11 +132,25 @@ enum CurrencyLive {
 // MARK: - Ekran
 struct CurrencyScreen: View {
     var body: some View {
-        Loadable(load: { await CurrencyLive.refresh(try await API.shared.get("currency") as CurrencyData) }) { d in
-            CurrencyContent(data: d)
+        // Server ma'lumoti darhol ko'rsatiladi; cbu.uz dan yangilash orqada (chet elda ulanish kutilmasin)
+        Loadable(load: { try await API.shared.get("currency") as CurrencyData }) { d in
+            CurrencyLiveContent(initial: d)
         }
         .background(Theme.paper)
         .navigationTitle(tr("Valyuta va banklar", "Валюта и банки", "Currency & banks"))
+    }
+}
+
+private struct CurrencyLiveContent: View {
+    let initial: CurrencyData
+    @State private var live: CurrencyData?
+
+    var body: some View {
+        CurrencyContent(data: live ?? initial)
+            .task(id: initial.updated) {
+                let d = await CurrencyLive.refresh(initial)
+                if d.updated != initial.updated { withAnimation(Motion.gentle) { live = d } }
+            }
     }
 }
 

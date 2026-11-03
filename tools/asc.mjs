@@ -294,15 +294,8 @@ async function setup() {
 }
 
 // ---------- review: App Review izohi (hisob yo'q — demo kerak emas) va aloqa ----------
-const REVIEW_NOTES = [
-  'All Uzbekistan is a free, independent travel and reference guide to Uzbekistan — the native app of https://alluzbekistan.com.',
-  'No account, no sign-in, no purchases, no ads, no tracking. All content is public and read-only; the app is fully usable without any login.',
-  'Content: places and monuments, regions and districts, hotels and restaurants (contacts only, no booking), history and culture, routes,',
-  'live airport departure/arrival boards (official airport data), train timetables, visa rules, weather (MET Norway), Central Bank exchange rates,',
-  'post codes and government office contacts. Languages: English, Russian, Uzbek (Settings).',
-  'Location (optional) is requested only when the user taps "My location" on the map and is used only on the device.',
-  'Photos are credited to their authors under Creative Commons / official licenses (shown under every photo).',
-].join('\n');
+// Izoh matni: appstore/review/notes.txt (sam.uz 2.1 «Information Needed» savollariga oldindan javob — 6 band)
+const REVIEW_NOTES = fs.readFileSync(path.join(ROOT, 'appstore/review/notes.txt'), 'utf8').trim();
 async function review() {
   const id = await appId();
   if (!id) throw new Error("ilova yo'q");
