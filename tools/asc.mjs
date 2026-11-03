@@ -40,7 +40,14 @@ function token() {
   return tokenCache.t;
 }
 
-async function api(method, p, body) {
+async function api(method, p, body, tries = 5) {
+  // Apple API ba'zan 500/503 qaytaradi — bir necha marta qayta urinamiz
+  for (let i = 1; ; i++) {
+    try { return await api1(method, p, body); }
+    catch (e) { if (i >= tries || !(e.status >= 500 || !e.status)) throw e; await new Promise((ok) => setTimeout(ok, 4000 * i)); }
+  }
+}
+async function api1(method, p, body) {
   const r = await fetch(API + p, { method, headers: { Authorization: `Bearer ${token()}`, 'Content-Type': 'application/json' }, body: body ? JSON.stringify(body) : undefined });
   const text = await r.text();
   let j = null;
