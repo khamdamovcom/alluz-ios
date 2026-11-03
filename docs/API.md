@@ -132,3 +132,12 @@ Bitta bo'lim to'liq — `item/post/:slug`.
 - `hotlines` — idoralar ma'lumotidan (gov.js, eng ko'p ishlatiladigan qisqa raqamlar), favqulodda raqamlar takrorlanmaydi.
 - Card (org): `sub` — «Tur · shahar/tuman (yoki «Respublika darajasi»)», `icon` — tur belgisi (sayt nomi), `kind` — tur.
 - Hudud tanlansa respublika idoralari chiqmaydi; tur tanlanmasa respublika idoralari faqat qidiruvda yoki `level=respublika` da.
+
+## Elchixonalar (2026-11-03) — `src/pages/app-embassies.js`
+| Yo'l | Javob |
+|---|---|
+| `embassies?dir=in\|out` | `{counts{in,out,inC,outC}, kinds{kind: matn}, groups{in:[Country], out:[Country]}, web}`; Country = `{code, name, flag, items[Row]}` (tilga qarab alifbo bo'yicha) |
+| `embassies/:slug` | Row + `countryInfo, phones[{value,tel}], consularPhones, emergencyPhones, email, telegram(url), hours, consularHours, services, coversInfo[{code,name,flag}], related[Row], same[Row], visa (ilova API yo'li), sources[url], checked, web` |
+
+Row = `{slug, dir (in — xorijiy davlatning O'zbekistondagi vakolatxonasi; out — O'zbekistonning xorijdagi), kind (embassy, consulate_general, consulate, consular_office, mission, honorary), kindLabel, country (ISO-2), name, city, address, phone{value,tel}|null, website (http ham bo'lishi mumkin — rasmiy sayt faqat http), lat, lon, covers[ISO-2], key (qidiruv kaliti)}`.
+`related`: in → O'zbekistonning shu davlatdagi (yoki akkreditatsiya orqali qamragan) vakolatxonalari; out → shu davlatning O'zbekistondagilari.
