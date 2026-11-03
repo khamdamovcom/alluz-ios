@@ -5,6 +5,9 @@ TLS pin (Let's Encrypt ildizlari), kuzatuv/reklama/hisob yo'q.
 
 - Kod: `AllUz/` — `App/` (kirish, navigatsiya, holat), `Data/` (API, modellar, til), `UI/` (dizayn tizimi), `Screens/<bo'lim>/`.
 - Server API: `docs/API.md` (`/opt/alluz/src/pages/app.js`), ishlab chiqish qoidalari: `docs/BRIEF.md`.
+- Menyu va kill switch serverdan (admin → Ilova, `config.menu` / `config.app`): tablar, Bosh sahifa to'ri va «Yana» — `App/AppMenu.swift`
+  (oflayn — oxirgi saqlangan config, u ham bo'lmasa ichki standart); `app.closed` — ilova faqat «vaqtincha yopiq» xabarini ko'rsatadi
+  (`App/AppGateViews.swift`), `ios.minBuild` — majburiy yangilash, `ios.latestBuild` — banner. Batafsil: `docs/API.md` «Menyu va kill switch».
 - Tekshirish (serverda, Mac'siz): `bash scripts/typecheck.sh`.
 - CI (`.github/workflows/ios.yml`, macOS): har push — simulyator yig'ish; qo'lda `gh workflow run iOS -f mode=shots -f list="tab:home=home …"`
   — skrinshotlar (artifact `shots`), `-f mode=release` — App Store Connect (TestFlight).

@@ -19,8 +19,34 @@ enum SymbolMap {
         "door-open": "door.left.hand.open", "siren": "light.beacon.max", "file-text": "doc.text", "send": "paperplane",
         "telegram": "paperplane", "instagram": "camera.circle", "link": "link", "external-link": "arrow.up.right.square",
         "badge-check": "checkmark.seal", "baggage-claim": "suitcase.rolling", "image": "photo", "locate-fixed": "location.fill",
+        "layout-grid": "square.grid.2x2", "banknote": "banknote", "milestone": "signpost.right", "bookmark": "bookmark",
+        "settings": "gearshape", "train": "tram", "building": "building.2", "flag-triangle-right": "flag",
     ]
     static func symbol(_ icon: String?) -> String { map[icon ?? ""] ?? "mappin.and.ellipse" }
+
+    /// Menyu bandlari (Bosh sahifa to'ri, «Yana» qatorlari) — to'liq (fill) ko'rinish; ro'yxatda yo'g'i — oddiy `symbol`
+    static let menuMap: [String: String] = [
+        "landmark": "building.columns.fill", "map": "map.fill", "plane": "airplane.departure", "cloud-sun": "cloud.sun.fill",
+        "banknote": "banknote.fill", "passport": "person.text.rectangle.fill", "bed-double": "bed.double.fill", "utensils": "fork.knife",
+        "map-pin": "mappin.and.ellipse", "scroll-text": "scroll.fill", "user": "person.fill", "users": "person.2.fill",
+        "palette": "paintpalette.fill", "calendar": "calendar", "info": "info.circle.fill", "train-front": "tram.fill",
+        "milestone": "signpost.right.fill", "mail": "envelope.fill", "building-2": "building.2.fill", "bookmark": "bookmark.fill",
+        "settings": "gearshape.fill", "globe": "safari.fill", "home": "house.fill", "compass": "safari.fill",
+        "layout-grid": "square.grid.2x2.fill", "search": "magnifyingglass", "bus": "bus.fill", "route": "point.topleft.down.to.point.bottomright.curvepath",
+        "phone": "phone.fill", "star": "star.fill", "flag": "flag.fill", "shield": "shield.fill", "sun": "sun.max.fill",
+        "camera": "camera.fill", "briefcase": "briefcase.fill", "ticket": "ticket.fill", "car": "car.fill", "book-open": "book.fill",
+    ]
+    static func menu(_ icon: String?) -> String { menuMap[icon ?? ""] ?? symbol(icon) }
+
+    /// Pastki tab ikonkasi (tab bar o'zi to'ldiradi — oddiy ko'rinish); noma'lumi — tabning o'z belgisi
+    static func tab(_ icon: String?, fallback: String) -> String {
+        switch icon {
+        case "plane": return "airplane.departure"
+        case "layout-grid": return "square.grid.2x2"
+        case let i? where map[i] != nil: return map[i]!
+        default: return fallback
+        }
+    }
 
     /// Yozuv turi → SF Symbol (karta ikonkasi bo'lmasa)
     static func forType(_ type: String?) -> String {

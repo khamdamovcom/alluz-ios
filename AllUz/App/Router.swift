@@ -52,6 +52,9 @@ enum Route: Hashable, Sendable {
     case post(String?)                 // pochta indekslari (hudud) — PostScreen
     case gov                           // davlat idoralari — GovScreen
     case distances(String?)            // shaharlar orasidagi masofa (juftlik) — DistancesScreen
+    case embassies(String?)            // elchixonalar: "in" — O'zbekistondagi, "out" — xorijdagi — EmbassiesScreen
+    case embassy(String)               // bitta vakolatxona (slug) — EmbassyDetailScreen
+    case explore                       // «Kashf eting» (tab menyudan olib tashlansa — shu ekran itariladi) — ExploreView
     // Ilova
     case search                        // SearchScreen
     case saved                         // sevimlilar — SavedScreen
@@ -62,6 +65,9 @@ enum Route: Hashable, Sendable {
     init?(spec: String) {
         let p = spec.split(separator: ":", omittingEmptySubsequences: false).map(String.init)
         let a1 = p.count > 1 && !p[1].isEmpty ? p[1] : nil, a2 = p.count > 2 && !p[2].isEmpty ? p[2] : nil
+        // Spec serverdan ham keladi (config.menu) — slug/tur faqat oddiy belgilardan
+        guard p.count <= 4, p.dropFirst().allSatisfy({ $0.isEmpty || $0.range(of: "^[A-Za-z0-9_-]{1,120}$", options: .regularExpression) != nil })
+        else { return nil }
         switch p[0] {
         case "item": guard let a1, let a2 else { return nil }; self = .item(ItemRef(type: a1, slug: a2))
         case "list": guard let a1 else { return nil }; self = .list(ListSpec(type: a1, kind: a2, unesco: p.count > 3 && p[3] == "unesco"))
@@ -78,6 +84,9 @@ enum Route: Hashable, Sendable {
         case "post": self = .post(a1)
         case "gov": self = .gov
         case "distances": self = .distances(a1)
+        case "embassies": guard a1 == nil || a1 == "in" || a1 == "out" else { return nil }; self = .embassies(a1)
+        case "embassy": guard let a1, Route.validSlug(a1) else { return nil }; self = .embassy(a1)
+        case "explore": self = .explore
         case "search": self = .search
         case "saved": self = .saved
         case "settings": self = .settings
@@ -128,6 +137,7 @@ enum Route: Hashable, Sendable {
         case "viza": r = .visa(s1)
         case "pochta-indekslari": r = s2 != nil ? .item(ItemRef(type: "post", slug: s2!)) : .post(s1)
         case "masofalar": r = .distances(s1)
+        case "elchixonalar": r = s1.map { Route.embassy($0) } ?? .embassies(nil)
         case "qidiruv": r = .search
         case "haqida": r = .about
         default: r = nil

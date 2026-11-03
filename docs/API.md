@@ -19,7 +19,7 @@ W ∈ 480/960/1600/2400 (`Img.url(for:)`). Rasm ostida muallif/litsenziya ko'rsa
 ## Endpointlar
 | Yo'l | Javob |
 |---|---|
-| `config` | `{site, langs, imgWidths, ios{minBuild, latestBuild, storeUrl}, counts{type: n}, links{privacy, about, photos}}` |
+| `config` | `{site, langs, imgWidths, ios{minBuild, latestBuild, storeUrl}, app{closed, title, text}, menu{tabs[Item], home[Item], more[{id, title, items[Item]}]}, counts{type: n}, links{privacy, about, photos}}` — `app`/`menu`: admin → Ilova (`/opt/alluz/src/app-menu.js`); Item = `{id, icon, title, route}` (pastda «Menyu va kill switch») |
 | `home` | `{hero[Card], regions[Card], top[Card], unesco[Card], routes[Card], fests[Card], persons[Card], cuisine[Card], guides[Card], airports[{iata, slug, name, city, region}]}` |
 | `list/:type?region=&district=&kind=&unesco=1&q=&sort=name&offset=&limit=` | `ListPage {type, total, offset, limit, kinds{kind: n}, kindLabels{kind: matn}, items[Card]}` (limit ≤ 200; standart saralash — reyting, rasmlilar oldin; person — tug'ilgan yil; route — kunlar) |
 | `item/:type/:slug` | `Item` — Card maydonlari + `text`, `data`, `images[Img]`, `refs{maydon: [Card]}`, `regionName`, `districtName`; region/district: `sections{places, stay, eat, persons, districts}`, `counts{places, venues, orgs}`; era: `sections{events: [Item]}` |
@@ -141,3 +141,14 @@ Bitta bo'lim to'liq — `item/post/:slug`.
 
 Row = `{slug, dir (in — xorijiy davlatning O'zbekistondagi vakolatxonasi; out — O'zbekistonning xorijdagi), kind (embassy, consulate_general, consulate, consular_office, mission, honorary), kindLabel, country (ISO-2), name, city, address, phone{value,tel}|null, website (http ham bo'lishi mumkin — rasmiy sayt faqat http), lat, lon, covers[ISO-2], key (qidiruv kaliti)}`.
 `related`: in → O'zbekistonning shu davlatdagi (yoki akkreditatsiya orqali qamragan) vakolatxonalari; out → shu davlatning O'zbekistondagilari.
+
+## Menyu va kill switch (config) — `/opt/alluz/src/app-menu.js`, ilova: `App/AppMenu.swift`, `App/AppGateViews.swift`
+- **menu.route** — `Route(spec:)` satri: `item:type:slug`, `list:type[:kind[:unesco]]`, `regions`, `culture`, `history`, `map`, `board[:IATA]`, `rail`,
+  `transport`, `weather`, `currency`, `visa`, `post`, `gov`, `embassies[:in|out]`, `embassy:slug`, `distances`, `search`, `saved`, `settings`, `about`,
+  `explore`; `tab:<home|explore|map|board|more>` — tabga o'tish; `web:site` yoki `web:https://…` — Safari oynasida. Ilova tanimagan route — band ko'rsatilmaydi.
+- Tablar: 5 tagacha, `tab.home` va `tab.more` doim (ilova o'zi qo'shadi). Tanlangan tab o'chirilsa — Asosiy. Tab o'chirilgan bo'lsa, unga olib boruvchi
+  band (masalan Bosh sahifadagi «Tablo») ekranni joriy tabga itaradi.
+- **app.closed=true** — ilova faqat «yopiq» ekranini ko'rsatadi (title/text, «Qayta urinish», sayt havolasi); deep link'lar e'tiborsiz. Holat diskda saqlanadi
+  (oflayn ham yopiq). Tekshiruv: ishga tushganda, ilova faollashganda, faol turganda har 60 s.
+- **ios.minBuild** — undan eski build bloklanadi (to'liq ekran «Yangilash»); **ios.latestBuild** — undan eski bo'lsa yopsa bo'ladigan banner
+  (shu latestBuild uchun bir marta). `storeUrl` bo'lmasa — `https://apps.apple.com/app/id6828710075`.

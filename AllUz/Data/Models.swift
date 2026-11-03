@@ -172,14 +172,44 @@ struct MapPoint: Hashable, Identifiable, Sendable {
 struct ServerConfig: Decodable, Sendable {
     struct IOS: Decodable, Sendable { let minBuild: Int?; let latestBuild: Int?; let storeUrl: String? }
     struct Links: Decodable, Sendable { let privacy: String?; let about: String?; let photos: String? }
+    /// Admin → Ilova: closed=true — ilova faqat shu xabarni ko'rsatadi (kill switch)
+    struct AppState: Codable, Equatable, Sendable {
+        var closed: Bool
+        var title: String?
+        var text: String?
+        static let open = AppState(closed: false, title: nil, text: nil)
+    }
     let site: String
     let langs: [String]
     let ios: IOS?
     let counts: [String: Int]
     let links: Links?
+    /// Ilova holati (yo'q bo'lsa — ochiq)
+    let app: AppState?
+    /// Server menyusi (AppMenu.swift); yo'q yoki buzuq bo'lsa — nil (ichki standart ishlaydi)
+    let menu: MenuConfig?
+
+    private enum CodingKeys: String, CodingKey { case site, langs, ios, counts, links, app, menu }
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        site = try c.decode(String.self, forKey: .site)          // majburiy — boshqa JSON (xato javobi) config deb olinmasin
+        langs = (try? c.decode([String].self, forKey: .langs)) ?? ["uz", "ru", "en"]
+        ios = try? c.decode(IOS.self, forKey: .ios)
+        counts = (try? c.decode([String: Int].self, forKey: .counts)) ?? [:]
+        links = try? c.decode(Links.self, forKey: .links)
+        // Bitta maydon buzilsa ham qolgani ishlaydi; «closed» — faqat aniq true bo'lsa yopiq
+        if let a = try? c.nestedContainer(keyedBy: AppKeys.self, forKey: .app) {
+            app = AppState(closed: (try? a.decode(Bool.self, forKey: .closed)) ?? false,
+                           title: try? a.decode(String.self, forKey: .title), text: try? a.decode(String.self, forKey: .text))
+        } else { app = nil }
+        menu = try? c.decode(MenuConfig.self, forKey: .menu)
+    }
+    private enum AppKeys: String, CodingKey { case closed, title, text }
 }
 
 enum AppConfig {
     static let site = "https://alluzbekistan.com"
     static let host = "alluzbekistan.com"
+    /// App Store sahifasi (config.ios.storeUrl bo'lmasa)
+    static let storeURL = "https://apps.apple.com/app/id6828710075"
 }

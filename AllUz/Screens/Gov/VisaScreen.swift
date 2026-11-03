@@ -250,6 +250,8 @@ private struct VisaResultContent: View {
                     }
                 }
 
+                VisaEmbassiesBlock(code: d.code)
+
                 if !d.sources.isEmpty { sourcesPanel }
 
                 if let w = d.warning {
@@ -607,6 +609,76 @@ private struct VisaTypesPanel: View {
                 Label { Text(types.title).font(Theme.Font.title3).foregroundStyle(Theme.ink) } icon: { Image(systemName: "list.bullet.rectangle").foregroundStyle(Theme.accent) }
             }
             .tint(Theme.muted)
+        }
+    }
+}
+
+/// Elchixonalar: O'zbekistonning shu davlatdagi (yoki akkreditatsiya orqali) vakolatxonalari va shu davlatning O'zbekistondagilari.
+/// Ro'yxat `embassies` dan (≈23 KB gzip, API keshi) — faqat natija ekranida, yuklanmasa blok ko'rinmaydi.
+private struct VisaEmbassiesBlock: View {
+    let code: String
+    @State private var uzThere: [EmbassyRow] = []
+    @State private var theirHere: [EmbassyRow] = []
+    @Environment(AppModel.self) private var model
+
+    var body: some View {
+        Group {
+            if !uzThere.isEmpty || !theirHere.isEmpty {
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack(alignment: .lastTextBaseline) {
+                        Text(tr("Elchixonalar", "Посольства", "Embassies")).font(Theme.Font.title).foregroundStyle(Theme.ink)
+                        Spacer()
+                        Button(tr("Hammasi", "Все", "See all")) { Haptics.select(); model.open(.embassies(nil)) }
+                            .font(Theme.Font.sub.weight(.semibold)).tint(Theme.accent)
+                    }
+                    if !uzThere.isEmpty {
+                        group(tr("Oʻzbekistonning shu davlatdagi vakolatxonasi", "Представительство Узбекистана в этой стране", "Uzbekistan’s mission in this country"), uzThere)
+                    }
+                    if !theirHere.isEmpty {
+                        group(tr("Shu davlatning Oʻzbekistondagi vakolatxonasi", "Представительство этой страны в Узбекистане", "This country’s mission in Uzbekistan"), theirHere)
+                    }
+                }
+                .transition(.opacity)
+            }
+        }
+        .animation(Motion.gentle, value: uzThere.count + theirHere.count)
+        .task(id: code) {
+            guard let list = try? await API.shared.get("embassies") as EmbassyList else { return }
+            let c = code.uppercased()
+            let out = list.countries("out").flatMap(\.items)
+            let direct = out.filter { $0.country == c }
+            uzThere = direct.isEmpty ? out.filter { ($0.covers ?? []).contains(c) } : direct
+            theirHere = list.countries("in").first { $0.code == c }?.items ?? []
+        }
+    }
+
+    private func group(_ title: String, _ rows: [EmbassyRow]) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title).font(Theme.Font.caption).foregroundStyle(Theme.muted)
+            VStack(spacing: 0) {
+                ForEach(Array(rows.prefix(4).enumerated()), id: \.element.id) { i, r in
+                    Button { Haptics.tap(); model.open(.embassy(r.slug)) } label: {
+                        HStack(spacing: 12) {
+                            Image(systemName: EmbassyStyle.symbol(r.kind)).foregroundStyle(EmbassyStyle.color(r.kind)).frame(width: 24)
+                                .accessibilityHidden(true)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(r.name).font(Theme.Font.sub.weight(.medium)).foregroundStyle(Theme.ink).multilineTextAlignment(.leading)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                Text([r.kindLabel, r.city].compactMap { $0 }.joined(separator: " · ")).font(Theme.Font.caption).foregroundStyle(Theme.muted)
+                            }
+                            Spacer(minLength: 0)
+                            Image(systemName: "chevron.right").font(.caption.weight(.semibold)).foregroundStyle(Theme.muted)
+                        }
+                        .padding(.vertical, 11)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.press)
+                    if i < min(rows.count, 4) - 1 { Divider().overlay(Theme.line) }
+                }
+            }
+            .padding(.horizontal, 14)
+            .background(Theme.card, in: RoundedRectangle(cornerRadius: Theme.Radius.l, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Theme.Radius.l, style: .continuous).strokeBorder(Theme.line.opacity(0.6)))
         }
     }
 }

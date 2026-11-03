@@ -118,7 +118,7 @@ struct SettingsScreen: View {
 
     @ViewBuilder private var updateSection: some View {
         Section {
-            Button { model.openWeb(model.config?.ios?.storeUrl) } label: {
+            Button { model.openURL(model.storeURL) } label: {
                 HStack(spacing: 14) {
                     MoreIcon(symbol: "arrow.down.app.fill", color: Theme.accent)
                     VStack(alignment: .leading, spacing: 2) {
@@ -128,7 +128,6 @@ struct SettingsScreen: View {
                     }
                 }
             }
-            .disabled(model.config?.ios?.storeUrl == nil)
         }
         .listRowBackground(Theme.card)
     }

@@ -1,5 +1,5 @@
-// «Yana» tab: barcha bo'limlar guruhlab (Sayohat, Madaniyat, Transport, Xizmatlar, Ilova) — Sozlamalar uslubidagi rangli ikonkali qatorlar.
-// Qatorlar yonida bo'limdagi yozuvlar soni (model.config.counts). Bo'limlar: Route orqali; Xarita va Tablo — o'z tabiga o'tadi.
+// «Yana» tab: barcha bo'limlar guruhlab — server menyusidan (model.menu.more, admin → Ilova; AppMenu.swift), Sozlamalar uslubidagi
+// rangli ikonkali qatorlar. Qatorlar yonida bo'limdagi yozuvlar soni (model.config.counts). Bo'limlar: Route orqali; «tab:…» — o'z tabiga o'tadi.
 import SwiftUI
 
 struct MoreView: View {
@@ -44,66 +44,32 @@ struct MoreView: View {
         }
     }
 
+    /// Server menyusidan (AppMenu) — tartib va ko'rinish admin paneldan; son — config.counts dan route turi bo'yicha
     private var groups: [MoreGroup] {
+        model.menu.more.map { g in
+            MoreGroup(id: g.id, title: g.title, rows: g.items.map { e in
+                MoreRow(id: e.id, title: e.title, symbol: e.symbol, color: e.color(), count: count(e), action: e.action)
+            })
+        }
+    }
+
+    private func count(_ e: MenuEntry) -> Int? {
         let c = model.config?.counts ?? [:]
         func n(_ k: String...) -> Int? { let s = k.compactMap { c[$0] }.reduce(0, +); return s > 0 ? s : nil }
-        return [
-            MoreGroup(id: "travel", title: tr("Sayohat", "Путешествие", "Travel"), rows: [
-                .init(id: "places", title: tr("Joylar", "Места", "Places"), symbol: "building.columns.fill", color: Theme.accent, count: n("place"),
-                      action: .route(.list(ListSpec(type: "place")))),
-                .init(id: "regions", title: tr("Hududlar", "Регионы", "Regions"), symbol: "map.fill", color: Theme.teal, count: n("region"),
-                      action: .route(.regions)),
-                .init(id: "routes", title: tr("Marshrutlar", "Маршруты", "Itineraries"), symbol: "point.topleft.down.to.point.bottomright.curvepath",
-                      color: Theme.gold, count: n("route"), action: .route(.list(ListSpec(type: "route")))),
-                .init(id: "stay", title: tr("Mehmonxonalar", "Отели", "Hotels"), symbol: "bed.double.fill", color: Theme.warn, count: nil,
-                      action: .route(.list(ListSpec(type: "venue", kind: "stay", title: tr("Mehmonxonalar", "Отели", "Hotels"))))),
-                .init(id: "eat", title: tr("Restoranlar", "Рестораны", "Restaurants"), symbol: "fork.knife", color: Theme.bad, count: nil,
-                      action: .route(.list(ListSpec(type: "venue", kind: "eat", title: tr("Restoranlar", "Рестораны", "Restaurants"))))),
-                .init(id: "map", title: tr("Xarita", "Карта", "Map"), symbol: "mappin.and.ellipse", color: Theme.ok, count: nil, action: .tab(.map)),
-            ]),
-            MoreGroup(id: "culture", title: tr("Madaniyat", "Культура", "Culture"), rows: [
-                .init(id: "history", title: tr("Tarix", "История", "History"), symbol: "scroll.fill", color: Theme.gold, count: n("era"),
-                      action: .route(.history)),
-                .init(id: "persons", title: tr("Allomalar", "Великие личности", "Great minds"), symbol: "person.fill", color: Theme.teal,
-                      count: n("person"), action: .route(.list(ListSpec(type: "person")))),
-                .init(id: "culture", title: tr("Madaniyat", "Культура", "Culture"), symbol: "paintpalette.fill", color: Theme.accent,
-                      count: n("cuisine", "craft", "tradition", "holiday"), action: .route(.culture)),
-                .init(id: "fests", title: tr("Tadbirlar", "События", "Events"), symbol: "calendar", color: Theme.bad, count: n("fest"),
-                      action: .route(.list(ListSpec(type: "fest")))),
-                .init(id: "guides", title: tr("Sayohatchilarga", "Путешественникам", "Travel tips"), symbol: "info.circle.fill", color: Theme.ok,
-                      count: n("guide"), action: .route(.list(ListSpec(type: "guide")))),
-            ]),
-            MoreGroup(id: "transport", title: tr("Transport", "Транспорт", "Transport"), rows: [
-                .init(id: "board", title: tr("Tablo", "Табло", "Flight board"), symbol: "airplane.departure", color: Theme.accent, count: nil,
-                      action: .tab(.board)),
-                .init(id: "transport", title: tr("Transport", "Транспорт", "Transport"), symbol: "tram.fill", color: Theme.teal, count: nil,
-                      action: .route(.transport)),
-                .init(id: "distances", title: tr("Masofalar", "Расстояния", "Distances"), symbol: "ruler.fill", color: Theme.gold, count: nil,
-                      action: .route(.distances(nil))),
-            ]),
-            MoreGroup(id: "services", title: tr("Xizmatlar", "Сервисы", "Services"), rows: [
-                .init(id: "weather", title: tr("Ob-havo", "Погода", "Weather"), symbol: "cloud.sun.fill", color: Theme.warn, count: nil,
-                      action: .route(.weather(nil))),
-                .init(id: "currency", title: tr("Valyuta va banklar", "Валюта и банки", "Currency and banks"), symbol: "dollarsign.circle.fill",
-                      color: Theme.ok, count: nil, action: .route(.currency)),
-                .init(id: "visa", title: tr("Viza", "Виза", "Visa"), symbol: "person.text.rectangle.fill", color: Theme.bad, count: nil,
-                      action: .route(.visa(nil))),
-                .init(id: "post", title: tr("Pochta indekslari", "Почтовые индексы", "Postal codes"), symbol: "envelope.fill", color: Theme.gold,
-                      count: n("post"), action: .route(.post(nil))),
-                .init(id: "gov", title: tr("Davlat idoralari", "Госучреждения", "Government offices"), symbol: "building.2.fill", color: Theme.teal,
-                      count: n("org"), action: .route(.gov)),
-            ]),
-            MoreGroup(id: "app", title: tr("Ilova", "Приложение", "App"), rows: [
-                .init(id: "saved", title: tr("Saqlanganlar", "Избранное", "Saved"), symbol: "bookmark.fill", color: Theme.accent,
-                      count: model.saved.isEmpty ? nil : model.saved.count, action: .route(.saved)),
-                .init(id: "settings", title: tr("Sozlamalar", "Настройки", "Settings"), symbol: "gearshape.fill", color: Theme.muted, count: nil,
-                      action: .route(.settings)),
-                .init(id: "about", title: tr("Ilova haqida", "О приложении", "About"), symbol: "info.circle.fill", color: Theme.teal, count: nil,
-                      action: .route(.about)),
-                .init(id: "site", title: tr("Saytni ochish", "Открыть сайт", "Open the website"), symbol: "safari.fill", color: Theme.ink2,
-                      count: nil, action: .web(MoreLinks.site)),
-            ]),
-        ]
+        switch e.action {
+        case .route(let r):
+            switch r {
+            case .list(let l): return l.kind == nil && l.region == nil && !l.unesco ? n(l.type) : nil
+            case .regions: return n("region")
+            case .history: return n("era")
+            case .culture: return n("cuisine", "craft", "tradition", "holiday")
+            case .post(nil): return n("post")
+            case .gov: return n("org")
+            case .saved: return model.saved.isEmpty ? nil : model.saved.count
+            default: return nil
+            }
+        default: return nil
+        }
     }
 }
 
@@ -143,13 +109,12 @@ private struct MoreGroup: Identifiable {
 }
 
 private struct MoreRow: Identifiable {
-    enum Action { case route(Route), tab(Tab), web(String) }
     let id: String
     let title: String
     let symbol: String
     let color: Color
     let count: Int?
-    let action: Action
+    let action: MenuAction
 }
 
 private struct MoreRowView: View {
@@ -160,11 +125,13 @@ private struct MoreRowView: View {
         switch row.action {
         case .route(let r):
             NavigationLink(value: r) { label }
-        case .tab(let t):
-            Button { Haptics.select(); model.tab = t } label: { label.overlay(alignment: .trailing) { trailingIcon("arrow.turn.up.right") } }
+        case .tab(let t) where model.menu.visibleTabs.contains(t):
+            Button { Haptics.select(); model.go(t) } label: { label.overlay(alignment: .trailing) { trailingIcon("arrow.turn.up.right") } }
                 .accessibilityHint(tr("Boshqa tabga oʻtadi", "Переход на другую вкладку", "Switches tab"))
-        case .web(let s):
-            Button { model.openWeb(s) } label: { label.overlay(alignment: .trailing) { trailingIcon("arrow.up.right") } }
+        case .tab(let t):      // tab menyuda yo'q — ekran shu stekka itariladi
+            Button { model.go(t) } label: { label.overlay(alignment: .trailing) { trailingIcon("chevron.right") } }
+        case .web(let u):
+            Button { model.openURL(u) } label: { label.overlay(alignment: .trailing) { trailingIcon("arrow.up.right") } }
         }
     }
 

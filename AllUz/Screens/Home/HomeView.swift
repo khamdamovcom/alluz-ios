@@ -349,46 +349,22 @@ private struct HomeSearchButton: View {
 
 // MARK: - Tezkor bo'limlar (2 qator × 4)
 
-private struct HomeQuickItem: Identifiable {
-    let id: String
-    let title: String
-    let symbol: String
-    let color: Color
-    let action: @MainActor (AppModel) -> Void
-}
-
+/// Tezkor tugmalar — server menyusidan (model.menu.home, admin → Ilova; AppMenu.swift): tartib va ko'rinish
 private struct HomeQuickGrid: View {
     @Environment(AppModel.self) private var model
-    private let items: [HomeQuickItem] = [
-        .init(id: "places", title: tr("Joylar", "Места", "Places"), symbol: "building.columns.fill", color: Theme.accent) {
-            $0.open(.list(ListSpec(type: "place")))
-        },
-        .init(id: "regions", title: tr("Hududlar", "Регионы", "Regions"), symbol: "map.fill", color: Theme.teal) { $0.open(.regions) },
-        .init(id: "board", title: tr("Tablo", "Табло", "Flights"), symbol: "airplane.departure", color: Theme.ink2) { m in
-            Haptics.select(); m.tab = .board
-        },
-        .init(id: "weather", title: tr("Ob-havo", "Погода", "Weather"), symbol: "cloud.sun.fill", color: Theme.warn) { $0.open(.weather(nil)) },
-        .init(id: "currency", title: tr("Valyuta", "Валюта", "Currency"), symbol: "dollarsign.arrow.circlepath", color: Theme.ok) { $0.open(.currency) },
-        .init(id: "visa", title: tr("Viza", "Виза", "Visa"), symbol: "person.text.rectangle.fill", color: Theme.bad) { $0.open(.visa(nil)) },
-        .init(id: "stay", title: tr("Mehmonxonalar", "Отели", "Hotels"), symbol: "bed.double.fill", color: Theme.gold) {
-            $0.open(.list(ListSpec(type: "venue", kind: "stay", title: tr("Mehmonxonalar", "Отели", "Hotels"))))
-        },
-        .init(id: "eat", title: tr("Restoranlar", "Рестораны", "Restaurants"), symbol: "fork.knife", color: Theme.accent) {
-            $0.open(.list(ListSpec(type: "venue", kind: "eat", title: tr("Restoranlar", "Рестораны", "Restaurants"))))
-        },
-    ]
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 8, alignment: .top), count: 4)
 
     var body: some View {
         LazyVGrid(columns: columns, spacing: 10) {
-            ForEach(items) { item in
-                Button { Haptics.tap(); item.action(model) } label: {
+            ForEach(model.menu.home) { item in
+                let color = item.color(home: true)
+                Button { Haptics.tap(); model.perform(item.action) } label: {
                     VStack(spacing: 7) {
                         Image(systemName: item.symbol)
                             .font(.system(size: 21, weight: .semibold))
-                            .foregroundStyle(item.color)
+                            .foregroundStyle(color)
                             .frame(width: 50, height: 50)
-                            .background(item.color.opacity(0.13), in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+                            .background(color.opacity(0.13), in: RoundedRectangle(cornerRadius: 15, style: .continuous))
                         Text(item.title)
                             .font(Theme.Font.caption.weight(.medium)).foregroundStyle(Theme.ink)
                             .lineLimit(2).minimumScaleFactor(0.75)
@@ -506,7 +482,7 @@ private struct HomeAirports: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionHeader(title: tr("Reyslar tablosi", "Табло рейсов", "Flight boards"), kicker: tr("Aeroportlar", "Аэропорты", "Airports"),
-                          actionTitle: tr("Tablo", "Табло", "Board")) { model.tab = .board }
+                          actionTitle: tr("Tablo", "Табло", "Board")) { model.go(.board) }
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
                     ForEach(airports, id: \.iata) { a in

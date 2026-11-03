@@ -16,7 +16,16 @@ yuritadi va skrinshotlarni ko'radi.
   `model.openWeb(string)`, `model.toggleSaved(card)`, `model.isSaved(ref)`, `model.visited(card)`, `model.saved`, `model.recent`,
   `model.show("xabar")` (toast), `model.lang`, `model.theme`, `model.tab`, `model.config`.
 - `App/Router.swift` — `Route` (barcha ekranlar), `ListSpec`, `Tab`, `Route(webPath:)` (sayt havolasi → ekran), `Route(spec:)`.
-- `App/RouteViews.swift` — Route → View; `App/AllUzApp.swift` — tablar; `App/ShotMode.swift` — `-shot` rejimi.
+- `App/RouteViews.swift` — Route → View; `App/AllUzApp.swift` — `RootGate` (yopiq / majburiy yangilash / tablar) va `RootView` (tablar);
+  `App/ShotMode.swift` — `-shot` rejimi.
+- `App/AppMenu.swift` — **server menyusi** (config.menu, admin → Ilova): `model.menu.tabs/home/more` — pastki tablar, Bosh sahifa tezkor
+  to'ri, «Yana» guruhlari shundan chiziladi (tartib va ko'rinish serverda). Ichki standart `AppMenu.builtIn` = server standarti
+  (`/opt/alluz/src/app-menu.js` ITEMS, `off:true` siz) — yangi band qo'shilsa ikkalasini birga yangilang. Oxirgi config diskda
+  (Application Support `config-<til>.json`). Band bosilsa — `model.perform(entry.action)`; tabga o'tish — `model.go(.board)` (tab menyuda
+  bo'lmasa ekran itariladi; `model.tab = …` ni to'g'ridan-to'g'ri yozmang). Ikonka → SF Symbol: `SymbolMap.menu/tab`.
+- **Kill switch** (config.app.closed) — `App/AppGateViews.swift`: yopiq bo'lsa faqat xabar; holat `app-state.json` da (oflayn ham yopiq).
+  `model.updateRequired` (build < ios.minBuild) — bloklovchi ekran, `model.showUpdateBanner` (build < ios.latestBuild) — banner.
+  Sinov: `-shot closed`, `-shot update`, `-shot update-banner`.
 - `Data/API.swift` — `try await API.shared.get("item/place/registon") as Item`, `getRaw("/api/board", query:)`. Faqat shu orqali
   tarmoq (TLS pin, oflayn kesh). `Data/Models.swift` — Img, Card, ItemRef, Item, ListPage, HomeData, MapData…; `Data/JSONValue.swift`.
 - `Data/L10n.swift` — `tr("O'zbekcha", "Русский", "English")`, `Lang`, `Fmt` (num, date, time, day, month, duration, km).

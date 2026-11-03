@@ -1,6 +1,7 @@
 // Skrinshot va sinov rejimi (CI simulyatori): ilova `-shot <spec> [-theme dark] [-lang en]` bilan ochiladi.
 // spec: "tab:home|explore|map|board|more" yoki Route(spec:) — "item:place:registon", "list:venue:stay", "board:TAS", "weather:samarqand" …
 // Bir nechta qadam «,» bilan: "tab:explore,regions,item:region:xorazm". Bu rejimda onboarding chiqmaydi.
+// Darvoza holatlari (yakka spec): "closed" — ilova yopiq (kill switch), "update" — majburiy yangilash, "update-banner" — yangilash banneri.
 import SwiftUI
 
 @MainActor
@@ -16,7 +17,7 @@ enum ShotMode {
     static func apply(_ spec: String, model: AppModel) {
         if let t = arg("-theme"), let th = ThemeChoice(rawValue: t) { model.theme = th }
         for step in spec.split(separator: ",").map(String.init) {
-            if step.hasPrefix("tab:"), let t = Tab(rawValue: String(step.dropFirst(4))) { model.tab = t; continue }
+            if step.hasPrefix("tab:"), let t = Tab(rawValue: String(step.dropFirst(4))) { model.go(t); continue }
             if let r = Route(spec: step) { model.paths[model.tab, default: []].append(r) }
         }
     }
